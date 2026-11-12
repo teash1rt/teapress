@@ -1,8 +1,8 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "measurement_date": "2026-11-11",
   "benchmark_file": "benchmark.json",
-  "benchmark_sha256": "ce436dd7045adab4f177ee7feea619304afad7b25aac00a8ba58254fedd591c5",
+  "benchmark_sha256": "a4ee49f202dfdabe5501162aaaeff10a5a399a9529583b234dfb58381b975593",
   "image_count": 236,
   "scope": "236 static opaque PNG originals; CLIC150 followed by Commons86; retained measurements, with no recompression during restructuring",
   "datasets": [
@@ -30,7 +30,7 @@
     "values": "Encoded original/local/TinyPNG file sizes; integers, not displayed KB/KiB"
   },
   "local_engine": {
-    "version": "0.5.0",
+    "version": "0.01",
     "binary_sha256": "b7e9325c02e3197ddde570ffde28853c0d57cfab367e698451d5573ebd685b13",
     "options": "Default balanced strategy; lossless=false"
   },
@@ -73,7 +73,80 @@
   "image_source": {
     "url": "Original image download URL, or dataset ZIP URL when archive_path is present",
     "archive_path": "Optional ZIP member path; required for CLIC images",
-    "sha256": "SHA256 of original encoded image bytes; stable row identifier"
+    "sha256": "SHA256 of original encoded image bytes; stable row identifier",
+    "page_url": "Commons file description page with full attribution and licensing context",
+    "author": "Author reported by Commons extmetadata, converted to plain text",
+    "license": "Dataset license or primary license label reported by Commons; not a license granted by teapress",
+    "license_url": "Official dataset license text or license URL reported by Commons; absent when not supplied",
+    "attribution": "Explicit attribution text reported by Commons, when supplied",
+    "restrictions": "Additional restrictions reported by Commons, when supplied"
   },
-  "retained_artifacts": "Only benchmark.json and benchmark.meta.json are retained from the validation runs. Original/output images, ZIPs, scripts, raw logs and reports have been removed; rerunning requires obtaining the original files and matching the recorded engine and scoring method."
+  "retained_artifacts": "Only benchmark.json and benchmark.meta.json are retained from the validation runs. Original/output images, ZIPs, scripts, raw logs and reports have been removed; rerunning requires obtaining the original files and matching the recorded engine and scoring method.",
+  "licensing_review": {
+    "review_date": "2026-11-12",
+    "scope": "236 source references: official CLIC 2020 license texts and current Commons API metadata for all 86 file pages; no images downloaded or redistributed in this review",
+    "counts": {
+      "CLIC Mobile": 75,
+      "CLIC Professional": 75,
+      "CC BY-SA 4.0": 26,
+      "CC BY 4.0": 10,
+      "Public domain": 38,
+      "CC0": 5,
+      "CC BY-SA 2.0": 2,
+      "CC BY-SA 3.0": 1,
+      "CC BY 2.0 fr": 1,
+      "CC BY-SA 2.5 ch": 1,
+      "GPL": 2
+    },
+    "method": "CLIC license mapped by archive_path subset; Commons queried through action=query prop=imageinfo iiprop=extmetadata|url|sha1 and matched by decoded original filename",
+    "sources": [
+      "https://data.vision.ee.ethz.ch/cvl/clic/LICENSE_mobile_2020.txt",
+      "https://data.vision.ee.ethz.ch/cvl/clic/LICENSE_professional_2020.txt",
+      "https://commons.wikimedia.org/wiki/Commons:Reusing_content_outside_Wikimedia",
+      "https://commons.wikimedia.org/wiki/Commons:General_disclaimer",
+      "https://creativecommons.org/licenses/by-sa/4.0/",
+      "https://unsplash.com/license"
+    ],
+    "assessment": "Publishing the existing measurements and source references without embedding or bundling images has lower copyright exposure than redistributing the images; no zero-risk or legal-clearance conclusion is made",
+    "image_reuse": "Follow the original license and file page when downloading, uploading to third parties, displaying or redistributing originals or compressed copies; retain attribution and license notices, identify modifications where required, and comply with applicable share-alike and GPL source requirements",
+    "license_boundary": "AGPL-3.0-only covers teapress code, not the referenced images; Unsplash License is not CC0 and restricts compiling a competing image service",
+    "manual_review_before_image_redistribution": [
+      {
+        "page_url": "https://commons.wikimedia.org/wiki/File:Hope_for_Wildlife_foundation.png",
+        "license": "Public domain",
+        "restrictions": "trademarked",
+        "reason": "Review the full file page and underlying depicted works before image redistribution"
+      },
+      {
+        "page_url": "https://commons.wikimedia.org/wiki/File:20231024_Screenshot_Stadtgeschichtslexikon_Ingolstadt.png",
+        "license": "GPL",
+        "restrictions": "",
+        "reason": "Review the full file page and underlying depicted works before image redistribution"
+      },
+      {
+        "page_url": "https://commons.wikimedia.org/wiki/File:Celeste_screenshot_04.png",
+        "license": "CC BY-SA 4.0",
+        "restrictions": "design",
+        "reason": "Review the full file page and underlying depicted works before image redistribution"
+      },
+      {
+        "page_url": "https://commons.wikimedia.org/wiki/File:Tux_Paint_3_Work_done_stamp_on_Tux_Paint_page.png",
+        "license": "GPL",
+        "restrictions": "",
+        "reason": "Review the full file page and underlying depicted works before image redistribution"
+      }
+    ],
+    "limitations": [
+      "Metadata reflects current file pages, not a historical authorization record",
+      "Original image bytes were not redownloaded to match the recorded SHA256 during this review",
+      "Commons metadata does not independently prove ownership or clear all rights in depicted works, trademarks, designs, people or locations",
+      "Primary license labels may omit alternative licenses and file-specific qualifications; use the linked file page",
+      "This is a source-license review, not a search of court records or a legal opinion on any jurisdiction",
+      "The review does not establish compliance of past third-party uploads with all image licenses or service terms"
+    ],
+    "measurement_integrity": {
+      "previous_benchmark_sha256": "ce436dd7045adab4f177ee7feea619304afad7b25aac00a8ba58254fedd591c5",
+      "change": "Only image_source licensing and attribution metadata added; source URLs, original hashes and all measurements unchanged"
+    }
+  }
 }

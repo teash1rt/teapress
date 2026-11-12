@@ -91,7 +91,7 @@ fn default_replaces_inputs_losslessly_and_leaves_failed_inputs_intact() {
     std::fs::write(dir.path().join("bad.png"), b"broken").unwrap();
     let run = Command::new(env!("CARGO_BIN_EXE_teapress"))
         .current_dir(dir.path())
-        .arg("--lossless")
+        .arg("-l")
         .arg("bad.png")
         .args(inputs.iter().map(|(name, _)| name))
         .output()
@@ -183,12 +183,7 @@ fn invalid_output_directory_returns_json_without_changing_input() {
 
 #[test]
 fn usage_errors_are_json_and_help_stays_text() {
-    for args in [
-        vec![],
-        vec!["--unknown"],
-        vec!["--jsonl", "--unknown"],
-        vec!["-o"],
-    ] {
+    for args in [vec![], vec!["--unknown"], vec!["--jsonl"], vec!["-o"]] {
         let run = Command::new(env!("CARGO_BIN_EXE_teapress"))
             .args(args)
             .output()
@@ -200,7 +195,7 @@ fn usage_errors_are_json_and_help_stays_text() {
         assert!(rows[0]["error"]["message"].is_string());
         assert!(rows[0].get("input").is_none());
     }
-    for flag in ["--help", "--version"] {
+    for flag in ["--help", "--version", "-v"] {
         let run = Command::new(env!("CARGO_BIN_EXE_teapress"))
             .arg(flag)
             .output()
@@ -211,20 +206,22 @@ fn usage_errors_are_json_and_help_stays_text() {
         assert!(text.contains("teapress"));
         if flag == "--help" {
             assert!(text.contains("25 MiB"));
-            assert!(text.contains("--jsonl"));
+            assert!(!text.contains("--jsonl"));
+            assert!(text.contains("-v, --version"));
+        } else {
+            assert_eq!(text.trim(), concat!("teapress ", env!("CARGO_PKG_VERSION")));
         }
     }
 }
 
 #[test]
-fn jsonl_preserves_order_and_continues_after_errors() {
+fn json_array_preserves_order_and_continues_after_errors() {
     let dir = tempfile::tempdir().unwrap();
     std::fs::write(dir.path().join("bad.png"), b"broken").unwrap();
     std::fs::write(dir.path().join("-中文.png"), image_bytes(ImageFormat::Png)).unwrap();
     let run = Command::new(env!("CARGO_BIN_EXE_teapress"))
         .current_dir(dir.path())
         .args([
-            "--jsonl",
             "--lossless",
             "--",
             "missing.png",
@@ -237,10 +234,8 @@ fn jsonl_preserves_order_and_continues_after_errors() {
     assert_eq!(run.status.code(), Some(1));
     assert!(run.stderr.is_empty());
     let text = String::from_utf8(run.stdout).unwrap();
-    let rows: Vec<serde_json::Value> = text
-        .lines()
-        .map(|line| serde_json::from_str(line).unwrap())
-        .collect();
+    assert_eq!(text.lines().count(), 1);
+    let rows: Vec<serde_json::Value> = serde_json::from_str(&text).unwrap();
     assert_eq!(rows.len(), 4);
     for (row, (input, code)) in rows.iter().zip([
         ("missing.png", "INPUT_NOT_FOUND"),
@@ -258,4 +253,49 @@ fn jsonl_preserves_order_and_continues_after_errors() {
     );
     assert_eq!(rows[3]["input"], "-中文.png");
     assert!(rows[3]["after"].as_u64().unwrap() < rows[3]["before"].as_u64().unwrap());
+}
+
+#[test]
+fn duplicate_paths_are_rejected_without_recompressing() {
+    for copies in [false, true] {
+        let dir = tempfile::tempdir().unwrap();
+        let input = dir.path().join("a.png");
+        let original = image_bytes(ImageFormat::Png);
+        std::fs::write(&input, &original).unwrap();
+        let mut command = Command::new(env!("CARGO_BIN_EXE_teapress"));
+        command.current_dir(dir.path()).arg("--lossless");
+        if copies {
+            command.args(["-o", "out"]);
+        }
+        command.arg("a.png").arg("./a.png").arg(&input);
+        #[cfg(unix)]
+        {
+            std::os::unix::fs::symlink(&input, dir.path().join("alias.png")).unwrap();
+            command.arg("alias.png");
+        }
+        let run = command.output().unwrap();
+        assert_eq!(run.status.code(), Some(1));
+        assert!(run.stderr.is_empty());
+        let rows: Vec<serde_json::Value> = serde_json::from_slice(&run.stdout).unwrap();
+        assert_eq!(rows.len(), if cfg!(unix) { 4 } else { 3 });
+        assert!(rows[0]["after"].as_u64().unwrap() < original.len() as u64);
+        for row in &rows[1..] {
+            assert_eq!(row["error"]["code"], "DUPLICATE_INPUT");
+            assert!(row.get("after").is_none());
+        }
+        let destination = if copies {
+            dir.path().join("out/a.png")
+        } else {
+            input.clone()
+        };
+        let output = std::fs::read(destination).unwrap();
+        assert_eq!(output.len() as u64, rows[0]["after"].as_u64().unwrap());
+        if copies {
+            assert_eq!(std::fs::read(&input).unwrap(), original);
+            assert_eq!(
+                std::fs::read_dir(dir.path().join("out")).unwrap().count(),
+                1
+            );
+        }
+    }
 }
