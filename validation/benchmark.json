@@ -1,0 +1,5344 @@
+[
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "433159f7e84028cda8368f32ca5f5be804d9673026fcd212827a1cafe4168ac2",
+      "archive_path": "mobile/4700c79789bc9676b12ab5c6bc3d5e66.png"
+    },
+    "image_size_bytes": {
+      "original": 3605289,
+      "local": 1082798,
+      "tinypng": 1083916
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.001007590276691337,
+        "dssim_peak": 0.0019466873504663251
+      },
+      "tinypng": {
+        "dssim_mean": 0.0015693924294201723,
+        "dssim_peak": 0.0031349655332013615
+      }
+    },
+    "local_ms": 7429
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "319519352a2b684a43f03900ae4542fa7f313f384fa19402739c07b5b5fa5cba",
+      "archive_path": "mobile/944c1dca7495abef15edded463ab6a83.png"
+    },
+    "image_size_bytes": {
+      "original": 3463425,
+      "local": 1376230,
+      "tinypng": 1413563
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.000576813649370921,
+        "dssim_peak": 0.0008200996899203616
+      },
+      "tinypng": {
+        "dssim_mean": 0.0007548005297325039,
+        "dssim_peak": 0.0012616216584080409
+      }
+    },
+    "local_ms": 21756
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "c567caa3bed3ebc2b578da37410194c54fe0ae660e086a27ae1dafec767f48e7",
+      "archive_path": "mobile/4cc106e3817048a1f6f9de14ee367f21.png"
+    },
+    "image_size_bytes": {
+      "original": 3541665,
+      "local": 1097285,
+      "tinypng": 1057692
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0014413360229675275,
+        "dssim_peak": 0.002926308996958449
+      },
+      "tinypng": {
+        "dssim_mean": 0.0020532441195921115,
+        "dssim_peak": 0.004449305022083294
+      }
+    },
+    "local_ms": 15439
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "d71c4e45c5e9436c3542724ba08bca4e51af32fc4c4a7cd699ea61b9af3854fb",
+      "archive_path": "mobile/ec235ab32e590aaeec61cf6d0c0d5013.png"
+    },
+    "image_size_bytes": {
+      "original": 3834172,
+      "local": 1275678,
+      "tinypng": 1224828
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0007271126951757827,
+        "dssim_peak": 0.001141000031492645
+      },
+      "tinypng": {
+        "dssim_mean": 0.001163997866617853,
+        "dssim_peak": 0.002175535713150767
+      }
+    },
+    "local_ms": 10071
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "5858534a53d3069b0b3c358a9447a409d86f7b818e3048b88fa1e3f25f86d54a",
+      "archive_path": "mobile/1035a35332e08ee1e7793f7be86d6ca1.png"
+    },
+    "image_size_bytes": {
+      "original": 2888188,
+      "local": 1032140,
+      "tinypng": 987171
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0008171710855345415,
+        "dssim_peak": 0.001625911560954263
+      },
+      "tinypng": {
+        "dssim_mean": 0.0012196462148481584,
+        "dssim_peak": 0.0027074447452459793
+      }
+    },
+    "local_ms": 25252
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "7376c938f160d70e0a2347c7f6c5e8805ef2560bfb4197a36aef3fe70e3b13a8",
+      "archive_path": "mobile/3f13fd6024c6cdd12d0960415d68af39.png"
+    },
+    "image_size_bytes": {
+      "original": 3701799,
+      "local": 1146808,
+      "tinypng": 1131476
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0008143548677149045,
+        "dssim_peak": 0.0011343780311101614
+      },
+      "tinypng": {
+        "dssim_mean": 0.0010440541554982044,
+        "dssim_peak": 0.0015977601007799436
+      }
+    },
+    "local_ms": 22443
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "31072e35d443573f752faa5775edaa76fadbaf9e37bc0cc78158b34c002abf36",
+      "archive_path": "mobile/0f5157fea733e2b9f9808020286df79c.png"
+    },
+    "image_size_bytes": {
+      "original": 2098973,
+      "local": 859548,
+      "tinypng": 851631
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0008087326090675462,
+        "dssim_peak": 0.006103333010880174
+      },
+      "tinypng": {
+        "dssim_mean": 0.0009553283115521465,
+        "dssim_peak": 0.008851092457516696
+      }
+    },
+    "local_ms": 7439
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "ae599acce2db6175033fb5e9845dc606ebb04844b122eead6f49f191c919ece6",
+      "archive_path": "mobile/213f329f29a7db7a5aa6fdcb223633f6.png"
+    },
+    "image_size_bytes": {
+      "original": 4116648,
+      "local": 1392622,
+      "tinypng": 1325772
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0010515792271519762,
+        "dssim_peak": 0.0018831117744726455
+      },
+      "tinypng": {
+        "dssim_mean": 0.0014988062253288123,
+        "dssim_peak": 0.0029316036494553277
+      }
+    },
+    "local_ms": 22891
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "d80c6a2e983fe4ccf1df513f2e7e9c0d2063d2a3ac0ed65d9b3deafffe7ed91f",
+      "archive_path": "mobile/5d59a65584961ead3b88c1926ad88ec1.png"
+    },
+    "image_size_bytes": {
+      "original": 4463695,
+      "local": 1335731,
+      "tinypng": 1307196
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0012819084454908116,
+        "dssim_peak": 0.002802915614048329
+      },
+      "tinypng": {
+        "dssim_mean": 0.0018919662543510861,
+        "dssim_peak": 0.004272007890427254
+      }
+    },
+    "local_ms": 14989
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "9f1f736b531e40aecbfd514511549dfc9a16e7131224c119a9c5f209202ae103",
+      "archive_path": "mobile/920e1085a30117a8ffc41ab80dd5d956.png"
+    },
+    "image_size_bytes": {
+      "original": 3125042,
+      "local": 1184745,
+      "tinypng": 1136331
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0008173118591642002,
+        "dssim_peak": 0.0011614869494465108
+      },
+      "tinypng": {
+        "dssim_mean": 0.0011240134645612526,
+        "dssim_peak": 0.0019064202307732536
+      }
+    },
+    "local_ms": 12222
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "2ad4de07de3a88e409f5cb0f0700b0c3c2393da5e93d8a291b9866d258e311c8",
+      "archive_path": "mobile/c62391423a371279c935644353fbc6d8.png"
+    },
+    "image_size_bytes": {
+      "original": 3923270,
+      "local": 1375313,
+      "tinypng": 1342340
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0007502432592436188,
+        "dssim_peak": 0.0011111683103950387
+      },
+      "tinypng": {
+        "dssim_mean": 0.0011394890479311452,
+        "dssim_peak": 0.0015849407962174045
+      }
+    },
+    "local_ms": 22028
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "c72aa30c8839d4e46195c30d28f05d296b43714fd57cf3afb6c3d54f05aa4689",
+      "archive_path": "mobile/4ad43299135101f0770e09c442efe37f.png"
+    },
+    "image_size_bytes": {
+      "original": 4112891,
+      "local": 1284030,
+      "tinypng": 1282123
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0007461382876025117,
+        "dssim_peak": 0.0014764207849295996
+      },
+      "tinypng": {
+        "dssim_mean": 0.0009853523602222321,
+        "dssim_peak": 0.0021330105373829067
+      }
+    },
+    "local_ms": 21162
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "13109f45b957923fa3b5f4ca889e78adbf7c7678514c5b7040a578a383f058f7",
+      "archive_path": "mobile/d3193a7f11f8d49e5231d56ba7dbffbc.png"
+    },
+    "image_size_bytes": {
+      "original": 3600289,
+      "local": 1216192,
+      "tinypng": 1133485
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0011481226288697311,
+        "dssim_peak": 0.001902060960019769
+      },
+      "tinypng": {
+        "dssim_mean": 0.001643287630118074,
+        "dssim_peak": 0.002838530110912618
+      }
+    },
+    "local_ms": 13514
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "c8a71af842f4d373ad7fb4705206ea4f2123c994e7d4e64fd51ccc419175623a",
+      "archive_path": "mobile/08eba944d75efaf0bf3390e68c8d03b0.png"
+    },
+    "image_size_bytes": {
+      "original": 4627256,
+      "local": 1621569,
+      "tinypng": 1543653
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0009926864579212966,
+        "dssim_peak": 0.0017593089565393072
+      },
+      "tinypng": {
+        "dssim_mean": 0.00158188813429427,
+        "dssim_peak": 0.0031292292169291525
+      }
+    },
+    "local_ms": 20057
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "acde970071f7fd435b5d55b607079241da07281ebde8bc743b30199dc3665b7f",
+      "archive_path": "mobile/762f398533ac3176407682110fb2d6b1.png"
+    },
+    "image_size_bytes": {
+      "original": 3808008,
+      "local": 1469177,
+      "tinypng": 1432130
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.00040642055979316365,
+        "dssim_peak": 0.0011844831472695994
+      },
+      "tinypng": {
+        "dssim_mean": 0.0006102688847191804,
+        "dssim_peak": 0.0019544436627072503
+      }
+    },
+    "local_ms": 14599
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "c319c8161c218bb34b72a090ce7b6df3c699997eb13d27419bf750226ee99b16",
+      "archive_path": "mobile/c976edc88703e2a2cb127c4f61a0f69b.png"
+    },
+    "image_size_bytes": {
+      "original": 4575585,
+      "local": 1771730,
+      "tinypng": 1662119
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0011517485048905649,
+        "dssim_peak": 0.002016774693040402
+      },
+      "tinypng": {
+        "dssim_mean": 0.0027568041067198303,
+        "dssim_peak": 0.003889326769284107
+      }
+    },
+    "local_ms": 20372
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "bcfd68edfd81bcdbc66637c883c252fdefdbe2735e253bd016f3be8e0f719226",
+      "archive_path": "mobile/801dc86d0553892bcac59059f21e836a.png"
+    },
+    "image_size_bytes": {
+      "original": 3311279,
+      "local": 1027663,
+      "tinypng": 1001535
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0014475848665713603,
+        "dssim_peak": 0.0025219198923844832
+      },
+      "tinypng": {
+        "dssim_mean": 0.002189796609635641,
+        "dssim_peak": 0.003934341922707807
+      }
+    },
+    "local_ms": 8321
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "ecb24f14072eb084d5a10a6186bae8a06a977622925f8c5625f72cf5248ae39e",
+      "archive_path": "mobile/7601c27e32cf71e3856bc7147057efd9.png"
+    },
+    "image_size_bytes": {
+      "original": 2783300,
+      "local": 862040,
+      "tinypng": 833258
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0010246140982486615,
+        "dssim_peak": 0.001588929874041023
+      },
+      "tinypng": {
+        "dssim_mean": 0.0014322842026767673,
+        "dssim_peak": 0.002414993624753947
+      }
+    },
+    "local_ms": 10513
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "29da77925b276b83974fd4479c225f4442715826f6a775ee2a0b539c426bd00c",
+      "archive_path": "mobile/0ec4f143050cb4aa6d05646e927b507e.png"
+    },
+    "image_size_bytes": {
+      "original": 3740033,
+      "local": 1455659,
+      "tinypng": 1354370
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0008232104261197081,
+        "dssim_peak": 0.0013018269689077933
+      },
+      "tinypng": {
+        "dssim_mean": 0.0015822963291329557,
+        "dssim_peak": 0.0024569341678915
+      }
+    },
+    "local_ms": 16972
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "b6b669903661333d7b952baa1e5a2d09facc145814a581520e4f2b114622a315",
+      "archive_path": "mobile/887df5b2fa9d2cb3f8080e5c3f2f76c8.png"
+    },
+    "image_size_bytes": {
+      "original": 3661230,
+      "local": 1179126,
+      "tinypng": 1103980
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0008718947231388957,
+        "dssim_peak": 0.0012408179316480972
+      },
+      "tinypng": {
+        "dssim_mean": 0.0013649461857772978,
+        "dssim_peak": 0.0023594687580039686
+      }
+    },
+    "local_ms": 12903
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "f5d1f752941e15198f2ec465dfa7939c4801a0316238fc5f7ad536baf3f27670",
+      "archive_path": "mobile/7b8504b7861b366de7b559d630c9974b.png"
+    },
+    "image_size_bytes": {
+      "original": 3254494,
+      "local": 1245701,
+      "tinypng": 1260149
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.00043590848656539896,
+        "dssim_peak": 0.0006284640756861748
+      },
+      "tinypng": {
+        "dssim_mean": 0.0006092487304929495,
+        "dssim_peak": 0.0008156369856662238
+      }
+    },
+    "local_ms": 10775
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "1e74ec63ca1e30e531a8601c7130b9e26dad9e5c2351aeeec35321a4f6a8272e",
+      "archive_path": "mobile/aa8ada79ffbdcdb385aedf23bb89bebe.png"
+    },
+    "image_size_bytes": {
+      "original": 2911723,
+      "local": 991156,
+      "tinypng": 1013594
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0006821303205750095,
+        "dssim_peak": 0.001020014458212426
+      },
+      "tinypng": {
+        "dssim_mean": 0.0014050953058801325,
+        "dssim_peak": 0.002949449815021099
+      }
+    },
+    "local_ms": 14368
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "c0090f2c8ec61e142da9cccced92e35452da24452c8aa0c8683110df24ddc2e9",
+      "archive_path": "mobile/66bbfb5c3a7df3f47e4b923399e678cc.png"
+    },
+    "image_size_bytes": {
+      "original": 888082,
+      "local": 259376,
+      "tinypng": 251351
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0011470433738276498,
+        "dssim_peak": 0.0011470433738276498
+      },
+      "tinypng": {
+        "dssim_mean": 0.0018831241178569602,
+        "dssim_peak": 0.0018831241178569602
+      }
+    },
+    "local_ms": 2517
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "a554a8cd573092a18fd83580867a653416237683830619df548006bc6b388dca",
+      "archive_path": "mobile/76d1283076915e256ec0de2d6729f937.png"
+    },
+    "image_size_bytes": {
+      "original": 4213396,
+      "local": 1323366,
+      "tinypng": 1280280
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.001901781908493881,
+        "dssim_peak": 0.002971780969811544
+      },
+      "tinypng": {
+        "dssim_mean": 0.0026234905106470876,
+        "dssim_peak": 0.003727999322721276
+      }
+    },
+    "local_ms": 23110
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "e08037c7559aaad9c6bed9b107c49df773cbedd0ca5941377b67a4699cb8f118",
+      "archive_path": "mobile/1eb25e2f93bf239c5498c407e9075359.png"
+    },
+    "image_size_bytes": {
+      "original": 3789068,
+      "local": 1314218,
+      "tinypng": 1237806
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0008749161751057213,
+        "dssim_peak": 0.0010527372188837703
+      },
+      "tinypng": {
+        "dssim_mean": 0.0013104856844926684,
+        "dssim_peak": 0.001731565705829441
+      }
+    },
+    "local_ms": 16846
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "47f30f25f03f682fd31aafd49827782b5c54bc7f971cbd571412537cbd25a117",
+      "archive_path": "mobile/02c3cf767c6845b3ec9a7b102d3b02fe.png"
+    },
+    "image_size_bytes": {
+      "original": 4057989,
+      "local": 1506518,
+      "tinypng": 1407461
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0008053272409745896,
+        "dssim_peak": 0.0013081768097469304
+      },
+      "tinypng": {
+        "dssim_mean": 0.00107721332796882,
+        "dssim_peak": 0.0016733527168177886
+      }
+    },
+    "local_ms": 16739
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "6bad44a1e6a15803c9303d6478318106a36e774f0b00632d18917ee2016ece2f",
+      "archive_path": "mobile/95e7deacfe5e03bd1c668d2ece54f77b.png"
+    },
+    "image_size_bytes": {
+      "original": 3313019,
+      "local": 1330922,
+      "tinypng": 1269506
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0008267745287710057,
+        "dssim_peak": 0.0016778857862069785
+      },
+      "tinypng": {
+        "dssim_mean": 0.001198210302301659,
+        "dssim_peak": 0.0022796087056982106
+      }
+    },
+    "local_ms": 12370
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "ee61fe016499d53353ac74e59aded086043ede0b6539292642aad38886da70d9",
+      "archive_path": "mobile/0ca770c32916dbcb0094ba7905b14665.png"
+    },
+    "image_size_bytes": {
+      "original": 4488021,
+      "local": 1384314,
+      "tinypng": 1339405
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0012922411719333508,
+        "dssim_peak": 0.0019902297302991645
+      },
+      "tinypng": {
+        "dssim_mean": 0.0018437789681585736,
+        "dssim_peak": 0.0032263072963782946
+      }
+    },
+    "local_ms": 11955
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "fa1a1dcb1cd2bdbb8b97df722620f39c1561aec5427b589a4f44d1f450355a9c",
+      "archive_path": "mobile/b78e795dc6c3024b9cbb4fe9e2889609.png"
+    },
+    "image_size_bytes": {
+      "original": 3999934,
+      "local": 1389276,
+      "tinypng": 1314880
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0008457147647574658,
+        "dssim_peak": 0.0013123575571685198
+      },
+      "tinypng": {
+        "dssim_mean": 0.001306734671504033,
+        "dssim_peak": 0.0032269733535956746
+      }
+    },
+    "local_ms": 10941
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "3463bbb2dec68dcd28ceaf6a5da1a1bdd75872cf433ce6a95ab79bcc02588eef",
+      "archive_path": "mobile/f2fa8ce472bd4021c533d9529c0d55b5.png"
+    },
+    "image_size_bytes": {
+      "original": 2218896,
+      "local": 996242,
+      "tinypng": 1037611
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0005355000053571659,
+        "dssim_peak": 0.0009815613841053228
+      },
+      "tinypng": {
+        "dssim_mean": 0.0006475957184525345,
+        "dssim_peak": 0.0014673257611115265
+      }
+    },
+    "local_ms": 18467
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "e5a0ac69c95e12731c001c8a6c7b95b7c307c5b64d1ce4c63494e54921cbbb24",
+      "archive_path": "mobile/d10a23343084780a7a217d1f507dd2ce.png"
+    },
+    "image_size_bytes": {
+      "original": 3707119,
+      "local": 1058895,
+      "tinypng": 978124
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0019504160843546226,
+        "dssim_peak": 0.0035578671680851492
+      },
+      "tinypng": {
+        "dssim_mean": 0.0031785232781469104,
+        "dssim_peak": 0.00557945862599496
+      }
+    },
+    "local_ms": 13484
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "aa1b78e126d865a7ce23940576b4c15dce485cb8b63fa07d481a62421fe182c3",
+      "archive_path": "mobile/0cb87ff168cf338fee6161e5e1892211.png"
+    },
+    "image_size_bytes": {
+      "original": 4444309,
+      "local": 1386715,
+      "tinypng": 1369748
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0007226818757634668,
+        "dssim_peak": 0.001153462342180056
+      },
+      "tinypng": {
+        "dssim_mean": 0.0009870950909119413,
+        "dssim_peak": 0.0017321715070053312
+      }
+    },
+    "local_ms": 12426
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "0355d7dd1803e4670ad76bd90224f54ecd0122a8717d6a20594648318020bdcf",
+      "archive_path": "mobile/aaec75d88bc62818237cdf29a64eee9d.png"
+    },
+    "image_size_bytes": {
+      "original": 3653456,
+      "local": 1118749,
+      "tinypng": 1056723
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0016735724127417402,
+        "dssim_peak": 0.002620514709654298
+      },
+      "tinypng": {
+        "dssim_mean": 0.0024295426436691083,
+        "dssim_peak": 0.004343766175164188
+      }
+    },
+    "local_ms": 10137
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "846a821c0a295454060df3079471eaa8d19ae970d2b125ecab9a3fe1a3e46776",
+      "archive_path": "mobile/cc79618cb154e0bf7a44ae8a46e35c02.png"
+    },
+    "image_size_bytes": {
+      "original": 4291604,
+      "local": 1315926,
+      "tinypng": 1230916
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.001300435084789329,
+        "dssim_peak": 0.002008320862665114
+      },
+      "tinypng": {
+        "dssim_mean": 0.0017736929747934713,
+        "dssim_peak": 0.003173974987609629
+      }
+    },
+    "local_ms": 17710
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "69e61fd3c16cfe9f16fee2ff11c4b1e129f2eda74a834bea7d28f545c4b32784",
+      "archive_path": "mobile/c0c62f2e001a865543e358a905e3e241.png"
+    },
+    "image_size_bytes": {
+      "original": 2971338,
+      "local": 877229,
+      "tinypng": 865457
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0014569545893590213,
+        "dssim_peak": 0.002475357759983865
+      },
+      "tinypng": {
+        "dssim_mean": 0.0028345081648299595,
+        "dssim_peak": 0.006317029074033753
+      }
+    },
+    "local_ms": 11153
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "e95e3f109d8270faa1465be6e933f6712bd128b0eb6043d9afa95b24d3cef2e8",
+      "archive_path": "mobile/c96c88bb0aaefb472a58193d51d3e50d.png"
+    },
+    "image_size_bytes": {
+      "original": 2948577,
+      "local": 1463973,
+      "tinypng": 1458995
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.00033892864018960267,
+        "dssim_peak": 0.0005942251685477906
+      },
+      "tinypng": {
+        "dssim_mean": 0.0004226604300073643,
+        "dssim_peak": 0.000868495356729948
+      }
+    },
+    "local_ms": 8191
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "6fc06caadb9e344507b484f0e98ebb26296e02a989f33a1243ab0151b5e00b57",
+      "archive_path": "mobile/80bd7a4aa85272ba69f64e6e682ea255.png"
+    },
+    "image_size_bytes": {
+      "original": 4042405,
+      "local": 1382818,
+      "tinypng": 1295872
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0012874932936622634,
+        "dssim_peak": 0.001757918530409075
+      },
+      "tinypng": {
+        "dssim_mean": 0.002222178889521257,
+        "dssim_peak": 0.0034744052453377083
+      }
+    },
+    "local_ms": 14048
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "609ae11e7dd175ee97c1fecedbd61a408223bb8bf66b0583a3acb5e9da6cdf1f",
+      "archive_path": "mobile/58c136e73333a653f526e186ae264606.png"
+    },
+    "image_size_bytes": {
+      "original": 3532674,
+      "local": 1207291,
+      "tinypng": 1119411
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0015386338034648016,
+        "dssim_peak": 0.0020749455304007736
+      },
+      "tinypng": {
+        "dssim_mean": 0.002212822621686101,
+        "dssim_peak": 0.0037010492875246825
+      }
+    },
+    "local_ms": 21928
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "0bc4ae2745cb2c486e2a123d27e374967f0c3ec901a52d2b7ccc161cad77bb4e",
+      "archive_path": "mobile/b3f25cd2833a0d0b196600245ba71f57.png"
+    },
+    "image_size_bytes": {
+      "original": 4794623,
+      "local": 1533456,
+      "tinypng": 1511768
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0005478566675797777,
+        "dssim_peak": 0.0009102574073938108
+      },
+      "tinypng": {
+        "dssim_mean": 0.0007860581594547199,
+        "dssim_peak": 0.0015349775253374887
+      }
+    },
+    "local_ms": 16195
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "6d04ea6090676e72869c9eb135e15ec234f193452bb52a2102799eef871add84",
+      "archive_path": "mobile/6e8e3df4edba76eb404df781a3da8cbb.png"
+    },
+    "image_size_bytes": {
+      "original": 4557043,
+      "local": 1357884,
+      "tinypng": 1270636
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.002075224299392258,
+        "dssim_peak": 0.0026819523472030316
+      },
+      "tinypng": {
+        "dssim_mean": 0.0034822483819422325,
+        "dssim_peak": 0.004755606428653136
+      }
+    },
+    "local_ms": 15777
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "eeaad3858e71d467c48330addd232b5ae236cdcaf07f8e1e57ab0e9e61864fa8",
+      "archive_path": "mobile/3fe26cdf751f3543807aa68dbe8a4f76.png"
+    },
+    "image_size_bytes": {
+      "original": 3551217,
+      "local": 1050532,
+      "tinypng": 1017558
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0012206267532622822,
+        "dssim_peak": 0.0024807240216240256
+      },
+      "tinypng": {
+        "dssim_mean": 0.0016282527985300149,
+        "dssim_peak": 0.0038811345515417095
+      }
+    },
+    "local_ms": 9866
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "abf7d9d1d5032a6b1b1f28717212269e6514609b8be5446faef4b05c72b53195",
+      "archive_path": "mobile/0f6066f84db90d35c2426fe28f92ad25.png"
+    },
+    "image_size_bytes": {
+      "original": 3149146,
+      "local": 1258994,
+      "tinypng": 1167306
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.000892545675827863,
+        "dssim_peak": 0.0014247727335163773
+      },
+      "tinypng": {
+        "dssim_mean": 0.0012280414501818638,
+        "dssim_peak": 0.0030277160029303918
+      }
+    },
+    "local_ms": 13269
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "5b6d251c8baaac6b2dadac33e0d5c1ced4ff8f670212c8eb34a6837523ca4caa",
+      "archive_path": "mobile/2ac50c40ad555be5f592f9c391dc3aa6.png"
+    },
+    "image_size_bytes": {
+      "original": 3834365,
+      "local": 1838278,
+      "tinypng": 1776674
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0002180910180442965,
+        "dssim_peak": 0.000555289910350476
+      },
+      "tinypng": {
+        "dssim_mean": 0.00031380346073444965,
+        "dssim_peak": 0.0008127019937305135
+      }
+    },
+    "local_ms": 8900
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "73720b5f348f31ea0f6429d04df22e575937aaef64576c84928144ed30c51b56",
+      "archive_path": "mobile/a089920d7fc2e69157a33bc9e11afa6a.png"
+    },
+    "image_size_bytes": {
+      "original": 3320110,
+      "local": 1113419,
+      "tinypng": 1014209
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0010850684247023347,
+        "dssim_peak": 0.0017358168748173863
+      },
+      "tinypng": {
+        "dssim_mean": 0.001665894173861282,
+        "dssim_peak": 0.0033311740962638225
+      }
+    },
+    "local_ms": 11838
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "cdca807b487a47855424d3c1de5e0cb5dfae4e8724bc91a52664eb7331639f57",
+      "archive_path": "mobile/d06035776d93bf5b101d3c377576ce1f.png"
+    },
+    "image_size_bytes": {
+      "original": 4157842,
+      "local": 1399027,
+      "tinypng": 1284145
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0010598905052647664,
+        "dssim_peak": 0.0015716203953795027
+      },
+      "tinypng": {
+        "dssim_mean": 0.0020245079739631294,
+        "dssim_peak": 0.0037980489595546008
+      }
+    },
+    "local_ms": 16899
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "8b616b142e454a5880d2bdde633f4cab91741ab9f7b3cf2de6c729bb7541c487",
+      "archive_path": "mobile/b29c46fa542667cf154003cc4a49fe81.png"
+    },
+    "image_size_bytes": {
+      "original": 3842584,
+      "local": 1371841,
+      "tinypng": 1391852
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0006922541168932718,
+        "dssim_peak": 0.0010478404877412029
+      },
+      "tinypng": {
+        "dssim_mean": 0.0009889509157751887,
+        "dssim_peak": 0.0015180897984263808
+      }
+    },
+    "local_ms": 13074
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "1f4787e284aee5400b68a7708f9d112e69cfd682c553a18d4e1916ab0b01800d",
+      "archive_path": "mobile/2f997f58b6f4a3301941f5bb543c3b7f.png"
+    },
+    "image_size_bytes": {
+      "original": 3946604,
+      "local": 1038589,
+      "tinypng": 989057
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0022325284154212518,
+        "dssim_peak": 0.00283626409405513
+      },
+      "tinypng": {
+        "dssim_mean": 0.003112588828597429,
+        "dssim_peak": 0.004059350311973686
+      }
+    },
+    "local_ms": 12090
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "0d4a14adc6f6cc8c0c6cc553fcd08702ef0f039788b78fc1ddd2d4c1cdddc90c",
+      "archive_path": "mobile/e58eeecc69309177f30808d671d08a55.png"
+    },
+    "image_size_bytes": {
+      "original": 4248927,
+      "local": 1511700,
+      "tinypng": 1416141
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0010199376051452222,
+        "dssim_peak": 0.0013591797957710483
+      },
+      "tinypng": {
+        "dssim_mean": 0.0020572352587815996,
+        "dssim_peak": 0.004003022509583731
+      }
+    },
+    "local_ms": 13786
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "e23d0ef3641a96f5976f5e587c03f94a398bc959dbaab9b01a14a03f7dbd3f6f",
+      "archive_path": "mobile/d5872a43ee17348396975c5997d2e06e.png"
+    },
+    "image_size_bytes": {
+      "original": 3060180,
+      "local": 1394464,
+      "tinypng": 1389820
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.00046992675353569723,
+        "dssim_peak": 0.0006402726950944793
+      },
+      "tinypng": {
+        "dssim_mean": 0.0005655693587514599,
+        "dssim_peak": 0.0008446274129163545
+      }
+    },
+    "local_ms": 13054
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "d4a0adcd4c74cc77953190497459245c7ac5cbd9dfa91d772d280cea57881503",
+      "archive_path": "mobile/671c5054b0d360ecde05cf691d00749a.png"
+    },
+    "image_size_bytes": {
+      "original": 3184739,
+      "local": 1371903,
+      "tinypng": 1310761
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0007833877506180186,
+        "dssim_peak": 0.001118342913021264
+      },
+      "tinypng": {
+        "dssim_mean": 0.0009536403944997544,
+        "dssim_peak": 0.0013302233344991699
+      }
+    },
+    "local_ms": 24590
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "059eb0c614ae11347c5f3be312885a03e4e43abb15617763b8e3c5cb0033b873",
+      "archive_path": "mobile/c9f6a2308316c232484bf2e3a1b92f44.png"
+    },
+    "image_size_bytes": {
+      "original": 2475127,
+      "local": 797521,
+      "tinypng": 803510
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0010744942982432552,
+        "dssim_peak": 0.001718294604745596
+      },
+      "tinypng": {
+        "dssim_mean": 0.0015225157165854072,
+        "dssim_peak": 0.0025419563200417272
+      }
+    },
+    "local_ms": 14134
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "3e98e308b9419d1a759cd0644b719123ca44efb178fb84a1ede8709a4940c71a",
+      "archive_path": "mobile/861563ce5244c9db995ad355a9d04726.png"
+    },
+    "image_size_bytes": {
+      "original": 2460876,
+      "local": 779944,
+      "tinypng": 741023
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0012592454680246824,
+        "dssim_peak": 0.0016694568999671144
+      },
+      "tinypng": {
+        "dssim_mean": 0.0015733682211028347,
+        "dssim_peak": 0.0025739536122484363
+      }
+    },
+    "local_ms": 7683
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "adbdabd0d732c36bd45f742c5b359d3f9d01abcba25b613f530ea2f150e41e7d",
+      "archive_path": "mobile/a221bc8a7db67f74a3379de0794ddcab.png"
+    },
+    "image_size_bytes": {
+      "original": 4439937,
+      "local": 1744038,
+      "tinypng": 1716495
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0008234672260063638,
+        "dssim_peak": 0.001310777298145327
+      },
+      "tinypng": {
+        "dssim_mean": 0.001106245625021546,
+        "dssim_peak": 0.0017013935065848251
+      }
+    },
+    "local_ms": 20052
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "61312b97dd0f257fd6cb9dfabe7f896fe8602ce329653098edb202b308e06294",
+      "archive_path": "mobile/74d62d5759beeed2eb14666d7ee1116c.png"
+    },
+    "image_size_bytes": {
+      "original": 4165482,
+      "local": 1232697,
+      "tinypng": 1135606
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.001744692862280897,
+        "dssim_peak": 0.0028174355663177497
+      },
+      "tinypng": {
+        "dssim_mean": 0.002605170384503466,
+        "dssim_peak": 0.004803944708279273
+      }
+    },
+    "local_ms": 14114
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "9a2347961b0b1031bb6fe43b6956c17b1083dd395fc6305622bd4f7919e6e2f3",
+      "archive_path": "mobile/22021159ddb73a620845904ce7c16fd6.png"
+    },
+    "image_size_bytes": {
+      "original": 4132436,
+      "local": 1247206,
+      "tinypng": 1189354
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0008381184070093755,
+        "dssim_peak": 0.0014529316593006047
+      },
+      "tinypng": {
+        "dssim_mean": 0.0012264231915375498,
+        "dssim_peak": 0.001927509813801409
+      }
+    },
+    "local_ms": 11705
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "f66fbafa166692d0053be7bce100b44aefe96f800281f094d90a3a730ba112e8",
+      "archive_path": "mobile/f851c62b712ee4bb3d6f1f997a3d14b6.png"
+    },
+    "image_size_bytes": {
+      "original": 4346331,
+      "local": 1275725,
+      "tinypng": 1246405
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0011097680903974496,
+        "dssim_peak": 0.0016271489203358858
+      },
+      "tinypng": {
+        "dssim_mean": 0.001530113088762516,
+        "dssim_peak": 0.0030861462761400116
+      }
+    },
+    "local_ms": 14790
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "39c4bc18a52d3081e3726cf6c1af63405034d9664843c122bbe4e467f9c0cd3c",
+      "archive_path": "mobile/e36c66fbc72267ec6ad4216d347c99a2.png"
+    },
+    "image_size_bytes": {
+      "original": 4445786,
+      "local": 1570504,
+      "tinypng": 1458479
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0012091792133718104,
+        "dssim_peak": 0.0019313712817394801
+      },
+      "tinypng": {
+        "dssim_mean": 0.0016464278231955788,
+        "dssim_peak": 0.002435579610086336
+      }
+    },
+    "local_ms": 14222
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "ba1bbe9ff316538f7248f074cfcf5db71b87a1396eb94a029f4a7fae790d510b",
+      "archive_path": "mobile/b8e9aa00e39cec57a606fb4484969256.png"
+    },
+    "image_size_bytes": {
+      "original": 4148161,
+      "local": 1405361,
+      "tinypng": 1303038
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0011526474271723506,
+        "dssim_peak": 0.0017131660783082925
+      },
+      "tinypng": {
+        "dssim_mean": 0.0016690277893698945,
+        "dssim_peak": 0.002543726126998047
+      }
+    },
+    "local_ms": 15042
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "140564fca97dc94db5b31aa14ab43626d5ff1a7739a560a8b1c5734006c88985",
+      "archive_path": "mobile/90b622e11ecc37edd42297427403ee81.png"
+    },
+    "image_size_bytes": {
+      "original": 4335325,
+      "local": 1499104,
+      "tinypng": 1449596
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0007245224058448919,
+        "dssim_peak": 0.0010779060337859914
+      },
+      "tinypng": {
+        "dssim_mean": 0.001135548455734538,
+        "dssim_peak": 0.001925358184756698
+      }
+    },
+    "local_ms": 13936
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "7919eb11ee1135522df143703bedc9bce39f9164a1454f50cc20cf964c5e5807",
+      "archive_path": "mobile/d8ed4d9bcb553ba87c94b403133129d1.png"
+    },
+    "image_size_bytes": {
+      "original": 3314750,
+      "local": 1005223,
+      "tinypng": 915608
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0013736878187474663,
+        "dssim_peak": 0.001995003194535272
+      },
+      "tinypng": {
+        "dssim_mean": 0.002139543962085005,
+        "dssim_peak": 0.0037730613777293698
+      }
+    },
+    "local_ms": 19897
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "89554f1c639ef1f39c528b86ad49c67e34fb9c9d10901b5692e4f09c76be32bf",
+      "archive_path": "mobile/93c642169ef5e111dde1b823fdc566a2.png"
+    },
+    "image_size_bytes": {
+      "original": 4501499,
+      "local": 1569389,
+      "tinypng": 1546913
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0006188702381247609,
+        "dssim_peak": 0.0010025709269860794
+      },
+      "tinypng": {
+        "dssim_mean": 0.0009504415677438261,
+        "dssim_peak": 0.0017818954815942423
+      }
+    },
+    "local_ms": 16160
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "e0d220354a02b846b7ec1e560566ac770b102b5835e0665d4c39b0fa2aad69eb",
+      "archive_path": "mobile/30f3a2fd512394b0565c2cc510831132.png"
+    },
+    "image_size_bytes": {
+      "original": 4948750,
+      "local": 1568255,
+      "tinypng": 1494512
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0013608754018918597,
+        "dssim_peak": 0.002337235145082106
+      },
+      "tinypng": {
+        "dssim_mean": 0.002298608426820873,
+        "dssim_peak": 0.00412667914649556
+      }
+    },
+    "local_ms": 12344
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "77aab681a80bd4ad3405913c4d799ceec89bed35498342b10f77d7f59231f208",
+      "archive_path": "mobile/b2ebe67ae558bec4435108d0b1afc6f5.png"
+    },
+    "image_size_bytes": {
+      "original": 3887007,
+      "local": 1344740,
+      "tinypng": 1294150
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.00040561942996504086,
+        "dssim_peak": 0.0005897652920823226
+      },
+      "tinypng": {
+        "dssim_mean": 0.0005856431443459808,
+        "dssim_peak": 0.0008865144207319542
+      }
+    },
+    "local_ms": 15987
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "555e6c3a6acf59779205cd6ae3f5c8777ba749e2794cb1173549f0910c94c64d",
+      "archive_path": "mobile/d78b363974ac79908b79012f48de715d.png"
+    },
+    "image_size_bytes": {
+      "original": 3347659,
+      "local": 1235272,
+      "tinypng": 1272224
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0006234377257515715,
+        "dssim_peak": 0.0013111668826519818
+      },
+      "tinypng": {
+        "dssim_mean": 0.000801364625052028,
+        "dssim_peak": 0.0021409406338885884
+      }
+    },
+    "local_ms": 13719
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "d482f2e095c8641f941e8f8aa0b0e7f72d2409183d0de0a3503bf450c3943500",
+      "archive_path": "mobile/00b64869422e0011ff5bb492e56042cc.png"
+    },
+    "image_size_bytes": {
+      "original": 4587117,
+      "local": 1707709,
+      "tinypng": 1734687
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0007520154112555217,
+        "dssim_peak": 0.0011598284606770815
+      },
+      "tinypng": {
+        "dssim_mean": 0.002057250564307082,
+        "dssim_peak": 0.0029263572074600397
+      }
+    },
+    "local_ms": 14794
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "6f280d3fda7fc107954c9f36f8ab048ee82a5d1fc4dee26fbc781e8d7354fe1c",
+      "archive_path": "mobile/2a4a019c669ffec1ff91b094c627adaf.png"
+    },
+    "image_size_bytes": {
+      "original": 4422471,
+      "local": 1486861,
+      "tinypng": 1369790
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0011083432562762204,
+        "dssim_peak": 0.0017803206322841714
+      },
+      "tinypng": {
+        "dssim_mean": 0.0024777337012300434,
+        "dssim_peak": 0.004212644827862988
+      }
+    },
+    "local_ms": 22895
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "fedc77e65cdf3bafd58b5b8e4e8d78d8745d68910d132f7f883568c3d63c959a",
+      "archive_path": "mobile/6b1a11db98c6eb1dbd2192201dade5e4.png"
+    },
+    "image_size_bytes": {
+      "original": 2474081,
+      "local": 706213,
+      "tinypng": 665105
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.001731271283049293,
+        "dssim_peak": 0.0022575264219653057
+      },
+      "tinypng": {
+        "dssim_mean": 0.0024323956130100142,
+        "dssim_peak": 0.0033107048042844145
+      }
+    },
+    "local_ms": 11973
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "f9800cb27a88cda7d9e614f70e848064174bda7f5a69be26051f8bdcc5133753",
+      "archive_path": "mobile/23b84f3ab4862f3b6812a740fe0f7a9f.png"
+    },
+    "image_size_bytes": {
+      "original": 3037408,
+      "local": 1179902,
+      "tinypng": 1165596
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0008791715513058295,
+        "dssim_peak": 0.0012666172927229269
+      },
+      "tinypng": {
+        "dssim_mean": 0.0011861334160824602,
+        "dssim_peak": 0.0016370097833979802
+      }
+    },
+    "local_ms": 14692
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "46351e86d2c08de997aa338635b71776ab00f9f7ea66deacf912278c3634faa5",
+      "archive_path": "mobile/00ce72ef820369df798001e9a28bf34f.png"
+    },
+    "image_size_bytes": {
+      "original": 3342380,
+      "local": 1105653,
+      "tinypng": 1068925
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0008852502821526858,
+        "dssim_peak": 0.0014030031664222786
+      },
+      "tinypng": {
+        "dssim_mean": 0.0011749710364499118,
+        "dssim_peak": 0.00204510491552945
+      }
+    },
+    "local_ms": 21241
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "016ce17539980d7a89890553b4c62541e852abd9f1e5ad9180b27d150bb5410e",
+      "archive_path": "mobile/ccb73561248a2d0f4b92d5061926ab58.png"
+    },
+    "image_size_bytes": {
+      "original": 4414192,
+      "local": 1353203,
+      "tinypng": 1302011
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.000815128073413071,
+        "dssim_peak": 0.0010629505055048671
+      },
+      "tinypng": {
+        "dssim_mean": 0.0010856129012637122,
+        "dssim_peak": 0.0014138761060271676
+      }
+    },
+    "local_ms": 18058
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "60b9d7f272ab2ffd77a320d4254ab5b24415d92d9dae2889cd1bc5f6d161c56b",
+      "archive_path": "mobile/1ac06ad4b53f9880698aaaaa730363c6.png"
+    },
+    "image_size_bytes": {
+      "original": 4054927,
+      "local": 1395981,
+      "tinypng": 1355464
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0007699437602943053,
+        "dssim_peak": 0.001133416887479921
+      },
+      "tinypng": {
+        "dssim_mean": 0.0011694559027937215,
+        "dssim_peak": 0.002103613243363167
+      }
+    },
+    "local_ms": 17737
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "88bc74fbba12ec9cd7d5a865910c0595820c635c621e99e40233777f6039805f",
+      "archive_path": "mobile/9c7b270667f567c85d090047271061a6.png"
+    },
+    "image_size_bytes": {
+      "original": 4222666,
+      "local": 1589824,
+      "tinypng": 1496248
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0010490492313796446,
+        "dssim_peak": 0.001513671980153397
+      },
+      "tinypng": {
+        "dssim_mean": 0.0014642961380130393,
+        "dssim_peak": 0.002053723180709399
+      }
+    },
+    "local_ms": 13477
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "3f7e093173fab6c0c1589ceb8e207e976f6b1bd965103e0da143cc9db55d51f6",
+      "archive_path": "mobile/2145f7acfa352c3dfaf5e53e19675922.png"
+    },
+    "image_size_bytes": {
+      "original": 4848699,
+      "local": 1696374,
+      "tinypng": 1654130
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.000546839891652791,
+        "dssim_peak": 0.0008727678544668827
+      },
+      "tinypng": {
+        "dssim_mean": 0.0008138182192185534,
+        "dssim_peak": 0.0012739855189352056
+      }
+    },
+    "local_ms": 15207
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "2968ac912da4d6c944b8c558b405ae7a6defd0290cc82e8b988f723b2f338396",
+      "archive_path": "mobile/5a5dc6fbbb29b668948f04fde7e50985.png"
+    },
+    "image_size_bytes": {
+      "original": 3836888,
+      "local": 1363665,
+      "tinypng": 1337888
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0004172979947380432,
+        "dssim_peak": 0.0006383612335454369
+      },
+      "tinypng": {
+        "dssim_mean": 0.0006449991595660748,
+        "dssim_peak": 0.0011708999652473295
+      }
+    },
+    "local_ms": 16208
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Mobile_test.zip",
+      "sha256": "8a56c638ce2029e0feadf9766e110bd02c07dac8f2609556b672b0074933ec55",
+      "archive_path": "mobile/1c1e89258c38f044d27681546a343b74.png"
+    },
+    "image_size_bytes": {
+      "original": 4842553,
+      "local": 1801896,
+      "tinypng": 1754534
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0006387648393230335,
+        "dssim_peak": 0.0011788268608281527
+      },
+      "tinypng": {
+        "dssim_mean": 0.0009427223295259959,
+        "dssim_peak": 0.0018771821412164602
+      }
+    },
+    "local_ms": 10464
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "35a5f964e689ea63dc99f008b354a0228462f3bd6e9f904c03489dadfb24d1be",
+      "archive_path": "professional/e59de00aa94a46c8af3302273c64971c.png"
+    },
+    "image_size_bytes": {
+      "original": 2513065,
+      "local": 974024,
+      "tinypng": 1007595
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.00019058194399118687,
+        "dssim_peak": 0.0002797884227658809
+      },
+      "tinypng": {
+        "dssim_mean": 0.0002526830918936314,
+        "dssim_peak": 0.0004113754660937108
+      }
+    },
+    "local_ms": 17592
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "ba3f23b134b20fc8ca5d2f96feb61993465cbd236ed0034721fce43bb3f25f78",
+      "archive_path": "professional/0c0ba31b279da4b8a0b848b63d302e8b.png"
+    },
+    "image_size_bytes": {
+      "original": 3977991,
+      "local": 1139643,
+      "tinypng": 1113775
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0015702593646201963,
+        "dssim_peak": 0.0024448963638350474
+      },
+      "tinypng": {
+        "dssim_mean": 0.0024394866594595194,
+        "dssim_peak": 0.0037967075162219643
+      }
+    },
+    "local_ms": 19400
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "22ec3d644ba684af2ae4829abca70c07f1410b639b5de631154a4ba2ce599d34",
+      "archive_path": "professional/1487aded81fd845e26acc5b869c7fa4a.png"
+    },
+    "image_size_bytes": {
+      "original": 4260324,
+      "local": 1504500,
+      "tinypng": 1494392
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0005350176474866296,
+        "dssim_peak": 0.0008606683491714229
+      },
+      "tinypng": {
+        "dssim_mean": 0.0008845052340551658,
+        "dssim_peak": 0.0016128199478229188
+      }
+    },
+    "local_ms": 11206
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "bd9b6f43f18363793e890428209dce5489cd67e0f4fbde2139729f6ffc6017e5",
+      "archive_path": "professional/08083126ffe2eaffe89aa1840b508db7.png"
+    },
+    "image_size_bytes": {
+      "original": 3147886,
+      "local": 1342497,
+      "tinypng": 1299332
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0003423318138403142,
+        "dssim_peak": 0.0007843254703661096
+      },
+      "tinypng": {
+        "dssim_mean": 0.00043481813109796404,
+        "dssim_peak": 0.001133364115728508
+      }
+    },
+    "local_ms": 10913
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "2d595c0d7228cd57a20784b3b8c32e52b3217c697f9b5d51c38919b0ba146df4",
+      "archive_path": "professional/4d3463878a1be973d246e9a244f68b7d.png"
+    },
+    "image_size_bytes": {
+      "original": 3317390,
+      "local": 1087574,
+      "tinypng": 1070154
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0006639022595257026,
+        "dssim_peak": 0.0010668013541552668
+      },
+      "tinypng": {
+        "dssim_mean": 0.000796151875833578,
+        "dssim_peak": 0.0013048189878019922
+      }
+    },
+    "local_ms": 11846
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "0db02a1431e13966efc9cae6067ce5d9198bfa4cc382f9af219a447636bb19a5",
+      "archive_path": "professional/d542411baac09dfc9e75b9c1b0532d94.png"
+    },
+    "image_size_bytes": {
+      "original": 3877158,
+      "local": 1638125,
+      "tinypng": 1666240
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0003720904795664938,
+        "dssim_peak": 0.0006822842768317017
+      },
+      "tinypng": {
+        "dssim_mean": 0.0004927784690150553,
+        "dssim_peak": 0.0010940485052466364
+      }
+    },
+    "local_ms": 13166
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "acb801aa156beb1279de85cd8f26b043ec1e5a99f4e0f79670d959f666dd6024",
+      "archive_path": "professional/e74885c08f264b026dead7d94cf6594d.png"
+    },
+    "image_size_bytes": {
+      "original": 3267635,
+      "local": 1414633,
+      "tinypng": 1350800
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.00044922643621086094,
+        "dssim_peak": 0.0009496535440194354
+      },
+      "tinypng": {
+        "dssim_mean": 0.0006730445764972105,
+        "dssim_peak": 0.0013444388876666657
+      }
+    },
+    "local_ms": 12753
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "c2525bd24bd8bd28487f7fa5fe9d2a8120286709bc8e98ec10fc6d6e58132d79",
+      "archive_path": "professional/edcf6fb2323b704cdffd7fd8eab3e6e7.png"
+    },
+    "image_size_bytes": {
+      "original": 2221799,
+      "local": 668309,
+      "tinypng": 646916
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.001202227535592238,
+        "dssim_peak": 0.00187536628777063
+      },
+      "tinypng": {
+        "dssim_mean": 0.0017019013171655228,
+        "dssim_peak": 0.002797403961738887
+      }
+    },
+    "local_ms": 11488
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "0d1576318fe7edb26cdc77abe8f7b7a995c52212afd8b53d63b76ac7e6c5b84b",
+      "archive_path": "professional/5ff9e78bb19a8097bcb0baaf6d3f33b5.png"
+    },
+    "image_size_bytes": {
+      "original": 2984852,
+      "local": 911962,
+      "tinypng": 874487
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0014797718076109754,
+        "dssim_peak": 0.00585609148339028
+      },
+      "tinypng": {
+        "dssim_mean": 0.002461538547338419,
+        "dssim_peak": 0.009367734427574215
+      }
+    },
+    "local_ms": 11498
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "accfce3ce606f4bba751c7c758d38eac50d47cc73e5e7087f5545b5bdb2f6f7c",
+      "archive_path": "professional/df90d2ed9e78b5c9752ea4418fa09e86.png"
+    },
+    "image_size_bytes": {
+      "original": 3197495,
+      "local": 960629,
+      "tinypng": 985215
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0006913103615975311,
+        "dssim_peak": 0.0015549774629417534
+      },
+      "tinypng": {
+        "dssim_mean": 0.0007844376451377552,
+        "dssim_peak": 0.0018277248931273249
+      }
+    },
+    "local_ms": 25482
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "7035a4f9b995aee0a06f0e9d996d66790e74c42d9e1460bd6b26276601ff507f",
+      "archive_path": "professional/e94cae36e4e7ddfd40f611fe0b6a1c16.png"
+    },
+    "image_size_bytes": {
+      "original": 2885727,
+      "local": 828165,
+      "tinypng": 827737
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0010792381083594494,
+        "dssim_peak": 0.001548024690780636
+      },
+      "tinypng": {
+        "dssim_mean": 0.0015710431940409103,
+        "dssim_peak": 0.0020591253615054317
+      }
+    },
+    "local_ms": 10944
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "14d0ebbaf6b9fa95a291bafd27efc91bf5873f22fe2d2edd9f0aa1931a29bfbe",
+      "archive_path": "professional/3abbb07f7c75b68ab4b60c0fea6d3c23.png"
+    },
+    "image_size_bytes": {
+      "original": 1839483,
+      "local": 799945,
+      "tinypng": 784864
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0004650471242158004,
+        "dssim_peak": 0.001253375928302214
+      },
+      "tinypng": {
+        "dssim_mean": 0.0005405735563230622,
+        "dssim_peak": 0.0017099551688442016
+      }
+    },
+    "local_ms": 13444
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "e1abc203ea59b2d9f042c11c8d291ec234d5ce1323e4e54d57cce7f04f9869fd",
+      "archive_path": "professional/aadfa4b23c5060bad9c2894facc2714b.png"
+    },
+    "image_size_bytes": {
+      "original": 1984876,
+      "local": 834480,
+      "tinypng": 855997
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.000299226562212277,
+        "dssim_peak": 0.0006704794853744644
+      },
+      "tinypng": {
+        "dssim_mean": 0.0003805859364132511,
+        "dssim_peak": 0.0008058615567079208
+      }
+    },
+    "local_ms": 9341
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "396ed36289fadf6ac35cfb7e8679ccd62ab2d8dc2181257649a8ab9561925b56",
+      "archive_path": "professional/fc675141e27165a3cda501eedc542bca.png"
+    },
+    "image_size_bytes": {
+      "original": 4200642,
+      "local": 1492301,
+      "tinypng": 1560855
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.00029162616726984773,
+        "dssim_peak": 0.0006502681441358238
+      },
+      "tinypng": {
+        "dssim_mean": 0.0003975508138702856,
+        "dssim_peak": 0.0010688159170444411
+      }
+    },
+    "local_ms": 11869
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "df074b1f83b39b55666dc333acd9f71418e66f5b787e8b28b0eebb17dbfcc317",
+      "archive_path": "professional/01443654fdc57490d5c2d8b0fd9e065b.png"
+    },
+    "image_size_bytes": {
+      "original": 3296646,
+      "local": 1001385,
+      "tinypng": 1024378
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0005735192846584181,
+        "dssim_peak": 0.000695777701436473
+      },
+      "tinypng": {
+        "dssim_mean": 0.000774416518608018,
+        "dssim_peak": 0.0010111054708783485
+      }
+    },
+    "local_ms": 17892
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "4c12eb066a7972b2c52139e78d38e01df5f2c2b0f33e9758acbca992cde022e1",
+      "archive_path": "professional/e50de866319ab42aaa8892105794cf0f.png"
+    },
+    "image_size_bytes": {
+      "original": 3229446,
+      "local": 1365065,
+      "tinypng": 1348485
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0005624809508797587,
+        "dssim_peak": 0.0010878680816568398
+      },
+      "tinypng": {
+        "dssim_mean": 0.0006569486431010629,
+        "dssim_peak": 0.0014399579102504223
+      }
+    },
+    "local_ms": 14043
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "5d257bd1cc8cbfb14e51eb311b637cd5e84b6a412832ea17629298a0b7045c58",
+      "archive_path": "professional/7f2fd43e3381825bd0f9e5fc3c373ba2.png"
+    },
+    "image_size_bytes": {
+      "original": 3508394,
+      "local": 1474911,
+      "tinypng": 1467582
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0002612711597686949,
+        "dssim_peak": 0.00045747529487250027
+      },
+      "tinypng": {
+        "dssim_mean": 0.0003395735294207127,
+        "dssim_peak": 0.0005799501627998804
+      }
+    },
+    "local_ms": 14125
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "8d6f3181d1b01c6f0b007bb2e704ed5dc122352df2fd9361df306f8167e8bbcc",
+      "archive_path": "professional/116988640757321d4861a1d9ee2fa3ea.png"
+    },
+    "image_size_bytes": {
+      "original": 904621,
+      "local": 449547,
+      "tinypng": 459116
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.00029177390781878054,
+        "dssim_peak": 0.0005045170611832628
+      },
+      "tinypng": {
+        "dssim_mean": 0.0003478323590302412,
+        "dssim_peak": 0.0006269584106204373
+      }
+    },
+    "local_ms": 7944
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "e01a919381ad60fc1e254539481d1d52cd3d9e5bd40de6e40c0c3aed32672875",
+      "archive_path": "professional/2605533dbf4342badbd4c24c403a9dd7.png"
+    },
+    "image_size_bytes": {
+      "original": 1622423,
+      "local": 740214,
+      "tinypng": 524807
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.00016728930114085302,
+        "dssim_peak": 0.00028110395338942773
+      },
+      "tinypng": {
+        "dssim_mean": 0.0006075160154389609,
+        "dssim_peak": 0.0010424955939170033
+      }
+    },
+    "local_ms": 9570
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "968740e0ddbfd423919a0f0d71c27a9b77d51d718c97a2dedf0babd3bc581598",
+      "archive_path": "professional/cc831c904a314a0e98530124526e930b.png"
+    },
+    "image_size_bytes": {
+      "original": 4206825,
+      "local": 1426171,
+      "tinypng": 1441834
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.000420042387293199,
+        "dssim_peak": 0.0007288001719008008
+      },
+      "tinypng": {
+        "dssim_mean": 0.00055958956059763,
+        "dssim_peak": 0.001073344143518673
+      }
+    },
+    "local_ms": 13475
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "4621ccb036ef47352a534081665c7a5440822aca46da85513a58d75d2b0085ad",
+      "archive_path": "professional/e92090da48b0a9466eb3b259d16b27d4.png"
+    },
+    "image_size_bytes": {
+      "original": 3055059,
+      "local": 952623,
+      "tinypng": 957204
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0010251283586488347,
+        "dssim_peak": 0.003248204945584865
+      },
+      "tinypng": {
+        "dssim_mean": 0.001350721855083976,
+        "dssim_peak": 0.004437925187470437
+      }
+    },
+    "local_ms": 12452
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "7c95ff290154c4191bb8f19ebdab58244c8ff832c1a0a0717f8ceaaa7430fb6e",
+      "archive_path": "professional/56ad924f096764d2f564c2cfdfacbdf2.png"
+    },
+    "image_size_bytes": {
+      "original": 4390787,
+      "local": 1231386,
+      "tinypng": 1200827
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0010662340536804877,
+        "dssim_peak": 0.0014495229410369515
+      },
+      "tinypng": {
+        "dssim_mean": 0.0014516013206928697,
+        "dssim_peak": 0.001863273629767015
+      }
+    },
+    "local_ms": 21061
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "da5781a4f7698138aafe65fd61f4872b72173d3ce969b2166621465ef65a9f58",
+      "archive_path": "professional/adf2eb452772a4fb90820ab239fd0862.png"
+    },
+    "image_size_bytes": {
+      "original": 1996823,
+      "local": 921349,
+      "tinypng": 954227
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0002695307757882198,
+        "dssim_peak": 0.0003582956095842249
+      },
+      "tinypng": {
+        "dssim_mean": 0.0003314889542674734,
+        "dssim_peak": 0.0004905451528283145
+      }
+    },
+    "local_ms": 16148
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "b89ba8fb9381d35aa4eb3fd284b4316defd6a3994b98dbec833d4bcf7eb311ae",
+      "archive_path": "professional/18089fbcc1e1cec439176833d87eda1d.png"
+    },
+    "image_size_bytes": {
+      "original": 3770702,
+      "local": 1092857,
+      "tinypng": 1078514
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0005016979281816802,
+        "dssim_peak": 0.0007117908901272951
+      },
+      "tinypng": {
+        "dssim_mean": 0.0008447760878537459,
+        "dssim_peak": 0.0014724824344298781
+      }
+    },
+    "local_ms": 12326
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "64e7c2b364cc8e63fc965f822abf25c350b6e043d923e25003ca032e06930fbe",
+      "archive_path": "professional/74a98d64088b70aa43dbe906b5a4a2eb.png"
+    },
+    "image_size_bytes": {
+      "original": 2766590,
+      "local": 768753,
+      "tinypng": 743316
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0021196801441029523,
+        "dssim_peak": 0.0031989974973929414
+      },
+      "tinypng": {
+        "dssim_mean": 0.0030793523160089395,
+        "dssim_peak": 0.004352745071379838
+      }
+    },
+    "local_ms": 12884
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "9672582575746596491570b2d1f4821882d06ab2e26c3d7bed8465ca0e7f92af",
+      "archive_path": "professional/c7737e81ede69577d2e97baf5546fa4c.png"
+    },
+    "image_size_bytes": {
+      "original": 4155034,
+      "local": 1187357,
+      "tinypng": 1159853
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.001669746838031569,
+        "dssim_peak": 0.002721650236505946
+      },
+      "tinypng": {
+        "dssim_mean": 0.0026269334022068426,
+        "dssim_peak": 0.005019498903756636
+      }
+    },
+    "local_ms": 15229
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "a7272e90c36678d3689f5e2df565cb2d67e4fbba8a3265322357c69bda9a0704",
+      "archive_path": "professional/3fd25b58ad168bf098cbb3ea2d7a0919.png"
+    },
+    "image_size_bytes": {
+      "original": 1629794,
+      "local": 486471,
+      "tinypng": 491059
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0009815329717437322,
+        "dssim_peak": 0.0012159702517771098
+      },
+      "tinypng": {
+        "dssim_mean": 0.0011276124284338598,
+        "dssim_peak": 0.0015556563140479707
+      }
+    },
+    "local_ms": 11097
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "4d14054e2d3c1af0c70c3568665eb3e94175b1576cf332b32b25321da72e3e99",
+      "archive_path": "professional/518bc4a10466c7b3f176979a3c5cec12.png"
+    },
+    "image_size_bytes": {
+      "original": 3652278,
+      "local": 1304671,
+      "tinypng": 1266426
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0009868190336785889,
+        "dssim_peak": 0.0015044075183934247
+      },
+      "tinypng": {
+        "dssim_mean": 0.0013208164530912707,
+        "dssim_peak": 0.002185572175045225
+      }
+    },
+    "local_ms": 17256
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "5be357828867671dee97156c6795aa2874b94c7090e17c41debc5b557e74f445",
+      "archive_path": "professional/acda8851def5fe87ebfe17f4ca90e55e.png"
+    },
+    "image_size_bytes": {
+      "original": 3305954,
+      "local": 1030468,
+      "tinypng": 987832
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.000996643455655114,
+        "dssim_peak": 0.0015093238906065398
+      },
+      "tinypng": {
+        "dssim_mean": 0.0013875295023575178,
+        "dssim_peak": 0.0021321970927576928
+      }
+    },
+    "local_ms": 14843
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "533b195fc6b1ca7b5982c9b099950510abd792b512c7b24469a23501a606a209",
+      "archive_path": "professional/3b9355409dd28c48c7675f2a5cc512b0.png"
+    },
+    "image_size_bytes": {
+      "original": 3920557,
+      "local": 1284541,
+      "tinypng": 1233708
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0006006280098494096,
+        "dssim_peak": 0.0011438752119981022
+      },
+      "tinypng": {
+        "dssim_mean": 0.0006935573634970585,
+        "dssim_peak": 0.001423710920960719
+      }
+    },
+    "local_ms": 19393
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "4ea1d8866f0293c641087599adb3895188be6c3f30e74784c742c26959beb326",
+      "archive_path": "professional/da46dc5a1e9c2e2177afec559943111f.png"
+    },
+    "image_size_bytes": {
+      "original": 1903709,
+      "local": 758741,
+      "tinypng": 724158
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0002983817969972489,
+        "dssim_peak": 0.0005494173662243806
+      },
+      "tinypng": {
+        "dssim_mean": 0.0003648647272257551,
+        "dssim_peak": 0.0006964481566120728
+      }
+    },
+    "local_ms": 10741
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "6d1f03a574764a38ad0af2bc58a6a9ca8d1c6375a7db3ec1fe8e4f039b4720bb",
+      "archive_path": "professional/88cbc54c42d71cf68280d97778fe3793.png"
+    },
+    "image_size_bytes": {
+      "original": 3814638,
+      "local": 1177531,
+      "tinypng": 1095046
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0012288802520083835,
+        "dssim_peak": 0.0018854556302054792
+      },
+      "tinypng": {
+        "dssim_mean": 0.0018694991124569664,
+        "dssim_peak": 0.003245839687049612
+      }
+    },
+    "local_ms": 14208
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "807aa2a88cdadbdffab286194a9bb00409736988629c056d0d51dae95ae04c6a",
+      "archive_path": "professional/1c55a04d89db0050a78e50fe10385da2.png"
+    },
+    "image_size_bytes": {
+      "original": 3711669,
+      "local": 1087082,
+      "tinypng": 1081452
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0008240879567664135,
+        "dssim_peak": 0.0014581839488816417
+      },
+      "tinypng": {
+        "dssim_mean": 0.0010572956109480651,
+        "dssim_peak": 0.0018833520421617234
+      }
+    },
+    "local_ms": 13002
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "8f4420cf600f639cff2001beaad98db5b278ea9f977d2374be83acc429fcb53f",
+      "archive_path": "professional/5064e69f56e68b4ad197102503fa4d3a.png"
+    },
+    "image_size_bytes": {
+      "original": 4961439,
+      "local": 2038385,
+      "tinypng": 2074143
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0003268966456615885,
+        "dssim_peak": 0.0007128001614447044
+      },
+      "tinypng": {
+        "dssim_mean": 0.00046951111424151234,
+        "dssim_peak": 0.0010473204420575755
+      }
+    },
+    "local_ms": 13113
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "5592bb6a99ee251e4cb07ff573060391e5ee183fc379dfa5bb501f170ef26dec",
+      "archive_path": "professional/b9bad0c68eb9ce94e02e9698c8cc429a.png"
+    },
+    "image_size_bytes": {
+      "original": 4408329,
+      "local": 1307312,
+      "tinypng": 1286924
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0011915491526215466,
+        "dssim_peak": 0.002878853258372782
+      },
+      "tinypng": {
+        "dssim_mean": 0.0018857300525426297,
+        "dssim_peak": 0.004584593258646574
+      }
+    },
+    "local_ms": 11486
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "768a308293d6824b85ffbc13a5d3d891313832fbc03acdf13a7d92654a5cb1c4",
+      "archive_path": "professional/4651e8e35c365243c4124787633a83c0.png"
+    },
+    "image_size_bytes": {
+      "original": 2675162,
+      "local": 1499605,
+      "tinypng": 1490374
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.00015553762508446756,
+        "dssim_peak": 0.0004827378695906326
+      },
+      "tinypng": {
+        "dssim_mean": 0.0002155832223338557,
+        "dssim_peak": 0.0007062657882022094
+      }
+    },
+    "local_ms": 11119
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "4cc14c36c43424719994c920918574fc1d9e9201ed41b1c68607c0c2b1f5541e",
+      "archive_path": "professional/f917410f6a2f5e6ff29b42e40d026981.png"
+    },
+    "image_size_bytes": {
+      "original": 3412038,
+      "local": 886234,
+      "tinypng": 871761
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0009316012021427816,
+        "dssim_peak": 0.001489167365997801
+      },
+      "tinypng": {
+        "dssim_mean": 0.0011123166493462067,
+        "dssim_peak": 0.0019108751186394102
+      }
+    },
+    "local_ms": 13472
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "711467639bf9345720fc1b1bdc742aa0ae3ef33d969a1bf3b99774504adca3a2",
+      "archive_path": "professional/b9fc47c6e253ce07e5be10c4f73a59a0.png"
+    },
+    "image_size_bytes": {
+      "original": 2634183,
+      "local": 895587,
+      "tinypng": 869348
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0008418374033649021,
+        "dssim_peak": 0.001411080400203657
+      },
+      "tinypng": {
+        "dssim_mean": 0.0010780821255614694,
+        "dssim_peak": 0.0018474589963819454
+      }
+    },
+    "local_ms": 18345
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "3b64b1c5568944127b084f3e2323a99e3e957ac5945d28775d3fbf3e20f37e85",
+      "archive_path": "professional/2bb1fee0867d8c551ce51b3bae40e101.png"
+    },
+    "image_size_bytes": {
+      "original": 4196475,
+      "local": 1347901,
+      "tinypng": 1329027
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0006002291073596348,
+        "dssim_peak": 0.0008830233560033207
+      },
+      "tinypng": {
+        "dssim_mean": 0.0009042332428420315,
+        "dssim_peak": 0.0016171515568172978
+      }
+    },
+    "local_ms": 19801
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "e2bd2d4cd5075c451346125edd5aa92a75327e81a9f5f7345d0e3eee85c049fe",
+      "archive_path": "professional/0824bfaef8a290439690f35b7602d682.png"
+    },
+    "image_size_bytes": {
+      "original": 2658016,
+      "local": 890192,
+      "tinypng": 873562
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.000518182723360261,
+        "dssim_peak": 0.0011763718394006695
+      },
+      "tinypng": {
+        "dssim_mean": 0.0007467828534624798,
+        "dssim_peak": 0.0016400059530568
+      }
+    },
+    "local_ms": 8555
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "eaed53566897e5759af0f6093dc3e9356a2d3f3b6aa3c9ec3b57208b7d097856",
+      "archive_path": "professional/a251fc93b93865a1649bdcdb1989dea0.png"
+    },
+    "image_size_bytes": {
+      "original": 3809057,
+      "local": 1246473,
+      "tinypng": 1172563
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0011384326411824812,
+        "dssim_peak": 0.0019812944102941543
+      },
+      "tinypng": {
+        "dssim_mean": 0.0015578352637661023,
+        "dssim_peak": 0.003003545584468137
+      }
+    },
+    "local_ms": 12932
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "180fa5a82105a55d81c694ee695004a9ee372ad75bb63412176ff8242da929c4",
+      "archive_path": "professional/42aa40af12a11b84bcb9232f6ca5253e.png"
+    },
+    "image_size_bytes": {
+      "original": 2932948,
+      "local": 895480,
+      "tinypng": 911741
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0009858653171678797,
+        "dssim_peak": 0.001540093053229441
+      },
+      "tinypng": {
+        "dssim_mean": 0.001002144954248379,
+        "dssim_peak": 0.001809374850151757
+      }
+    },
+    "local_ms": 10942
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "e63b309bf6e4973baaa8ed2ed830704eeeef7877c8b35e0f0d0283d7ebedbaeb",
+      "archive_path": "professional/97c4621301311fba4c133352c96abcec.png"
+    },
+    "image_size_bytes": {
+      "original": 4137825,
+      "local": 2144681,
+      "tinypng": 2157415
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 7.658373397723807e-05,
+        "dssim_peak": 0.00013954899336332538
+      },
+      "tinypng": {
+        "dssim_mean": 0.00012243244921886443,
+        "dssim_peak": 0.0002479910353401227
+      }
+    },
+    "local_ms": 11806
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "d05e9758ae21a583de96a3dba725b4f99421e3d3572db87331202d21845441ac",
+      "archive_path": "professional/155b69fb7b85c1dd48abcec83b49c3c0.png"
+    },
+    "image_size_bytes": {
+      "original": 2582017,
+      "local": 937806,
+      "tinypng": 936636
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.000293301128247755,
+        "dssim_peak": 0.0006194745000309698
+      },
+      "tinypng": {
+        "dssim_mean": 0.0003660496068320105,
+        "dssim_peak": 0.0009066890977720288
+      }
+    },
+    "local_ms": 11617
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "33d7b56494078b435c5358e73ea38d6377eec740b3a99de9f68af15b6dc65da9",
+      "archive_path": "professional/9ca5710e0c97e20db8878947c85ca8ed.png"
+    },
+    "image_size_bytes": {
+      "original": 1541214,
+      "local": 501449,
+      "tinypng": 555917
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0008723038022284047,
+        "dssim_peak": 0.0013039451522789403
+      },
+      "tinypng": {
+        "dssim_mean": 0.001067001332756839,
+        "dssim_peak": 0.001636708258398345
+      }
+    },
+    "local_ms": 16774
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "23a75913016d70d64967dc9246fd2b0fad8a65959f41faa82a3f835048fe5f55",
+      "archive_path": "professional/d3688a7285d7b2b81febe1cd72e6e22c.png"
+    },
+    "image_size_bytes": {
+      "original": 4968804,
+      "local": 1821569,
+      "tinypng": 1959948
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.00034160526936910057,
+        "dssim_peak": 0.0004586922380673819
+      },
+      "tinypng": {
+        "dssim_mean": 0.00043642381776831126,
+        "dssim_peak": 0.0005863868378352954
+      }
+    },
+    "local_ms": 20551
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "55992f1cf11b0bc39d2414d1c1797717ba393a6c41d319d748749eaed890c485",
+      "archive_path": "professional/181e5e67b826bfa3e5e6d2d43c6a656d.png"
+    },
+    "image_size_bytes": {
+      "original": 3100231,
+      "local": 1092590,
+      "tinypng": 1090306
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0007127252756957705,
+        "dssim_peak": 0.0011016654593345443
+      },
+      "tinypng": {
+        "dssim_mean": 0.0009521956958215737,
+        "dssim_peak": 0.0016030794423591566
+      }
+    },
+    "local_ms": 18726
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "538c1051ab0fea9af360e2c1599609fb6fbbbb671656d8f0a6758eef0d6a6ebc",
+      "archive_path": "professional/0f6cd456ade0adf0c1a0d4e522954d00.png"
+    },
+    "image_size_bytes": {
+      "original": 2886541,
+      "local": 1133994,
+      "tinypng": 1054007
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0003730129793439314,
+        "dssim_peak": 0.0006276737884252093
+      },
+      "tinypng": {
+        "dssim_mean": 0.0004903186533271259,
+        "dssim_peak": 0.0007036258658534855
+      }
+    },
+    "local_ms": 12417
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "f6ff0d292ea952d2eea50a9f20a3eff2496432084aec9399256021aaa984e79e",
+      "archive_path": "professional/24886b1ee94679373a23c4e1f7e284c1.png"
+    },
+    "image_size_bytes": {
+      "original": 3560352,
+      "local": 1080725,
+      "tinypng": 1083572
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0005895826325802606,
+        "dssim_peak": 0.0007914901644596739
+      },
+      "tinypng": {
+        "dssim_mean": 0.0007209990023252154,
+        "dssim_peak": 0.00113521279975215
+      }
+    },
+    "local_ms": 12639
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "68b073dcc227d540036a816740265b57e1689700efa601f56607f76e4664d5a1",
+      "archive_path": "professional/e339986bbfa79387dd93994f6ed68939.png"
+    },
+    "image_size_bytes": {
+      "original": 3278211,
+      "local": 1493574,
+      "tinypng": 1454130
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0004135413337520846,
+        "dssim_peak": 0.0008697979559146862
+      },
+      "tinypng": {
+        "dssim_mean": 0.0006133768168247717,
+        "dssim_peak": 0.001402469065352463
+      }
+    },
+    "local_ms": 15333
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "58ef3432a96f9f80af44c9e732dc69ae06b7836d12cb4b8cb919b65343e64a8a",
+      "archive_path": "professional/7f3f4b4b151f81d395e8f4b96a10c4cb.png"
+    },
+    "image_size_bytes": {
+      "original": 3324061,
+      "local": 1620538,
+      "tinypng": 1518730
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.00041572139368317105,
+        "dssim_peak": 0.0007298415902610156
+      },
+      "tinypng": {
+        "dssim_mean": 0.0005631246202580653,
+        "dssim_peak": 0.0011315288827611347
+      }
+    },
+    "local_ms": 15536
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "4ab8cdd28490a29dca5c53596368c8c5987829e3558ab545f4821a2f5b0f74ac",
+      "archive_path": "professional/da304ab2b27c21508612f6ea44dae584.png"
+    },
+    "image_size_bytes": {
+      "original": 3675927,
+      "local": 1242898,
+      "tinypng": 1230806
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0003947988974285751,
+        "dssim_peak": 0.0005482498205915398
+      },
+      "tinypng": {
+        "dssim_mean": 0.0004962822250484051,
+        "dssim_peak": 0.0006473191743407991
+      }
+    },
+    "local_ms": 12098
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "2f54df3d4f7c5a3b923a490f060328fcdfaa9e249391c5a09ac3ccc456a8f12c",
+      "archive_path": "professional/afa0a2b3e76a7bd4f0ded4d9237bdd51.png"
+    },
+    "image_size_bytes": {
+      "original": 2346639,
+      "local": 965856,
+      "tinypng": 1027498
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.00027592408037701243,
+        "dssim_peak": 0.0006239309116446989
+      },
+      "tinypng": {
+        "dssim_mean": 0.0003340318623490734,
+        "dssim_peak": 0.0008079730071042235
+      }
+    },
+    "local_ms": 14329
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "702792c0c91c8717600a12c08986e9a7d018142cad3b6ad454a25c3b2c8dbdf1",
+      "archive_path": "professional/f38cc4f69a59ba64e5d85c28923e2b32.png"
+    },
+    "image_size_bytes": {
+      "original": 1500679,
+      "local": 887708,
+      "tinypng": 807524
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.00011941577751008411,
+        "dssim_peak": 0.00030795759726487404
+      },
+      "tinypng": {
+        "dssim_mean": 0.0001980896621502787,
+        "dssim_peak": 0.0005313114796221541
+      }
+    },
+    "local_ms": 11335
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "594949855ca099a378e0ba4c78091c96bd91b77ee326fd77c43bff8ced1a2c40",
+      "archive_path": "professional/586460a320d3e725cdf3f6032dd09f52.png"
+    },
+    "image_size_bytes": {
+      "original": 2390533,
+      "local": 791499,
+      "tinypng": 834991
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0008967940204992272,
+        "dssim_peak": 0.0017403887734099843
+      },
+      "tinypng": {
+        "dssim_mean": 0.0011869462340141643,
+        "dssim_peak": 0.0022879486796731907
+      }
+    },
+    "local_ms": 19172
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "d3e4e54c9efa746141a30187272b6478215d2e95d3e3a7a05d8db02feb98bd5c",
+      "archive_path": "professional/4051aeed928b0258553e2e6c7ce36466.png"
+    },
+    "image_size_bytes": {
+      "original": 3541445,
+      "local": 962897,
+      "tinypng": 888244
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0017722909623075149,
+        "dssim_peak": 0.0030020077955104085
+      },
+      "tinypng": {
+        "dssim_mean": 0.0025879791125332377,
+        "dssim_peak": 0.004560240153564266
+      }
+    },
+    "local_ms": 13504
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "419240c6f40d7b2d841599a2fe0d773d0fcc78fa206ef4a51861b82dcc2cccd3",
+      "archive_path": "professional/51aa52fd42a26edda0e494f6a985f9b9.png"
+    },
+    "image_size_bytes": {
+      "original": 4758042,
+      "local": 1993042,
+      "tinypng": 2404381
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.00011628032807989991,
+        "dssim_peak": 0.0006629015108847724
+      },
+      "tinypng": {
+        "dssim_mean": 0.00020680146779377052,
+        "dssim_peak": 0.0012731781061972036
+      }
+    },
+    "local_ms": 12858
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "33d263c03e3a579f2c8aa2992e2f3f78180e18b05eb6ddf3254d094767f42b14",
+      "archive_path": "professional/3aa03f87234a369c7031624cbfdf7436.png"
+    },
+    "image_size_bytes": {
+      "original": 4736729,
+      "local": 1696274,
+      "tinypng": 1645762
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.00033109074420452117,
+        "dssim_peak": 0.0004609148463892154
+      },
+      "tinypng": {
+        "dssim_mean": 0.00041268788865791544,
+        "dssim_peak": 0.000606843635138743
+      }
+    },
+    "local_ms": 13067
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "8ef5de3cf397ac73dcebe1630c4eb5f33a37698e8bd7ac30aa5104c6b7b0c26e",
+      "archive_path": "professional/cb569a93b37b58d834342a84458ed8e9.png"
+    },
+    "image_size_bytes": {
+      "original": 4815449,
+      "local": 1327719,
+      "tinypng": 1252159
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0016770563983702104,
+        "dssim_peak": 0.002791430415081786
+      },
+      "tinypng": {
+        "dssim_mean": 0.002257769065859696,
+        "dssim_peak": 0.0040511237697757885
+      }
+    },
+    "local_ms": 19635
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "2e9c11fbbb6383281bc036c55cd8090659dc7c9a5d907498bf094d9c337d38e8",
+      "archive_path": "professional/ba783d6487425929ba30a57bdc24e85b.png"
+    },
+    "image_size_bytes": {
+      "original": 3323412,
+      "local": 1124216,
+      "tinypng": 1124770
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0004941043654583436,
+        "dssim_peak": 0.0007762551272498808
+      },
+      "tinypng": {
+        "dssim_mean": 0.0006138189113449254,
+        "dssim_peak": 0.001031796810501362
+      }
+    },
+    "local_ms": 15629
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "77daff0d94430f334c394e2df4f05d8be4b124ae8059fbe3dbcaf900c5f28a54",
+      "archive_path": "professional/52b914dc6a9b34022bfd24cc0c0c410e.png"
+    },
+    "image_size_bytes": {
+      "original": 2788558,
+      "local": 889106,
+      "tinypng": 879824
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.001028356373136013,
+        "dssim_peak": 0.0020785238732554667
+      },
+      "tinypng": {
+        "dssim_mean": 0.0012991794697076967,
+        "dssim_peak": 0.0028356795623896147
+      }
+    },
+    "local_ms": 17193
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "ec824c5c381544aa5be57c87a3c2e7deea9c64ecf8e9e32c2f068d6ca69e5f4a",
+      "archive_path": "professional/8e1996cb7329defee7f3003d1255b964.png"
+    },
+    "image_size_bytes": {
+      "original": 4065340,
+      "local": 1287036,
+      "tinypng": 1306844
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0007930333240549513,
+        "dssim_peak": 0.0016173797370735432
+      },
+      "tinypng": {
+        "dssim_mean": 0.0011203096854899225,
+        "dssim_peak": 0.0027697611227743835
+      }
+    },
+    "local_ms": 9432
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "5855c9c44d0dd13baee718a882588c38b1308b8a05fbaf99c06d6a5e4e8e6996",
+      "archive_path": "professional/d67a561c20248b0f2efa2c053fd0d473.png"
+    },
+    "image_size_bytes": {
+      "original": 4214074,
+      "local": 1249274,
+      "tinypng": 1192337
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0015000026602414358,
+        "dssim_peak": 0.00293627279023001
+      },
+      "tinypng": {
+        "dssim_mean": 0.0023053787306235676,
+        "dssim_peak": 0.0049294021592187764
+      }
+    },
+    "local_ms": 21454
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "1db35d9e002a967e1a98821a8dafc85819313350b367fccba1aab17f772ca793",
+      "archive_path": "professional/b1b8f33917a40c9d0b118ef801de67d4.png"
+    },
+    "image_size_bytes": {
+      "original": 3680228,
+      "local": 1020960,
+      "tinypng": 1002721
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0007356678724348473,
+        "dssim_peak": 0.0011565046729977713
+      },
+      "tinypng": {
+        "dssim_mean": 0.0010833337052038958,
+        "dssim_peak": 0.001776264647393111
+      }
+    },
+    "local_ms": 20855
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "10b0d7a3af58c6d11517917a69790e6ae99ffb9d10c8ec134ba4c296ac666e44",
+      "archive_path": "professional/8ba19447ea8e56002881d89c34d58d92.png"
+    },
+    "image_size_bytes": {
+      "original": 4584446,
+      "local": 1367830,
+      "tinypng": 1463606
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0006077164978017318,
+        "dssim_peak": 0.001261676997184491
+      },
+      "tinypng": {
+        "dssim_mean": 0.0007669375458908861,
+        "dssim_peak": 0.0018647003229312897
+      }
+    },
+    "local_ms": 18972
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "148104e2dbfa791119c97809d3d846fce8caaf070a7f78b32d43441019831c6d",
+      "archive_path": "professional/08052112d0151f7c9ac4879f838d5a0c.png"
+    },
+    "image_size_bytes": {
+      "original": 3483086,
+      "local": 1244053,
+      "tinypng": 1236077
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0004937746278120948,
+        "dssim_peak": 0.0007305242359270103
+      },
+      "tinypng": {
+        "dssim_mean": 0.000759956255026693,
+        "dssim_peak": 0.0010096391086322765
+      }
+    },
+    "local_ms": 16517
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "01eb625ea8a717b5458c70594355cf7325993f0cc838181227b580f873c983ce",
+      "archive_path": "professional/e903c4f4684100a6dbac1f0b9b4de760.png"
+    },
+    "image_size_bytes": {
+      "original": 4075621,
+      "local": 1647674,
+      "tinypng": 1621497
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.00016829112239182572,
+        "dssim_peak": 0.00031597582033016103
+      },
+      "tinypng": {
+        "dssim_mean": 0.00026148933455984543,
+        "dssim_peak": 0.0005598772646904226
+      }
+    },
+    "local_ms": 13571
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "ca8a069fb732d2056de30cd3821c85228e301e6135ef790074b63afed785089b",
+      "archive_path": "professional/7b22f7d25c42fe87e3e1559477259531.png"
+    },
+    "image_size_bytes": {
+      "original": 3708214,
+      "local": 1505970,
+      "tinypng": 1547393
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0005781339298827013,
+        "dssim_peak": 0.001143544804027563
+      },
+      "tinypng": {
+        "dssim_mean": 0.0006934286314529039,
+        "dssim_peak": 0.0013199745656327089
+      }
+    },
+    "local_ms": 19171
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "0fd49f233e925bcb4a80f1705291bb49e2c87898d67b3d8ffb6faed233c4699c",
+      "archive_path": "professional/b3f371e9f3aa7d427d64a22001d156d8.png"
+    },
+    "image_size_bytes": {
+      "original": 3826479,
+      "local": 1317449,
+      "tinypng": 1319137
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0005462831952534264,
+        "dssim_peak": 0.0009182959770295263
+      },
+      "tinypng": {
+        "dssim_mean": 0.0006391252209956038,
+        "dssim_peak": 0.001044653536300011
+      }
+    },
+    "local_ms": 14275
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "146ea5f05239abff0054137a6a59ddaebfab58d348222540298ab380e8f62c4f",
+      "archive_path": "professional/615db6f953577cdaf9e252c1feb451e8.png"
+    },
+    "image_size_bytes": {
+      "original": 3837674,
+      "local": 1427893,
+      "tinypng": 1431688
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0006246003747686165,
+        "dssim_peak": 0.0011397535277279935
+      },
+      "tinypng": {
+        "dssim_mean": 0.000884927799273238,
+        "dssim_peak": 0.0017245265886416394
+      }
+    },
+    "local_ms": 29058
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "4b965380be26ab43f1aad8e26ea64acc7c0e72bc0e83a1ce08ca32ba002d392b",
+      "archive_path": "professional/4d5494621e78f96a102441a5b28d7295.png"
+    },
+    "image_size_bytes": {
+      "original": 3059843,
+      "local": 1419826,
+      "tinypng": 1369050
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.00020682940814090154,
+        "dssim_peak": 0.00032647767428928276
+      },
+      "tinypng": {
+        "dssim_mean": 0.00029057194948860216,
+        "dssim_peak": 0.0004201610817771151
+      }
+    },
+    "local_ms": 13678
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "304e3263c72b63e92c8fd63e053a7e7edb7030fc234c75836435d24432f38a1a",
+      "archive_path": "professional/83741fd2a7d17fe1d6e7bdbc73cd9963.png"
+    },
+    "image_size_bytes": {
+      "original": 2259495,
+      "local": 864438,
+      "tinypng": 844098
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.000384362450733013,
+        "dssim_peak": 0.0008158105169973062
+      },
+      "tinypng": {
+        "dssim_mean": 0.0005003471416932805,
+        "dssim_peak": 0.0011691345671396292
+      }
+    },
+    "local_ms": 17356
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "831b5ded6b3c8c790b6eb72bdcd84e9d4abbccf49b988e9ff9e50c0725e4b4b5",
+      "archive_path": "professional/fc02b24bd4ed72f9db555a28a8285df6.png"
+    },
+    "image_size_bytes": {
+      "original": 1701412,
+      "local": 618413,
+      "tinypng": 647888
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.00037248675102688396,
+        "dssim_peak": 0.0007613045677021812
+      },
+      "tinypng": {
+        "dssim_mean": 0.0004652715501544066,
+        "dssim_peak": 0.0011635564061274195
+      }
+    },
+    "local_ms": 13834
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "e406e4956da0cf5738e10b588f518433a434c0ae086f6aa0eda36a55e6050b3e",
+      "archive_path": "professional/c6658d87c608b631f5cc3fb5a8d89731.png"
+    },
+    "image_size_bytes": {
+      "original": 3880113,
+      "local": 1337338,
+      "tinypng": 1326151
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0011240430115850805,
+        "dssim_peak": 0.0021925423291391244
+      },
+      "tinypng": {
+        "dssim_mean": 0.0023539642802566977,
+        "dssim_peak": 0.004890265050965681
+      }
+    },
+    "local_ms": 14511
+  },
+  {
+    "image_source": {
+      "url": "https://data.vision.ee.ethz.ch/cvl/clic/test/CLIC2020Professional_test.zip",
+      "sha256": "0ceb51bbe88293f83feaab31b27555edc1b4676e51a9bc28992bc1f7efabc9d5",
+      "archive_path": "professional/63645228d4a0a835d8ffdcc46ab7e464.png"
+    },
+    "image_size_bytes": {
+      "original": 3809063,
+      "local": 1323939,
+      "tinypng": 1299694
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.00021745103526361458,
+        "dssim_peak": 0.00039522225275590017
+      },
+      "tinypng": {
+        "dssim_mean": 0.0003005752768131307,
+        "dssim_peak": 0.0006115641474035982
+      }
+    },
+    "local_ms": 11893
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/13/Landscape_painting_%28Fort_Tryon_Park%2C_New_York_City%2C_with_grey_underpainting%29_by_Christopher_Willard.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "29ffe34d5842c3e7549b56613668cf1bb9bf173d87e43d4b39a97b6ecfa0133a"
+    },
+    "image_size_bytes": {
+      "original": 1551372,
+      "local": 531352,
+      "tinypng": 506286
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0009378853528094755,
+        "dssim_peak": 0.0009378853528094755
+      },
+      "tinypng": {
+        "dssim_mean": 0.0015232063885080027,
+        "dssim_peak": 0.0015232063885080027
+      }
+    },
+    "local_ms": 5515
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Bedourie_Landscape%2C_2022.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "a316de7c044530befa94c348e394008e2de2afa567539eba172fc109a04f2d2c"
+    },
+    "image_size_bytes": {
+      "original": 571249,
+      "local": 192674,
+      "tinypng": 195035
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.000757111369210639,
+        "dssim_peak": 0.000757111369210639
+      },
+      "tinypng": {
+        "dssim_mean": 0.0011815977749354278,
+        "dssim_peak": 0.0011815977749354278
+      }
+    },
+    "local_ms": 2559
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/12/A_Stormy_Landscape_.PNG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "245832bc0f011cf6a826be18b93e9b4e3b4be6243bb64cb150c6d40957dfaa98"
+    },
+    "image_size_bytes": {
+      "original": 536772,
+      "local": 155200,
+      "tinypng": 161465
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.00034069739433117974,
+        "dssim_peak": 0.00034069739433117974
+      },
+      "tinypng": {
+        "dssim_mean": 0.0005557127642337178,
+        "dssim_peak": 0.0005557127642337178
+      }
+    },
+    "local_ms": 1503
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Fa%C5%82at_Winter_landscape_with_a_river.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "326c1d93d535213f644fb756a869b23a8ad465d70e637566ee61826be89656df"
+    },
+    "image_size_bytes": {
+      "original": 2586171,
+      "local": 776458,
+      "tinypng": 760763
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0006113330703714655,
+        "dssim_peak": 0.000706646181449555
+      },
+      "tinypng": {
+        "dssim_mean": 0.0010367587264994067,
+        "dssim_peak": 0.0011649262393611526
+      }
+    },
+    "local_ms": 4641
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Landscape_at_the_Kroumiere_hills_at_the_end_of_rainy_season.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "aef531046f81a6f467979e53fa3ba53a7c1a4b4b7c58a8a02917d45dd8bce027"
+    },
+    "image_size_bytes": {
+      "original": 3425170,
+      "local": 882380,
+      "tinypng": 849424
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0007125746587180026,
+        "dssim_peak": 0.0011534145285350128
+      },
+      "tinypng": {
+        "dssim_mean": 0.0013335211793907206,
+        "dssim_peak": 0.0021846161349350357
+      }
+    },
+    "local_ms": 9276
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Landscape_with_Ferry_-_Jacob_van_Ruysdael.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "9b9a98737de5f7af44f2e78db513143fffd5826ea3260e008f16428962dbe863"
+    },
+    "image_size_bytes": {
+      "original": 3152549,
+      "local": 1062547,
+      "tinypng": 1038652
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0006827743107678345,
+        "dssim_peak": 0.0007945870749161976
+      },
+      "tinypng": {
+        "dssim_mean": 0.0010348407133277486,
+        "dssim_peak": 0.0012728416946734544
+      }
+    },
+    "local_ms": 6501
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/61/Vista_del_atardecer_de_Cusco_desde_el_Abra_Corao.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "8fe539924470ce0ae800a0354d4a14e36341620ae5830b7218bd491d029febe9"
+    },
+    "image_size_bytes": {
+      "original": 1249137,
+      "local": 390639,
+      "tinypng": 392340
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0005076550456975655,
+        "dssim_peak": 0.0007184464310800998
+      },
+      "tinypng": {
+        "dssim_mean": 0.0006197020718168103,
+        "dssim_peak": 0.0008808171691285782
+      }
+    },
+    "local_ms": 4969
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Landscape_%28Fort_Tryon_Park%2C_New_York_City%2C_greens_and_ochres%29_by_Christopher_Willard.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "5c2eb4c04be1b177c3e0ad73b31747f06076e2d02ec038cde0abaed4774332f2"
+    },
+    "image_size_bytes": {
+      "original": 1658724,
+      "local": 510211,
+      "tinypng": 487191
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0014604763705896584,
+        "dssim_peak": 0.0014604763705896584
+      },
+      "tinypng": {
+        "dssim_mean": 0.0023074077735056875,
+        "dssim_peak": 0.0023074077735056875
+      }
+    },
+    "local_ms": 5742
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/94/A_Landscape_with_a_Ford_.PNG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "066689c9ab45c5a8e1551b71ff8e893539c8de602236aa859ff517ae3310b491"
+    },
+    "image_size_bytes": {
+      "original": 900932,
+      "local": 200256,
+      "tinypng": 196439
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0006981421855920544,
+        "dssim_peak": 0.0006981421855920544
+      },
+      "tinypng": {
+        "dssim_mean": 0.0010565943009719359,
+        "dssim_peak": 0.0010565943009719359
+      }
+    },
+    "local_ms": 1639
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Landscape_-_Cornelius_Poelenburg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "7120194da10bd880ff33694f72a1d07c45652960ecc153d1b8ef1c8af2b29982"
+    },
+    "image_size_bytes": {
+      "original": 3242224,
+      "local": 1109050,
+      "tinypng": 1129923
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0005045989645664865,
+        "dssim_peak": 0.0005996802066123852
+      },
+      "tinypng": {
+        "dssim_mean": 0.0007283866463317171,
+        "dssim_peak": 0.000856749685051339
+      }
+    },
+    "local_ms": 7285
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Santo_Domingo_3671.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "874cdf7f128edaa293b591cb9c12dabf1231f5c46f12955342e284e7c1564c28"
+    },
+    "image_size_bytes": {
+      "original": 1369868,
+      "local": 409695,
+      "tinypng": 414680
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0007725635486002247,
+        "dssim_peak": 0.0007725635486002247
+      },
+      "tinypng": {
+        "dssim_mean": 0.0012149085481591992,
+        "dssim_peak": 0.0012149085481591992
+      }
+    },
+    "local_ms": 5475
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Buxoro_tarixiy_panoramasi.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "be1b3e69dac565888d03c111f4557c4ab346279a72e93ae3e68c13dd1fe08867"
+    },
+    "image_size_bytes": {
+      "original": 329552,
+      "local": 150391,
+      "tinypng": 163416
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0005475209780738677,
+        "dssim_peak": 0.0005475209780738677
+      },
+      "tinypng": {
+        "dssim_mean": 0.0005489949345551803,
+        "dssim_peak": 0.0005489949345551803
+      }
+    },
+    "local_ms": 3765
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Figure_4-1_Trino_architecture.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "13a88b60513e18a3b65949b7d88f526415367f4149a4d1a8f69416e064afbe09"
+    },
+    "image_size_bytes": {
+      "original": 126945,
+      "local": 40547,
+      "tinypng": 32190
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 4.908001742354173e-06,
+        "dssim_peak": 4.908001742354173e-06
+      },
+      "tinypng": {
+        "dssim_mean": 9.514819534262031e-06,
+        "dssim_peak": 9.514819534262031e-06
+      }
+    },
+    "local_ms": 2414
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Carpet-Shaded_Heritage_Passage.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "4fa1051f314ff8769239deffb63adf39f60c0a576bd42ec667bd913fdfa3d6a2"
+    },
+    "image_size_bytes": {
+      "original": 1692588,
+      "local": 538923,
+      "tinypng": 528673
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0006869298164438315,
+        "dssim_peak": 0.0009287437361007456
+      },
+      "tinypng": {
+        "dssim_mean": 0.0009484460275191547,
+        "dssim_peak": 0.001282498365124729
+      }
+    },
+    "local_ms": 8803
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/80/Blue-Domed_Mausoleum_Complex.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "0f3ca3f7b428d01b92bfe6eb5f2981ed1f54d10e9544e2a4e0fc358fee938e3d"
+    },
+    "image_size_bytes": {
+      "original": 1294001,
+      "local": 514130,
+      "tinypng": 540945
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0002531792195568887,
+        "dssim_peak": 0.000386802015521992
+      },
+      "tinypng": {
+        "dssim_mean": 0.00030107016863906795,
+        "dssim_peak": 0.00040638753421173845
+      }
+    },
+    "local_ms": 5894
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Teatro_Italia_el_d%C3%ADa_de_su_inauguraci%C3%B3n.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "89872683cc93738216d555e40a4c7353896dba70e03d187893ce83a2583e9c1b"
+    },
+    "image_size_bytes": {
+      "original": 748659,
+      "local": 268485,
+      "tinypng": 320578
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.00023164060740588077,
+        "dssim_peak": 0.00023164060740588077
+      },
+      "tinypng": {
+        "dssim_mean": 0.00034579882338481305,
+        "dssim_peak": 0.00034579882338481305
+      }
+    },
+    "local_ms": 3451
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/EB1911_-_Order_-_Fig._12.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "2a27e92af4efe8b4f172ae9e819f2edfb3bc9dea8bfbe73ef070879d5d317e0f"
+    },
+    "image_size_bytes": {
+      "original": 316867,
+      "local": 276842,
+      "tinypng": 237188
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0,
+        "dssim_peak": 0.0
+      },
+      "tinypng": {
+        "dssim_mean": 1.436993707219168e-05,
+        "dssim_peak": 1.575801945308264e-05
+      }
+    },
+    "local_ms": 340
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Architectural_Place_December_2025_Cover.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "739f50b0495eb95f7afb1bb678b7667cb0b263357dba1da2baa66200143af494"
+    },
+    "image_size_bytes": {
+      "original": 463343,
+      "local": 140917,
+      "tinypng": 149712
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.00041783428463881833,
+        "dssim_peak": 0.00041783428463881833
+      },
+      "tinypng": {
+        "dssim_mean": 0.0006890163121500148,
+        "dssim_peak": 0.0006890163121500148
+      }
+    },
+    "local_ms": 1741
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Nupe_Architecture%2C_Nigeria%2C_Aquarell_Carl_Arriens.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "f5a4b7c6a6a853201b3e93c045e1e0ce8b32cf4ae0c01c2feeec6bec9a76006c"
+    },
+    "image_size_bytes": {
+      "original": 1353027,
+      "local": 387088,
+      "tinypng": 380307
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.001463678138788005,
+        "dssim_peak": 0.001463678138788005
+      },
+      "tinypng": {
+        "dssim_mean": 0.002243915235340177,
+        "dssim_peak": 0.002243915235340177
+      }
+    },
+    "local_ms": 4832
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Koshinkor_tarixiy_bino_fasadi.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "737fe72d7dfc9231faf3b083ac254c84bf7484a2e790906267772bd158758ca9"
+    },
+    "image_size_bytes": {
+      "original": 921571,
+      "local": 303733,
+      "tinypng": 310029
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0005102742801526006,
+        "dssim_peak": 0.0005102742801526006
+      },
+      "tinypng": {
+        "dssim_mean": 0.0008459081460010509,
+        "dssim_peak": 0.0008459081460010509
+      }
+    },
+    "local_ms": 3522
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Hope_for_Wildlife_foundation.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "3648adba46f43d2a310d7b638f8c5c6a0cef229faf470f5b41875e7c2852e91d"
+    },
+    "image_size_bytes": {
+      "original": 215591,
+      "local": 87313,
+      "tinypng": 82870
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 5.221608472653971e-06,
+        "dssim_peak": 1.3043394870404512e-05
+      },
+      "tinypng": {
+        "dssim_mean": 1.6661335174759826e-05,
+        "dssim_peak": 3.896535100711418e-05
+      }
+    },
+    "local_ms": 8505
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Bassi_Wildlife_Sanctuary.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "591064f5da000e85d10ee3f7265b5a2b81e71da5cf7e45a25674aea7691c7ee1"
+    },
+    "image_size_bytes": {
+      "original": 1868551,
+      "local": 527860,
+      "tinypng": 516158
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0013011246719857586,
+        "dssim_peak": 0.0034471564977265334
+      },
+      "tinypng": {
+        "dssim_mean": 0.002090087108949769,
+        "dssim_peak": 0.006208651286707667
+      }
+    },
+    "local_ms": 8388
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Caribou_Selawik_National_Wildlife_Refuge.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "34988aacec81ac8ccdba1e09ec02b2db2e0ffff07c05387dc20a80a532a9748c"
+    },
+    "image_size_bytes": {
+      "original": 1594825,
+      "local": 364905,
+      "tinypng": 367330
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0002728233721438489,
+        "dssim_peak": 0.0002728233721438489
+      },
+      "tinypng": {
+        "dssim_mean": 0.0003964808461813796,
+        "dssim_peak": 0.0003964808461813796
+      }
+    },
+    "local_ms": 3972
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/72/Sonny_Bono_Salton_Sea_National_Wildlife_Refuge_-_Waterfowl_at_Hazard_Ponds.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "cdd55119b7318c92d99d57e813c2942f71eca194530e4f33a7f9279c95e6c758"
+    },
+    "image_size_bytes": {
+      "original": 787276,
+      "local": 212690,
+      "tinypng": 208976
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0008741275560535389,
+        "dssim_peak": 0.0008741275560535389
+      },
+      "tinypng": {
+        "dssim_mean": 0.001583186449198859,
+        "dssim_peak": 0.001583186449198859
+      }
+    },
+    "local_ms": 1960
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Boundary_Map_Togiak_National_Wildlife_Refuge.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "3ea5150ba06adc725bca07acd78a257d075b66bb188ae2ee056f58199db103da"
+    },
+    "image_size_bytes": {
+      "original": 1418666,
+      "local": 461111,
+      "tinypng": 446098
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 9.270823317747777e-05,
+        "dssim_peak": 0.0001239387554521354
+      },
+      "tinypng": {
+        "dssim_mean": 0.00014924492677270506,
+        "dssim_peak": 0.00020498033818094896
+      }
+    },
+    "local_ms": 3921
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Yukon_Flats_National_Wildlife_Refuge.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "78db8b9cbcd955bf082313261cf83dd7c6393743ae1bfdc43931114417002741"
+    },
+    "image_size_bytes": {
+      "original": 1432127,
+      "local": 438399,
+      "tinypng": 421475
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0007464149055020908,
+        "dssim_peak": 0.0007464149055020908
+      },
+      "tinypng": {
+        "dssim_mean": 0.001168527661185026,
+        "dssim_peak": 0.001168527661185026
+      }
+    },
+    "local_ms": 5959
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Partners_for_Fish_%26_Wildlife_25th_Anniversary_Accomplishments_%287971896512%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "79ed83e50ddb1b52c16b328f3e40ee0d39ab881ce350d97daa67c4f022c3a476"
+    },
+    "image_size_bytes": {
+      "original": 776057,
+      "local": 252794,
+      "tinypng": 255084
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0006558169754049548,
+        "dssim_peak": 0.0006558169754049548
+      },
+      "tinypng": {
+        "dssim_mean": 0.0009189415005248502,
+        "dssim_peak": 0.0009189415005248502
+      }
+    },
+    "local_ms": 5546
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/87/USFWS_Junior_Ranger_badge_3_December_2021.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "45d87cd76eaa22c27674e8a6b554dde076b279ec41fbb31a8c3ab13014f2aa7e"
+    },
+    "image_size_bytes": {
+      "original": 1098834,
+      "local": 316612,
+      "tinypng": 325512
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0003611184414928914,
+        "dssim_peak": 0.0003611184414928914
+      },
+      "tinypng": {
+        "dssim_mean": 0.0006952090480378814,
+        "dssim_peak": 0.0006952090480378814
+      }
+    },
+    "local_ms": 2931
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Map_Tetlin_National_Wildlife_Refuge.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "a40cd725b28a6ef9368e9669e2606b887d91a68e9359b0e98e817001179c2c32"
+    },
+    "image_size_bytes": {
+      "original": 2437351,
+      "local": 815839,
+      "tinypng": 801463
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.00015278945802784996,
+        "dssim_peak": 0.00026902985417964764
+      },
+      "tinypng": {
+        "dssim_mean": 0.0002276833425271662,
+        "dssim_peak": 0.0003283713196582383
+      }
+    },
+    "local_ms": 6667
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/63/FWS_logo_early_facing_right.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "ce9fc22b4632f9851383f1cc4474f48e7693689ac230bee4fdb8563e0197c87f"
+    },
+    "image_size_bytes": {
+      "original": 1140318,
+      "local": 268432,
+      "tinypng": 273628
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.000528296096149683,
+        "dssim_peak": 0.000528296096149683
+      },
+      "tinypng": {
+        "dssim_mean": 0.0007148581806804,
+        "dssim_peak": 0.0007148581806804
+      }
+    },
+    "local_ms": 4205
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Compilation_de_fleurs_de_mauves.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "f183e5299635061dd83d175238fc905b490c61146852f2da2e726eaa67a1e194"
+    },
+    "image_size_bytes": {
+      "original": 742496,
+      "local": 210645,
+      "tinypng": 200160
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0017389390452027254,
+        "dssim_peak": 0.0017389390452027254
+      },
+      "tinypng": {
+        "dssim_mean": 0.0024889103202023755,
+        "dssim_peak": 0.0024889103202023755
+      }
+    },
+    "local_ms": 3127
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/The_Bloom_of_Monticello_-_The_Garden_Book_of_Thomas_Jefferson.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "bf04c54fa85e5f02e2d56fdbeaa214219f1077dbabd165c599e63cf64b51d02f"
+    },
+    "image_size_bytes": {
+      "original": 204097,
+      "local": 172923,
+      "tinypng": 171247
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0,
+        "dssim_peak": 0.0
+      },
+      "tinypng": {
+        "dssim_mean": 0.0,
+        "dssim_peak": 0.0
+      }
+    },
+    "local_ms": 886
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/19/Blue-gree_algae_bloom_Lake_Erie.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "3f7e5dd45a3460cfa006834c6ed38a4687c59f125109df7a67efdf911cdde698"
+    },
+    "image_size_bytes": {
+      "original": 631114,
+      "local": 222736,
+      "tinypng": 212401
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0006803881458548044,
+        "dssim_peak": 0.0006803881458548044
+      },
+      "tinypng": {
+        "dssim_mean": 0.0011627797648472438,
+        "dssim_peak": 0.0011627797648472438
+      }
+    },
+    "local_ms": 3053
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/93/Frangipani_Flowers%2C_ZX_Spectrum_PAL_display_simulation.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "0c8fd6935d694e03e245f9b26ed7929473f5b8c357778678f2f8ec63417cae1d"
+    },
+    "image_size_bytes": {
+      "original": 199843,
+      "local": 61815,
+      "tinypng": 59385
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 1.557913079452966e-05,
+        "dssim_peak": 1.557913079452966e-05
+      },
+      "tinypng": {
+        "dssim_mean": 1.9919531799583723e-05,
+        "dssim_peak": 1.9919531799583723e-05
+      }
+    },
+    "local_ms": 2629
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Satellite_image_of_cyanobacteria_bloom_in_the_Great_Lakes.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "4682446a9c0adce39ff54e44065d9aa937824f934de39b1ee6f37332d1b35d0a"
+    },
+    "image_size_bytes": {
+      "original": 657613,
+      "local": 197081,
+      "tinypng": 189642
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0009729468704491318,
+        "dssim_peak": 0.0009729468704491318
+      },
+      "tinypng": {
+        "dssim_mean": 0.0014805474511225825,
+        "dssim_peak": 0.0014805474511225825
+      }
+    },
+    "local_ms": 2046
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Restrepia_flower_column_annotated.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "1c93ab24411519ab85bb3d95d1d92264c025865e75ff507ddc4a8c4166564a17"
+    },
+    "image_size_bytes": {
+      "original": 2732128,
+      "local": 675520,
+      "tinypng": 747475
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0006022816539212256,
+        "dssim_peak": 0.0014048614508224144
+      },
+      "tinypng": {
+        "dssim_mean": 0.00089535297951065,
+        "dssim_peak": 0.0028675141260312564
+      }
+    },
+    "local_ms": 7269
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Rose_in_Bloom_%28Alcott%29_-_Frontispiece.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "0633559cf100cf2fb9c1b5f0c0bd8c459fe5ddf3fff4a4f4977a07f635a2f328"
+    },
+    "image_size_bytes": {
+      "original": 1053372,
+      "local": 974756,
+      "tinypng": 826794
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0,
+        "dssim_peak": 0.0
+      },
+      "tinypng": {
+        "dssim_mean": 0.00022533034966170723,
+        "dssim_peak": 0.000768226987603482
+      }
+    },
+    "local_ms": 989
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Gladiolus_%28PSF%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "26e4689f2472ffd74d0bee441cd10559abde08575d3e8a9f7cb83da64d1b91e6"
+    },
+    "image_size_bytes": {
+      "original": 215872,
+      "local": 189011,
+      "tinypng": 152926
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0,
+        "dssim_peak": 0.0
+      },
+      "tinypng": {
+        "dssim_mean": 1.3059615570849895e-05,
+        "dssim_peak": 1.9644572135879557e-05
+      }
+    },
+    "local_ms": 454
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/67/%22Language_of_flowers%22_bookmark_reading_%22Espiritu_santo._Triple_extract._The_most_delicate%2C_fragrant_and_lasting_perfume_of_the_age._Tisseau%2C_distillateur-parfumeur%2C_Philadelphia._Bookmark.%22_chromolithograph_print.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "fbb34fd20258da5a1ddcbba0853d41aa547cf66f197c839331ded127f3a04e27"
+    },
+    "image_size_bytes": {
+      "original": 2641507,
+      "local": 765268,
+      "tinypng": 833371
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.00025680358041023913,
+        "dssim_peak": 0.0005515098807271634
+      },
+      "tinypng": {
+        "dssim_mean": 0.0004003926025730079,
+        "dssim_peak": 0.0009279932408121638
+      }
+    },
+    "local_ms": 12581
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Bloom_Store.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "af6cfdeaac18e9b62b621059faed5ec922b6dbca2bd362dabadb3e61b761c1cf"
+    },
+    "image_size_bytes": {
+      "original": 3137993,
+      "local": 1304418,
+      "tinypng": 1452328
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.00018178114032226469,
+        "dssim_peak": 0.0002575325176275012
+      },
+      "tinypng": {
+        "dssim_mean": 0.00028529239179192505,
+        "dssim_peak": 0.00043095825564187784
+      }
+    },
+    "local_ms": 6647
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Three_Paintings_of_a_Muleteer_%282%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "746b0279084eb0f316d7e90a375c56e6bcec0ad8271017cf9f199e3735d2e2d3"
+    },
+    "image_size_bytes": {
+      "original": 898263,
+      "local": 292043,
+      "tinypng": 317084
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0009515433310836041,
+        "dssim_peak": 0.0009515433310836041
+      },
+      "tinypng": {
+        "dssim_mean": 0.0015046240641130026,
+        "dssim_peak": 0.0015046240641130026
+      }
+    },
+    "local_ms": 3486
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/89/PA_Cot-petite_fille_a_la_poupee-1881-frame.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "3af226cef6453edb1590fa24c586808ec0369236955f5dc659cafb34fd55efe6"
+    },
+    "image_size_bytes": {
+      "original": 2974483,
+      "local": 1078264,
+      "tinypng": 1148995
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0014010413773210616,
+        "dssim_peak": 0.002175575199200974
+      },
+      "tinypng": {
+        "dssim_mean": 0.00198172509256411,
+        "dssim_peak": 0.003333720332291179
+      }
+    },
+    "local_ms": 15137
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/RMS_America_arrives_in_Halifax%2C_Valentines_Day%2C_1859.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "a1c026497f6a54ad4ba70f8b18cdceed065f143dfcd934002711bf554d257276"
+    },
+    "image_size_bytes": {
+      "original": 1928583,
+      "local": 552223,
+      "tinypng": 598370
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.00039092591469947814,
+        "dssim_peak": 0.0004510908390933377
+      },
+      "tinypng": {
+        "dssim_mean": 0.0005301750376613696,
+        "dssim_peak": 0.0006237314782870929
+      }
+    },
+    "local_ms": 8518
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/58/La_transmutaci%C3%B3n_de_la_creatividad._Tek%C3%B2l%C3%B3tl.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "aba8afc7507f12de9d3620e8a00588271661337d9c8ff3d5ba493fe749739885"
+    },
+    "image_size_bytes": {
+      "original": 3882447,
+      "local": 1214918,
+      "tinypng": 1218590
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0022014522221867946,
+        "dssim_peak": 0.0033589289256443777
+      },
+      "tinypng": {
+        "dssim_mean": 0.003601428171196563,
+        "dssim_peak": 0.006850773050084191
+      }
+    },
+    "local_ms": 16584
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Milensi_Gossip.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "98c6a67ed2087fdc485c5c75bdb8f2d66a8ce00ca220245cfe45898092f6a8f5"
+    },
+    "image_size_bytes": {
+      "original": 4925730,
+      "local": 1533435,
+      "tinypng": 1569894
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0009038748975956276,
+        "dssim_peak": 0.0013108518988442786
+      },
+      "tinypng": {
+        "dssim_mean": 0.0013244542715770155,
+        "dssim_peak": 0.001955870639176238
+      }
+    },
+    "local_ms": 13140
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Carl_Wuttke%2C_Albenga%2C_1885.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "1a66442247818800a285ac19294c84834b83a6dade6511274578508358fec7d3"
+    },
+    "image_size_bytes": {
+      "original": 666175,
+      "local": 248050,
+      "tinypng": 242864
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0010861436460263274,
+        "dssim_peak": 0.0010861436460263274
+      },
+      "tinypng": {
+        "dssim_mean": 0.001745128015012254,
+        "dssim_peak": 0.001745128015012254
+      }
+    },
+    "local_ms": 3078
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Painting_Paint_application.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "b3db414cb154921c0aff7dc8142672d2ace57ea8a9b35e35040c79b544336966"
+    },
+    "image_size_bytes": {
+      "original": 676500,
+      "local": 201130,
+      "tinypng": 196005
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0008923593158853826,
+        "dssim_peak": 0.0008923593158853826
+      },
+      "tinypng": {
+        "dssim_mean": 0.0015916323519287179,
+        "dssim_peak": 0.0015916323519287179
+      }
+    },
+    "local_ms": 1745
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Ancienne_%C3%A9glise_Saint-Martin_de_Pau.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "fc5b9e88aac5ece033aaef8e3002446ea5d9003e186281007137e6e829e60366"
+    },
+    "image_size_bytes": {
+      "original": 802989,
+      "local": 229818,
+      "tinypng": 236549
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0006980123268995886,
+        "dssim_peak": 0.0006980123268995886
+      },
+      "tinypng": {
+        "dssim_mean": 0.0009714822454935934,
+        "dssim_peak": 0.0009714822454935934
+      }
+    },
+    "local_ms": 2869
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/18/%D7%A1%D7%95%D7%91%D7%9C%D7%99%D7%9E%D7%A6%D7%99%D7%94_%D7%A9%D7%9C_%D7%96%D7%A0%D7%95%D7%AA.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "a483fd0d21b69f9a7f7a1319537daffaa58bb3ebb61c3e2d09faa7414d1e7810"
+    },
+    "image_size_bytes": {
+      "original": 1417467,
+      "local": 352547,
+      "tinypng": 352073
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0002337193143813009,
+        "dssim_peak": 0.0005520317318272738
+      },
+      "tinypng": {
+        "dssim_mean": 0.0003284817867464892,
+        "dssim_peak": 0.0008527578305146388
+      }
+    },
+    "local_ms": 4822
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/13/Oscar_Howe_-_Medicine_Man_-_painted_1962.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "3eab8a2bdecf824363228ea6305107074b84ba5532992cea01d25c0cb4a77101"
+    },
+    "image_size_bytes": {
+      "original": 2542915,
+      "local": 753297,
+      "tinypng": 743136
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0010445793598103123,
+        "dssim_peak": 0.001242132828269682
+      },
+      "tinypng": {
+        "dssim_mean": 0.0016829523735009684,
+        "dssim_peak": 0.002189642079115206
+      }
+    },
+    "local_ms": 9746
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Map-crop-1.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "048365fb23fcb0341442bcba21c71c21318b46a7596d20d26fafd4c15657219f"
+    },
+    "image_size_bytes": {
+      "original": 105445,
+      "local": 25138,
+      "tinypng": 18984
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 2.242112274595011e-06,
+        "dssim_peak": 4.063792418573797e-06
+      },
+      "tinypng": {
+        "dssim_mean": 1.3772298450654511e-05,
+        "dssim_peak": 2.5422504764893716e-05
+      }
+    },
+    "local_ms": 2019
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Map_of_the_Greater_Ameridia_Patria.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "f2fa50c97128c40954e9610a4a7a9b1bfe5d5ec9ac5dcfeff960bb4ca0beb9a0"
+    },
+    "image_size_bytes": {
+      "original": 174806,
+      "local": 66907,
+      "tinypng": 58842
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 5.980939807166909e-06,
+        "dssim_peak": 6.711727743802243e-06
+      },
+      "tinypng": {
+        "dssim_mean": 1.016483012193705e-05,
+        "dssim_peak": 1.3242485511488766e-05
+      }
+    },
+    "local_ms": 2232
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Map_of_Zambesia.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "24e6ffda01435fef82c67f842c529205a34330d32bc5cbe939d5ec518d49b590"
+    },
+    "image_size_bytes": {
+      "original": 636293,
+      "local": 284770,
+      "tinypng": 266014
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 9.267347267405412e-05,
+        "dssim_peak": 9.267347267405412e-05
+      },
+      "tinypng": {
+        "dssim_mean": 0.0001650405921769238,
+        "dssim_peak": 0.0001650405921769238
+      }
+    },
+    "local_ms": 2090
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Irish_International_Exhibition_map%2C_1907.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "51c431fbdcfaf8dcb268afa056b1af66486d9a01f7a6e014c9950668ba147a3c"
+    },
+    "image_size_bytes": {
+      "original": 673907,
+      "local": 360348,
+      "tinypng": 320249
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 5.396546664650823e-06,
+        "dssim_peak": 6.7097206735144965e-06
+      },
+      "tinypng": {
+        "dssim_mean": 4.7096340525989084e-05,
+        "dssim_peak": 7.749431056880418e-05
+      }
+    },
+    "local_ms": 4458
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Map_of_south_asian_rivers.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "de0f9a31f000387d82b6d15a5dd01dbd0ae0c679f4c19f769bcf06c8080de4df"
+    },
+    "image_size_bytes": {
+      "original": 758081,
+      "local": 223967,
+      "tinypng": 192240
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 7.024263916260974e-06,
+        "dssim_peak": 1.110168995466232e-05
+      },
+      "tinypng": {
+        "dssim_mean": 1.1205986015508634e-05,
+        "dssim_peak": 2.2953630024469263e-05
+      }
+    },
+    "local_ms": 16566
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Location_Map_USA_Alabama_Huntsville.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "cf1e713f56663e06d88fb4e8b7eabe4163792589877224f2f550c85b248dca1f"
+    },
+    "image_size_bytes": {
+      "original": 1818072,
+      "local": 658798,
+      "tinypng": 651863
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.00011911669945698298,
+        "dssim_peak": 0.00019382330346195964
+      },
+      "tinypng": {
+        "dssim_mean": 0.00018609303468825327,
+        "dssim_peak": 0.0003054182803534644
+      }
+    },
+    "local_ms": 14096
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/South_lebanon_map-ar.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "5009a54398c94c1d2e169be441ef5ae1674ea89d5f7667e9a66f1076ad6d4e7c"
+    },
+    "image_size_bytes": {
+      "original": 172912,
+      "local": 55639,
+      "tinypng": 54108
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 1.4885762473104691e-05,
+        "dssim_peak": 1.4885762473104691e-05
+      },
+      "tinypng": {
+        "dssim_mean": 2.0887127938573613e-05,
+        "dssim_peak": 2.0887127938573613e-05
+      }
+    },
+    "local_ms": 1700
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Map_of_Garncarsko%2C_Poland_2.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "6b4fd83051c7ceed9aca7650a8cfbf4fb181f84051789e08668fae948a0ba017"
+    },
+    "image_size_bytes": {
+      "original": 193211,
+      "local": 58933,
+      "tinypng": 58165
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 6.385525274099635e-05,
+        "dssim_peak": 6.385525274099635e-05
+      },
+      "tinypng": {
+        "dssim_mean": 8.471624478323392e-05,
+        "dssim_peak": 8.471624478323392e-05
+      }
+    },
+    "local_ms": 1657
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Yugoslav_Wars_map_late_1993.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "2e8295cdd34e03b876fc260763ccfba60015eccea0364df2009ca89c04e885c4"
+    },
+    "image_size_bytes": {
+      "original": 312885,
+      "local": 107605,
+      "tinypng": 89796
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 1.61558394279732e-06,
+        "dssim_peak": 2.9123912086426174e-06
+      },
+      "tinypng": {
+        "dssim_mean": 7.570056653462222e-06,
+        "dssim_peak": 1.4040081023569684e-05
+      }
+    },
+    "local_ms": 17714
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/26/%22Votes_for_Women_is_a_Success_The_Map_Proves_It%22_1914_map.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "bcaac0173dbfbc47afa4242eff70b4c0efcfafe4f63f20c46e152d54f3d35742"
+    },
+    "image_size_bytes": {
+      "original": 537395,
+      "local": 223375,
+      "tinypng": 220102
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.00012461917767003783,
+        "dssim_peak": 0.00012461917767003783
+      },
+      "tinypng": {
+        "dssim_mean": 0.00024293077187964585,
+        "dssim_peak": 0.00024293077187964585
+      }
+    },
+    "local_ms": 1181
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/06/Apollo_block_II_IRIG_diagram.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "f52bf122d943d7884be3aee7b71157d20debb5323c6ad72d597bf51b22949214"
+    },
+    "image_size_bytes": {
+      "original": 251820,
+      "local": 131903,
+      "tinypng": 93492
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0,
+        "dssim_peak": 0.0
+      },
+      "tinypng": {
+        "dssim_mean": 1.0300127303075612e-05,
+        "dssim_peak": 1.0300127303075612e-05
+      }
+    },
+    "local_ms": 125
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/08/Homograph_homophone_venn_diagram_%28Ukrainian%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "9b129ef0be5c7a69a8fdc1643daf185cfb666cbb1cbc2fc93d799d28a64517d8"
+    },
+    "image_size_bytes": {
+      "original": 103580,
+      "local": 34616,
+      "tinypng": 34665
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 9.294604879306334e-06,
+        "dssim_peak": 9.294604879306334e-06
+      },
+      "tinypng": {
+        "dssim_mean": 1.4616045175497305e-05,
+        "dssim_peak": 1.4616045175497305e-05
+      }
+    },
+    "local_ms": 1472
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/80/TTS_diagram.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "17544c39c7940637ea9c33dee3261269b5ddad72fa49fc6155a6698d520856ec"
+    },
+    "image_size_bytes": {
+      "original": 1041516,
+      "local": 255812,
+      "tinypng": 240930
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 8.308185194348466e-06,
+        "dssim_peak": 5.27315147806906e-05
+      },
+      "tinypng": {
+        "dssim_mean": 2.191191931056279e-05,
+        "dssim_peak": 0.0002055853738538449
+      }
+    },
+    "local_ms": 33483
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/DNSSEC_Trust_Anchor_Diagram.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "46b8e8ca418aabb01ef34b252b16fda2a030122462cac1f1ecc4bf455cd42210"
+    },
+    "image_size_bytes": {
+      "original": 141687,
+      "local": 39228,
+      "tinypng": 37919
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 9.727633386881596e-06,
+        "dssim_peak": 1.4004656538002536e-05
+      },
+      "tinypng": {
+        "dssim_mean": 1.1844362666269795e-05,
+        "dssim_peak": 1.5534581449427876e-05
+      }
+    },
+    "local_ms": 3957
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/%28589683%29_2010_RF43_orbit_diagram_jpl.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "3ba6f52301b9b14ecf9dc7d8432686977a13324acf5801fcc284b56da48f6d22"
+    },
+    "image_size_bytes": {
+      "original": 111376,
+      "local": 37545,
+      "tinypng": 37810
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 2.4899596527508516e-06,
+        "dssim_peak": 1.5224935455471211e-05
+      },
+      "tinypng": {
+        "dssim_mean": 5.910578648505125e-06,
+        "dssim_peak": 2.234329834593929e-05
+      }
+    },
+    "local_ms": 3724
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Diagram_of_umbra%2C_penumbra_%26_antumbra-ar.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "2eabdc5d65f58ed19ceebd696fdf727905b8b83d682296b5a000aed293d83d0c"
+    },
+    "image_size_bytes": {
+      "original": 120281,
+      "local": 37293,
+      "tinypng": 37957
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 9.870604319694998e-05,
+        "dssim_peak": 9.870604319694998e-05
+      },
+      "tinypng": {
+        "dssim_mean": 0.00012186876706876681,
+        "dssim_peak": 0.00012186876706876681
+      }
+    },
+    "local_ms": 2022
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Convex_Mirror_Diagram.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "6735415dcaf3c6f5dc62b214752544360cd7cae4c84755ca7e40de7fa0faf487"
+    },
+    "image_size_bytes": {
+      "original": 137907,
+      "local": 41605,
+      "tinypng": 35686
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 2.854836472549528e-06,
+        "dssim_peak": 7.736019002724248e-06
+      },
+      "tinypng": {
+        "dssim_mean": 4.208030944421555e-06,
+        "dssim_peak": 1.286856209237186e-05
+      }
+    },
+    "local_ms": 8829
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Venn_diagram_language_population.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "156d697ef73100e1f1a3f6910097b5b687d8ceec2a8da109b852f295612e7c41"
+    },
+    "image_size_bytes": {
+      "original": 139556,
+      "local": 60198,
+      "tinypng": 49150
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0,
+        "dssim_peak": 0.0
+      },
+      "tinypng": {
+        "dssim_mean": 1.9503556725641857e-05,
+        "dssim_peak": 1.9503556725641857e-05
+      }
+    },
+    "local_ms": 114
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/3D_Diagram_of_the_Rolling_Fork_Water_Tower_Pre-Tornado_2.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "21f9eded5b57e08feb21584b940a2e1e761bd8543dcec8e32160e5c4fb5b6e57"
+    },
+    "image_size_bytes": {
+      "original": 236298,
+      "local": 87907,
+      "tinypng": 86482
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 6.445142303856954e-05,
+        "dssim_peak": 6.445142303856954e-05
+      },
+      "tinypng": {
+        "dssim_mean": 9.26634265845383e-05,
+        "dssim_peak": 9.26634265845383e-05
+      }
+    },
+    "local_ms": 2583
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Heart_diagram-fa.PNG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "74c9c3c2ce5a9f9cd4d2d6e3a5e8902c824435848bf5737792bbb3c6314ceaa5"
+    },
+    "image_size_bytes": {
+      "original": 244097,
+      "local": 63590,
+      "tinypng": 62939
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.00011773258796865527,
+        "dssim_peak": 0.00011773258796865527
+      },
+      "tinypng": {
+        "dssim_mean": 0.00014663422835803352,
+        "dssim_peak": 0.00014663422835803352
+      }
+    },
+    "local_ms": 2052
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Tatoeba.org_English_screenshot_2021.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "b136f13f3f4eaacb72345182855c77098ea1801649d7b99359ec879239288a61"
+    },
+    "image_size_bytes": {
+      "original": 172207,
+      "local": 63176,
+      "tinypng": 53964
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 4.736062177354696e-06,
+        "dssim_peak": 7.831350977482998e-06
+      },
+      "tinypng": {
+        "dssim_mean": 1.7294354943609373e-05,
+        "dssim_peak": 3.327860848090225e-05
+      }
+    },
+    "local_ms": 3374
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/86/Vandal_Cleaner_screenshot_12.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "b4786c30382faa6ef95585ba2e2285f2b8d670721bf1fba83c1102718c5fec50"
+    },
+    "image_size_bytes": {
+      "original": 181346,
+      "local": 61633,
+      "tinypng": 53274
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 4.731488468209035e-06,
+        "dssim_peak": 9.779685417043993e-06
+      },
+      "tinypng": {
+        "dssim_mean": 9.305411809427042e-06,
+        "dssim_peak": 2.737626800763948e-05
+      }
+    },
+    "local_ms": 9889
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/20210428_Screenshot_Wetzipedia.ch.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "0521e198afd5c267147736a9ebaa09eaa5dd7ba9672e55739cedbaf74ca834fb"
+    },
+    "image_size_bytes": {
+      "original": 1215485,
+      "local": 356991,
+      "tinypng": 360917
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 7.498716080105652e-05,
+        "dssim_peak": 0.000675348706606238
+      },
+      "tinypng": {
+        "dssim_mean": 0.00010597838280303747,
+        "dssim_peak": 0.0011244820270464029
+      }
+    },
+    "local_ms": 7578
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Screenshot_clinical_trial_article_English_Wikipedia.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "a69ee7960ab442e5c6729445594eda878d5405330cb2a63619be254953c423d9"
+    },
+    "image_size_bytes": {
+      "original": 985883,
+      "local": 233554,
+      "tinypng": 229493
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.00024714298526373827,
+        "dssim_peak": 0.0015563011311159336
+      },
+      "tinypng": {
+        "dssim_mean": 0.00032207885899080996,
+        "dssim_peak": 0.0026407600658835406
+      }
+    },
+    "local_ms": 6516
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Instant_Diffs_screenshot_light_ja.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "c098e59cee85f150633b698378cd93bfde0a76af1629114413c0de7281949c26"
+    },
+    "image_size_bytes": {
+      "original": 103708,
+      "local": 46348,
+      "tinypng": 39923
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 4.42718605746344e-06,
+        "dssim_peak": 1.2086339562733528e-05
+      },
+      "tinypng": {
+        "dssim_mean": 2.218898509140693e-05,
+        "dssim_peak": 0.00023657469804638787
+      }
+    },
+    "local_ms": 5813
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/14/20231024_Screenshot_Stadtgeschichtslexikon_Ingolstadt.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "a56027faaed6ea1bf5c9234cc3187d9b62624408b848bea6bec2f4efe97f28bf"
+    },
+    "image_size_bytes": {
+      "original": 1703443,
+      "local": 630652,
+      "tinypng": 639371
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 7.682401920202882e-05,
+        "dssim_peak": 0.0004259707044467209
+      },
+      "tinypng": {
+        "dssim_mean": 0.00011101747923337206,
+        "dssim_peak": 0.0006775940999121932
+      }
+    },
+    "local_ms": 12399
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Instant_Diffs_screenshot_light_az.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "5f1e589c3530dd7a6f08fa8b730881e0a1218e561ad5aa4b8471578134443495"
+    },
+    "image_size_bytes": {
+      "original": 108094,
+      "local": 49097,
+      "tinypng": 43017
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 3.507822769470201e-06,
+        "dssim_peak": 1.3106304340482211e-05
+      },
+      "tinypng": {
+        "dssim_mean": 2.315986569977062e-05,
+        "dssim_peak": 0.00011790177572312821
+      }
+    },
+    "local_ms": 5411
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Instant_Diffs_screenshot_ja.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "0ae05deb404ed5397341587cda8408dc87e9b4796be8f9003231d9bfa054bf55"
+    },
+    "image_size_bytes": {
+      "original": 105679,
+      "local": 46095,
+      "tinypng": 39380
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 3.780838680915112e-06,
+        "dssim_peak": 2.070637437801004e-05
+      },
+      "tinypng": {
+        "dssim_mean": 4.169001567545643e-05,
+        "dssim_peak": 0.000278369136893053
+      }
+    },
+    "local_ms": 7330
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Celeste_screenshot_04.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "2fb85db24add3cde5753f4004766fac0b5944ae52de37479f623e7b1e3623dec"
+    },
+    "image_size_bytes": {
+      "original": 172499,
+      "local": 76205,
+      "tinypng": 105305
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0003380511982871123,
+        "dssim_peak": 0.0005781319935578288
+      },
+      "tinypng": {
+        "dssim_mean": 0.0003350321022705179,
+        "dssim_peak": 0.0007247506151430994
+      }
+    },
+    "local_ms": 4742
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Ark_qal%E2%80%99asi_devori.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "3fed65b16c0953a0ad5829760675866a245fb53f84d03139913384389358b8b9"
+    },
+    "image_size_bytes": {
+      "original": 671211,
+      "local": 236194,
+      "tinypng": 241462
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0004269392563915897,
+        "dssim_peak": 0.0004269392563915897
+      },
+      "tinypng": {
+        "dssim_mean": 0.0005278405758550875,
+        "dssim_peak": 0.0005278405758550875
+      }
+    },
+    "local_ms": 4467
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Male_Red-Winged_Blackbird_Singing_in_Tree.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "89b0b194f2ff45e967c7807450e293b29f904b46380829623b9b72cecaae0592"
+    },
+    "image_size_bytes": {
+      "original": 4326410,
+      "local": 1663392,
+      "tinypng": 1595973
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0004247410854960004,
+        "dssim_peak": 0.0012413039220851019
+      },
+      "tinypng": {
+        "dssim_mean": 0.0006573553848879485,
+        "dssim_peak": 0.0018638400471790995
+      }
+    },
+    "local_ms": 10816
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/74/Heckscher_House.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "4f82510a2ab75a84673d34b7b505e74f85531ad65e67d48455d3292876f4d94d"
+    },
+    "image_size_bytes": {
+      "original": 1562300,
+      "local": 392847,
+      "tinypng": 438083
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.00034688394272586187,
+        "dssim_peak": 0.00034688394272586187
+      },
+      "tinypng": {
+        "dssim_mean": 0.0004418270301353999,
+        "dssim_peak": 0.0004418270301353999
+      }
+    },
+    "local_ms": 3092
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Christie_Boser-_Faces_of_the_Fish_and_Wildlife_%2852442333554%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "43c48c27fac605b7253c4eff90b78afdc9104d4b67809090cffb3fb0e36a623a"
+    },
+    "image_size_bytes": {
+      "original": 4153344,
+      "local": 1058345,
+      "tinypng": 1038308
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0011898004886039554,
+        "dssim_peak": 0.0020975947959935848
+      },
+      "tinypng": {
+        "dssim_mean": 0.001962926367163132,
+        "dssim_peak": 0.0032720980521481202
+      }
+    },
+    "local_ms": 17744
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Flower_petal_%28species_unknown%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "fd7854bd5e38985379117fcdef5369d8c059b2e1dc6f22f13115cbbb258b4adb"
+    },
+    "image_size_bytes": {
+      "original": 1405924,
+      "local": 345747,
+      "tinypng": 369381
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0002567758446780921,
+        "dssim_peak": 0.0002567758446780921
+      },
+      "tinypng": {
+        "dssim_mean": 0.00026708973900890776,
+        "dssim_peak": 0.00026708973900890776
+      }
+    },
+    "local_ms": 3128
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Tux_Paint_3_Work_done_stamp_on_Tux_Paint_page.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "bccf24b2142c41a9f044877bc6af3e60ebe0b4f95569430642a370e09e55eb1e"
+    },
+    "image_size_bytes": {
+      "original": 112308,
+      "local": 42514,
+      "tinypng": 41323
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 7.338075763207996e-05,
+        "dssim_peak": 7.338075763207996e-05
+      },
+      "tinypng": {
+        "dssim_mean": 0.00011526676047246553,
+        "dssim_peak": 0.00011526676047246553
+      }
+    },
+    "local_ms": 1219
+  },
+  {
+    "image_source": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Moeder_met_kind_op_schoot.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "4c7adb27c52354270f649d9622030ad7412f34c14c2b10467e97ef319796008f"
+    },
+    "image_size_bytes": {
+      "original": 2001009,
+      "local": 607274,
+      "tinypng": 590458
+    },
+    "quality": {
+      "local": {
+        "dssim_mean": 0.0010917245117567594,
+        "dssim_peak": 0.0013985562206879631
+      },
+      "tinypng": {
+        "dssim_mean": 0.0015839189100537493,
+        "dssim_peak": 0.0021250101075980243
+      }
+    },
+    "local_ms": 6680
+  }
+]
