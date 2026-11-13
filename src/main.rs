@@ -50,27 +50,48 @@ struct Cli {
 
 #[derive(Subcommand)]
 enum Action {
-    #[command(about = "Update to the latest stable release using the installed updater")]
+    #[command(about = "Install the latest stable release in place")]
     Update,
 }
 
 fn update(stdout: &mut impl Write) -> Result<u8> {
-    // 只调用当前程序旁的更新器 不从 PATH 查找同名程序
-    let result = std::env::current_exe().and_then(|path| {
-        Command::new(path.with_file_name("teapress-update"))
+    let result = (|| -> Result<()> {
+        let executable = std::env::current_exe()?;
+        let directory = executable
+            .parent()
+            .context("Executable has no parent directory")?;
+        let script = tempfile::NamedTempFile::new()?;
+        // 下载完整后再执行 避免网络中断时运行残缺脚本
+        let status = Command::new("curl")
+            .args([
+                "--fail", "--silent", "--show-error", "--location",
+                "--proto", "=https", "--proto-redir", "=https",
+                "--connect-timeout", "10", "--max-time", "120", "--output",
+            ])
+            .arg(script.path())
+            .arg("https://github.com/teash1rt/teapress/releases/latest/download/teapress-installer.sh")
             .stdout(Stdio::from(io::stderr()))
             .status()
-    });
+            .context("Failed to run curl to download the installer")?;
+        if !status.success() {
+            bail!("Installer download failed with {status}");
+        }
+        // 复用官方安装器 只更新当前目录 不改 shell 配置或安装记录
+        let status = Command::new("/bin/sh")
+            .arg(script.path())
+            .env_remove("TEAPRESS_INSTALL_DIR")
+            .env_remove("CARGO_DIST_FORCE_INSTALL_DIR")
+            .env("TEAPRESS_UNMANAGED_INSTALL", directory)
+            .stdout(Stdio::from(io::stderr()))
+            .status()
+            .context("Failed to run the installer")?;
+        if !status.success() {
+            bail!("Installer exited with {status}");
+        }
+        Ok(())
+    })();
     let (code, row) = match result {
-        Ok(status) if status.success() => (0, json!({"detail":"Update check completed"})),
-        Ok(status) => (
-            1,
-            json!({"error":{"code":"UPDATE_FAILED","message":format!("Updater exited with {status}")}}),
-        ),
-        Err(error) if error.kind() == io::ErrorKind::NotFound => (
-            1,
-            json!({"error":{"code":"UPDATE_UNAVAILABLE","message":"Install teapress using the official shell installer to enable updates"}}),
-        ),
+        Ok(()) => (0, json!({"detail":"Update completed"})),
         Err(error) => (
             1,
             json!({"error":{"code":"UPDATE_FAILED","message":error_message(error)}}),

@@ -100,7 +100,6 @@ jobs:
           test "$("$binary" --version)" = "teapress $VERSION"
           "$binary" --help
           "$binary" update --help
-          test -s "target/distrib/teapress-$TARGET-update"
           mkdir -p target/upload
           find target/distrib -maxdepth 1 -type f -exec cp {} target/upload/ \;
           cp target/local-manifest.json "target/upload/$TARGET-dist-manifest.json"

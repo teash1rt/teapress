@@ -33,7 +33,7 @@ teapress photo.png -o output/
 | Argument / option | Behavior |
 | --- | --- |
 | `<INPUTS>...` | One or more image paths |
-| `update` | Check for and install the latest stable release |
+| `update` | Install the latest stable release in place; requires curl and sh |
 | `-o, --outdir <DIR>` | Save copies instead; never overwrite existing files |
 | `-l, --lossless` | Preserve decoded pixels; metadata and file bytes may change |
 | `-h, --help` | Show all options and output conventions |

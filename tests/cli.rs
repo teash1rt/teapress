@@ -230,12 +230,13 @@ fn usage_errors_are_json_and_help_stays_text() {
 
 #[cfg(unix)]
 #[test]
-fn update_uses_sibling_updater_and_keeps_stdout_json() {
+fn update_installs_in_place_and_keeps_stdout_json() {
     use std::os::unix::fs::PermissionsExt;
 
     let dir = tempfile::tempdir().unwrap();
-    let binary = dir.path().join("teapress");
-    let updater = dir.path().join("teapress-update");
+    let install = dir.path().join("install with spaces");
+    std::fs::create_dir(&install).unwrap();
+    let binary = install.join("teapress");
     std::fs::copy(env!("CARGO_BIN_EXE_teapress"), &binary).unwrap();
     let help = Command::new(&binary)
         .args(["update", "--help"])
@@ -244,32 +245,73 @@ fn update_uses_sibling_updater_and_keeps_stdout_json() {
     assert!(help.status.success());
     assert!(String::from_utf8_lossy(&help.stdout).contains("latest stable release"));
 
-    // PATH 中的同名程序不能代替随包安装的更新器
-    let other = dir.path().join("other");
-    std::fs::create_dir(&other).unwrap();
-    let decoy = other.join("teapress-update");
-    std::fs::write(&decoy, "#!/bin/sh\necho unexpected\n").unwrap();
-    std::fs::set_permissions(&decoy, std::fs::Permissions::from_mode(0o755)).unwrap();
+    let tools = dir.path().join("tools");
+    std::fs::create_dir(&tools).unwrap();
     let missing = Command::new(&binary)
         .arg("update")
-        .env("PATH", &other)
+        .env("PATH", &tools)
         .output()
         .unwrap();
     assert_eq!(missing.status.code(), Some(1));
     let rows: serde_json::Value = serde_json::from_slice(&missing.stdout).unwrap();
-    assert_eq!(rows[0]["error"]["code"], "UPDATE_UNAVAILABLE");
+    assert_eq!(rows[0]["error"]["code"], "UPDATE_FAILED");
 
-    for exit in [0, 7] {
-        std::fs::write(&updater, format!("#!/bin/sh\ntest \"$#\" -eq 0 || exit 99\necho checking\necho progress >&2\nexit {exit}\n")).unwrap();
-        std::fs::set_permissions(&updater, std::fs::Permissions::from_mode(0o755)).unwrap();
-        let run = Command::new(&binary).arg("update").output().unwrap();
-        assert_eq!(run.status.success(), exit == 0);
+    // 模拟下载 不访问网络也不替换真实安装
+    let curl = tools.join("curl");
+    std::fs::write(&curl, r#"#!/bin/sh
+while [ "$#" -gt 0 ]; do
+    case "$1" in
+        --output) shift; output="$1" ;;
+        https://*) test "$1" = 'https://github.com/teash1rt/teapress/releases/latest/download/teapress-installer.sh' || exit 99 ;;
+    esac
+    shift
+done
+/bin/cat "$MOCK_INSTALLER" > "$output"
+echo downloading >&2
+exit "$MOCK_DOWNLOAD_EXIT"
+"#).unwrap();
+    std::fs::set_permissions(&curl, std::fs::Permissions::from_mode(0o755)).unwrap();
+    let installer = dir.path().join("installer.sh");
+    std::fs::write(
+        &installer,
+        r#"test -z "${TEAPRESS_INSTALL_DIR:-}${CARGO_DIST_FORCE_INSTALL_DIR:-}" || exit 99
+printf installed > "$TEAPRESS_UNMANAGED_INSTALL/installed"
+echo installing
+echo progress >&2
+exit "$MOCK_INSTALL_EXIT"
+"#,
+    )
+    .unwrap();
+    for (download_exit, install_exit) in [(7, 0), (0, 7), (0, 0)] {
+        let run = Command::new(&binary)
+            .arg("update")
+            .env("PATH", &tools)
+            .env("MOCK_INSTALLER", &installer)
+            .env("MOCK_DOWNLOAD_EXIT", download_exit.to_string())
+            .env("MOCK_INSTALL_EXIT", install_exit.to_string())
+            .env("TEAPRESS_INSTALL_DIR", dir.path().join("wrong"))
+            .env("CARGO_DIST_FORCE_INSTALL_DIR", dir.path().join("wrong"))
+            .output()
+            .unwrap();
+        assert_eq!(
+            run.status.success(),
+            download_exit == 0 && install_exit == 0
+        );
         let rows: serde_json::Value = serde_json::from_slice(&run.stdout).unwrap();
         assert_eq!(rows.as_array().unwrap().len(), 1);
         let progress = String::from_utf8(run.stderr).unwrap();
-        assert!(progress.contains("checking") && progress.contains("progress"));
-        if exit == 0 {
-            assert_eq!(rows[0]["detail"], "Update check completed");
+        assert!(progress.contains("downloading"));
+        if download_exit == 0 {
+            assert!(progress.contains("installing") && progress.contains("progress"));
+            assert_eq!(
+                std::fs::read(install.join("installed")).unwrap(),
+                b"installed"
+            );
+        } else {
+            assert!(!install.join("installed").exists());
+        }
+        if run.status.success() {
+            assert_eq!(rows[0]["detail"], "Update completed");
         } else {
             assert_eq!(rows[0]["error"]["code"], "UPDATE_FAILED");
         }

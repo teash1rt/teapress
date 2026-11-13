@@ -1,6 +1,6 @@
 [package]
 name = "teapress"
-version = "0.0.3"
+version = "0.0.4"
 description = "A simple, fast, local image compression CLI for PNG, JPEG and WebP, built for developers and AI agents."
 repository = "https://github.com/teash1rt/teapress"
 homepage = "https://github.com/teash1rt/teapress"
@@ -48,7 +48,6 @@ ci = ["github"]
 allow-dirty = ["ci"]
 hosting = ["github"]
 installers = ["shell"]
-install-updater = true
 targets = ["aarch64-apple-darwin", "x86_64-apple-darwin", "x86_64-unknown-linux-gnu"]
 unix-archive = ".tar.gz"
 checksum = "sha256"
