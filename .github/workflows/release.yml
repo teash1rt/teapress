@@ -77,9 +77,8 @@ jobs:
         with:
           persist-credentials: false
       - uses: dtolnay/rust-toolchain@1.88.0
-      - uses: taiki-e/install-action@v2
-        with:
-          tool: cargo-dist@0.34.0
+      - name: Install cargo-dist
+        run: curl --proto '=https' --tlsv1.2 -LsSf https://github.com/axodotdev/cargo-dist/releases/download/v0.34.0/cargo-dist-installer.sh | sh
       - name: Collect dependency licenses
         run: |
           mkdir -p target
@@ -122,9 +121,8 @@ jobs:
         with:
           persist-credentials: false
       - uses: dtolnay/rust-toolchain@1.88.0
-      - uses: taiki-e/install-action@v2
-        with:
-          tool: cargo-dist@0.34.0
+      - name: Install cargo-dist
+        run: curl --proto '=https' --tlsv1.2 -LsSf https://github.com/axodotdev/cargo-dist/releases/download/v0.34.0/cargo-dist-installer.sh | sh
       - uses: actions/download-artifact@v4
         with:
           pattern: dist-*
