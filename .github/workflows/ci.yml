@@ -25,20 +25,29 @@ jobs:
           persist-credentials: false
       - uses: taiki-e/install-action@v2
         with:
-          tool: cargo-dist@0.34.0,actionlint@1.7.12,yq@4.48.1
+          tool: cargo-dist@0.34.0,actionlint@1.7.12,yq@4.54.2
       - name: Check version
         id: version
         env:
           BEFORE: ${{ github.event_name == 'push' && github.event.before || github.event.pull_request.base.sha }}
+          GH_TOKEN: ${{ github.token }}
+          EVENT: ${{ github.event_name }}
         run: |
           version=$(yq -p toml -oy -r '.package.version' Cargo.toml)
           locked=$(yq -p toml -oy -r '.package[] | select(.name == "teapress" and .source == null) | .version' Cargo.lock)
           test "$version" = "$locked" || { echo 'Cargo.toml and Cargo.lock versions differ'; exit 1; }
           [[ "$version" != *+* ]] || { echo 'Build metadata is not supported'; exit 1; }
-          [[ "$BEFORE" =~ ^0+$ ]] && exit 0
-          previous=$(git show "$BEFORE:Cargo.toml" | yq -p toml -oy -r '.package.version')
-          test "$version" = "$previous" && exit 0
-          npx --yes semver@7.7.3 "$version" --include-prerelease -r ">$previous"
+          if [[ ! "$BEFORE" =~ ^0+$ ]]; then
+            previous=$(git show "$BEFORE:Cargo.toml" | yq -p toml -oy -r '.package.version')
+            if test "$version" != "$previous"; then
+              npx --yes semver@7.7.3 "$version" --include-prerelease -r ">$previous"
+            fi
+          fi
+          test "$EVENT" = push || exit 0
+          gh api --paginate "repos/$GITHUB_REPOSITORY/releases" --jq '.[] | @json' > "$RUNNER_TEMP/releases.jsonl"
+          if jq -se --arg tag "v$version" 'any(.[]; .tag_name == $tag and .draft == false)' "$RUNNER_TEMP/releases.jsonl"; then
+            exit 0
+          fi
           echo "version=$version" >> "$GITHUB_OUTPUT"
       - uses: dtolnay/rust-toolchain@1.88.0
         with:
