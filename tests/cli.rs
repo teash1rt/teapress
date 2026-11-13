@@ -184,10 +184,11 @@ fn invalid_output_directory_returns_json_without_changing_input() {
 #[test]
 fn usage_errors_are_json_and_help_stays_text() {
     for args in [
-        vec![],
         vec!["--unknown"],
         vec!["--jsonl"],
         vec!["-o"],
+        vec!["--lossless"],
+        vec!["-o", "output"],
         vec!["update", "photo.png"],
         vec!["update", "--lossless"],
     ] {
@@ -199,20 +200,26 @@ fn usage_errors_are_json_and_help_stays_text() {
         assert!(run.stderr.is_empty());
         let rows: serde_json::Value = serde_json::from_slice(&run.stdout).unwrap();
         assert_eq!(rows[0]["error"]["code"], "CLI_PARSE_ERROR");
-        assert!(rows[0]["error"]["message"].is_string());
+        let message = rows[0]["error"]["message"].as_str().unwrap();
+        assert!(!message.contains(['\n', '\r', '\t']));
+        assert!(!message.contains("  "));
         assert!(rows[0].get("input").is_none());
     }
-    for flag in ["--help", "--version", "-v"] {
+    for args in [vec![], vec!["--help"], vec!["--version"], vec!["-v"]] {
         let run = Command::new(env!("CARGO_BIN_EXE_teapress"))
-            .arg(flag)
+            .args(&args)
             .output()
             .unwrap();
         assert!(run.status.success());
         assert!(run.stderr.is_empty());
         let text = String::from_utf8(run.stdout).unwrap();
         assert!(text.contains("teapress"));
-        if flag == "--help" {
+        if args.is_empty() || args == ["--help"] {
             assert!(text.contains("25 MiB"));
+            assert!(text.contains("Usage:"));
+            assert!(text.contains("Commands:"));
+            assert!(text.contains("Options:"));
+            assert!(!text.contains("CLI_PARSE_ERROR"));
             assert!(!text.contains("--jsonl"));
             assert!(text.contains("-v, --version"));
         } else {

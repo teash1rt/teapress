@@ -1,6 +1,6 @@
 [package]
 name = "teapress"
-version = "0.0.2"
+version = "0.0.3"
 description = "A simple, fast, local image compression CLI for PNG, JPEG and WebP, built for developers and AI agents."
 repository = "https://github.com/teash1rt/teapress"
 homepage = "https://github.com/teash1rt/teapress"

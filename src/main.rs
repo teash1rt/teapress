@@ -19,6 +19,7 @@ use std::{
 #[command(
     version,
     disable_version_flag = true,
+    arg_required_else_help = true,
     subcommand_negates_reqs = true,
     args_conflicts_with_subcommands = true,
     arg(clap::Arg::new("version").short('v').long("version").action(clap::ArgAction::Version).help("Print version")),
@@ -72,7 +73,7 @@ fn update(stdout: &mut impl Write) -> Result<u8> {
         ),
         Err(error) => (
             1,
-            json!({"error":{"code":"UPDATE_FAILED","message":error.to_string()}}),
+            json!({"error":{"code":"UPDATE_FAILED","message":error_message(error)}}),
         ),
     };
     emit(stdout, &json!([row]))?;
@@ -86,7 +87,7 @@ fn main() -> ExitCode {
             // 标准输出不可写时 改用标准错误报告
             eprintln!(
                 "{}",
-                json!([{"error":{"code":"STDOUT_WRITE_FAILED","message":error.to_string()}}])
+                json!([{"error":{"code":"STDOUT_WRITE_FAILED","message":error_message(error)}}])
             );
             ExitCode::FAILURE
         }
@@ -100,6 +101,14 @@ fn emit(writer: &mut impl Write, value: &impl serde::Serialize) -> Result<()> {
     Ok(())
 }
 
+fn error_message(error: impl std::fmt::Display) -> String {
+    error
+        .to_string()
+        .split_whitespace()
+        .collect::<Vec<_>>()
+        .join(" ")
+}
+
 fn run() -> Result<u8> {
     let mut stdout = io::stdout().lock();
     let Cli {
@@ -110,13 +119,17 @@ fn run() -> Result<u8> {
     } = match Cli::try_parse() {
         Ok(cli) => cli,
         Err(error) => match error.kind() {
+            clap::error::ErrorKind::DisplayHelpOnMissingArgumentOrSubcommand => {
+                write!(stdout, "{error}")?;
+                return Ok(0);
+            }
             clap::error::ErrorKind::DisplayHelp | clap::error::ErrorKind::DisplayVersion => {
                 error.exit()
             }
             _ => {
                 emit(
                     &mut stdout,
-                    &json!([{"error":{"code":"CLI_PARSE_ERROR","message":error.to_string()}}]),
+                    &json!([{"error":{"code":"CLI_PARSE_ERROR","message":error_message(error)}}]),
                 )?;
                 return Ok(2);
             }
@@ -209,7 +222,7 @@ fn run() -> Result<u8> {
                 {
                     code = "INPUT_NOT_FOUND";
                 }
-                json!({"input":input,"error":{"code":code,"message":error.to_string()}})
+                json!({"input":input,"error":{"code":code,"message":error_message(error)}})
             }
         };
         rows.push(row);
