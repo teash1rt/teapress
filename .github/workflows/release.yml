@@ -147,7 +147,7 @@ jobs:
           done
           cp "teapress-$TAG-source.tar.gz" dist-manifest.json ../upload/
           cd ../upload
-          sha256sum * > SHA256SUMS
+          sha256sum -- * > SHA256SUMS
       - name: Publish release
         env:
           VERSION: ${{ inputs.version }}
