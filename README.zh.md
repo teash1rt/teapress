@@ -8,7 +8,12 @@
 
 ## 安装
 
-TODO: Homebrew 安装
+```sh
+curl -fsSL https://github.com/teash1rt/teapress/releases/latest/download/teapress-installer.sh | sh
+
+# 更新
+teapress update
+```
 
 ## 用法
 
@@ -28,6 +33,7 @@ teapress photo.png -o output/
 | 参数 | 行为 |
 | --- | --- |
 | `<INPUTS>...` | 一个或多个图片路径 |
+| `update` | 检查并安装最新稳定版 |
 | `-o, --outdir <DIR>` | 另存副本，不覆盖已有文件 |
 | `-l, --lossless` | 保持解码后的像素不变，元数据和文件字节可能变化 |
 | `-h, --help` | 查看全部参数和输出约定 |

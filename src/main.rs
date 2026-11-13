@@ -5,25 +5,29 @@ mod quality;
 
 use crate::compress::{MAX_BYTES, compress};
 use anyhow::{Context, Result, bail};
-use clap::Parser;
+use clap::{Parser, Subcommand};
 use serde_json::json;
 use std::{
     collections::HashSet,
     fs,
     io::{self, Read, Write},
     path::PathBuf,
-    process::ExitCode,
+    process::{Command, ExitCode, Stdio},
 };
 
 #[derive(Parser)]
 #[command(
     version,
     disable_version_flag = true,
+    subcommand_negates_reqs = true,
+    args_conflicts_with_subcommands = true,
     arg(clap::Arg::new("version").short('v').long("version").action(clap::ArgAction::Version).help("Print version")),
     about = "Compress PNG, JPEG and WebP locally",
     after_help = "Balanced lossy compression; replaces inputs in place, no backup. Use -o to save copies.\nStatic images only; max 25 MiB and 20 million pixels per image. No directory traversal.\nRepeated canonical input paths return DUPLICATE_INPUT, including symlink aliases.\nStdout: one compact JSON array after the batch completes.\nSuccess: input/output paths, before/after bytes, ms (compression only),\ndssim/dssim_peak (lower is better), dssim_mode, detail.\nFailure: input, error {code, message}. Batches continue after errors.\nUsage errors: JSON array without input. Help/version: plain text.\nExit: 0 success, 1 failure, 2 usage."
 )]
 struct Cli {
+    #[command(subcommand)]
+    command: Option<Action>,
     // 按顺序逐张处理图片
     #[arg(required = true, help = "Input images, processed sequentially")]
     inputs: Vec<PathBuf>,
@@ -41,6 +45,38 @@ struct Cli {
         help = "Preserve decoded pixels; file bytes and metadata may change"
     )]
     lossless: bool,
+}
+
+#[derive(Subcommand)]
+enum Action {
+    #[command(about = "Update to the latest stable release using the installed updater")]
+    Update,
+}
+
+fn update(stdout: &mut impl Write) -> Result<u8> {
+    // 只调用当前程序旁的更新器 不从 PATH 查找同名程序
+    let result = std::env::current_exe().and_then(|path| {
+        Command::new(path.with_file_name("teapress-update"))
+            .stdout(Stdio::from(io::stderr()))
+            .status()
+    });
+    let (code, row) = match result {
+        Ok(status) if status.success() => (0, json!({"detail":"Update check completed"})),
+        Ok(status) => (
+            1,
+            json!({"error":{"code":"UPDATE_FAILED","message":format!("Updater exited with {status}")}}),
+        ),
+        Err(error) if error.kind() == io::ErrorKind::NotFound => (
+            1,
+            json!({"error":{"code":"UPDATE_UNAVAILABLE","message":"Install teapress using the official shell installer to enable updates"}}),
+        ),
+        Err(error) => (
+            1,
+            json!({"error":{"code":"UPDATE_FAILED","message":error.to_string()}}),
+        ),
+    };
+    emit(stdout, &json!([row]))?;
+    Ok(code)
 }
 
 fn main() -> ExitCode {
@@ -67,6 +103,7 @@ fn emit(writer: &mut impl Write, value: &impl serde::Serialize) -> Result<()> {
 fn run() -> Result<u8> {
     let mut stdout = io::stdout().lock();
     let Cli {
+        command,
         inputs,
         outdir,
         lossless,
@@ -85,6 +122,9 @@ fn run() -> Result<u8> {
             }
         },
     };
+    if let Some(Action::Update) = command {
+        return update(&mut stdout);
+    }
     let mut rows = Vec::new();
     let mut seen = HashSet::new();
     let mut failed = false;

@@ -183,7 +183,14 @@ fn invalid_output_directory_returns_json_without_changing_input() {
 
 #[test]
 fn usage_errors_are_json_and_help_stays_text() {
-    for args in [vec![], vec!["--unknown"], vec!["--jsonl"], vec!["-o"]] {
+    for args in [
+        vec![],
+        vec!["--unknown"],
+        vec!["--jsonl"],
+        vec!["-o"],
+        vec!["update", "photo.png"],
+        vec!["update", "--lossless"],
+    ] {
         let run = Command::new(env!("CARGO_BIN_EXE_teapress"))
             .args(args)
             .output()
@@ -210,6 +217,54 @@ fn usage_errors_are_json_and_help_stays_text() {
             assert!(text.contains("-v, --version"));
         } else {
             assert_eq!(text.trim(), concat!("teapress ", env!("CARGO_PKG_VERSION")));
+        }
+    }
+}
+
+#[cfg(unix)]
+#[test]
+fn update_uses_sibling_updater_and_keeps_stdout_json() {
+    use std::os::unix::fs::PermissionsExt;
+
+    let dir = tempfile::tempdir().unwrap();
+    let binary = dir.path().join("teapress");
+    let updater = dir.path().join("teapress-update");
+    std::fs::copy(env!("CARGO_BIN_EXE_teapress"), &binary).unwrap();
+    let help = Command::new(&binary)
+        .args(["update", "--help"])
+        .output()
+        .unwrap();
+    assert!(help.status.success());
+    assert!(String::from_utf8_lossy(&help.stdout).contains("latest stable release"));
+
+    // PATH 中的同名程序不能代替随包安装的更新器
+    let other = dir.path().join("other");
+    std::fs::create_dir(&other).unwrap();
+    let decoy = other.join("teapress-update");
+    std::fs::write(&decoy, "#!/bin/sh\necho unexpected\n").unwrap();
+    std::fs::set_permissions(&decoy, std::fs::Permissions::from_mode(0o755)).unwrap();
+    let missing = Command::new(&binary)
+        .arg("update")
+        .env("PATH", &other)
+        .output()
+        .unwrap();
+    assert_eq!(missing.status.code(), Some(1));
+    let rows: serde_json::Value = serde_json::from_slice(&missing.stdout).unwrap();
+    assert_eq!(rows[0]["error"]["code"], "UPDATE_UNAVAILABLE");
+
+    for exit in [0, 7] {
+        std::fs::write(&updater, format!("#!/bin/sh\ntest \"$#\" -eq 0 || exit 99\necho checking\necho progress >&2\nexit {exit}\n")).unwrap();
+        std::fs::set_permissions(&updater, std::fs::Permissions::from_mode(0o755)).unwrap();
+        let run = Command::new(&binary).arg("update").output().unwrap();
+        assert_eq!(run.status.success(), exit == 0);
+        let rows: serde_json::Value = serde_json::from_slice(&run.stdout).unwrap();
+        assert_eq!(rows.as_array().unwrap().len(), 1);
+        let progress = String::from_utf8(run.stderr).unwrap();
+        assert!(progress.contains("checking") && progress.contains("progress"));
+        if exit == 0 {
+            assert_eq!(rows[0]["detail"], "Update check completed");
+        } else {
+            assert_eq!(rows[0]["error"]["code"], "UPDATE_FAILED");
         }
     }
 }

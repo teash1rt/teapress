@@ -8,7 +8,12 @@
 
 ## Install
 
-TODO: Homebrew installation
+```sh
+curl -fsSL https://github.com/teash1rt/teapress/releases/latest/download/teapress-installer.sh | sh
+
+# Update
+teapress update
+```
 
 ## Usage
 
@@ -28,6 +33,7 @@ teapress photo.png -o output/
 | Argument / option | Behavior |
 | --- | --- |
 | `<INPUTS>...` | One or more image paths |
+| `update` | Check for and install the latest stable release |
 | `-o, --outdir <DIR>` | Save copies instead; never overwrite existing files |
 | `-l, --lossless` | Preserve decoded pixels; metadata and file bytes may change |
 | `-h, --help` | Show all options and output conventions |

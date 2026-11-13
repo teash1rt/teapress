@@ -1,0 +1,173 @@
+name: Release
+
+on:
+  workflow_call:
+    inputs:
+      version:
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+concurrency:
+  group: teapress-release
+  cancel-in-progress: false
+
+env:
+  TAG: v${{ inputs.version }}
+  GH_TOKEN: ${{ github.token }}
+  MACOSX_DEPLOYMENT_TARGET: '11.0'
+
+jobs:
+  prepare:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/dev'
+    runs-on: ubuntu-22.04
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    outputs:
+      published: ${{ steps.release.outputs.published }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Reserve tag and check release
+        id: release
+        env:
+          VERSION: ${{ inputs.version }}
+        run: |
+          gh api --paginate "repos/$GITHUB_REPOSITORY/releases" --jq '.[] | @json' > releases.jsonl
+          read -r -a versions <<< "$VERSION $(jq -sr '[.[] | select(.draft == false) | .tag_name] | join(" ")' releases.jsonl)"
+          latest=$(npx --yes semver@7.7.3 "${versions[@]}" | tail -n 1)
+          test "$latest" = "$VERSION" || { echo 'A newer version is already published'; exit 1; }
+          if git rev-parse -q --verify "refs/tags/$TAG" >/dev/null; then
+            test "$(git rev-list -n 1 "$TAG")" = "$GITHUB_SHA" || { echo 'Version tag belongs to another commit'; exit 1; }
+          else
+            git tag "$TAG" "$GITHUB_SHA"
+            git push origin "refs/tags/$TAG"
+          fi
+          if jq -se --arg tag "$TAG" 'any(.[]; .tag_name == $tag and .draft == false)' releases.jsonl; then
+            echo 'published=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'published=false' >> "$GITHUB_OUTPUT"
+          fi
+
+  build:
+    needs: prepare
+    if: needs.prepare.outputs.published != 'true'
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: macos-15
+            target: aarch64-apple-darwin
+          - os: macos-15-intel
+            target: x86_64-apple-darwin
+          - os: ubuntu-22.04
+            target: x86_64-unknown-linux-gnu
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: dtolnay/rust-toolchain@1.88.0
+      - uses: taiki-e/install-action@v2
+        with:
+          tool: cargo-dist@0.34.0
+      - name: Collect dependency licenses
+        run: |
+          mkdir -p target
+          cargo vendor --locked target/vendor > /dev/null
+          find target/vendor -type f \( -iname '*license*' -o -iname '*licence*' -o -iname 'copy*' -o -iname 'notice*' -o -iname 'patents*' -o -name Cargo.toml \) -print0 |
+            tar --null -T - -czf target/DEPENDENCY-LICENSES.tar.gz
+      - name: Build archive
+        env:
+          TARGET: ${{ matrix.target }}
+        run: dist build --artifacts=local --target "$TARGET" --tag "$TAG" --output-format=json > target/local-manifest.json
+      - name: Test packaged binary
+        env:
+          TARGET: ${{ matrix.target }}
+          VERSION: ${{ inputs.version }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/package"
+          tar -xzf "target/distrib/teapress-$TARGET.tar.gz" -C "$RUNNER_TEMP/package"
+          binary="$RUNNER_TEMP/package/teapress-$TARGET/teapress"
+          test "$("$binary" --version)" = "teapress $VERSION"
+          "$binary" --help
+          "$binary" update --help
+          test -s "target/distrib/teapress-$TARGET-update"
+          mkdir -p target/upload
+          find target/distrib -maxdepth 1 -type f -exec cp {} target/upload/ \;
+          cp target/local-manifest.json "target/upload/$TARGET-dist-manifest.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist-${{ matrix.target }}
+          path: target/upload/*
+          if-no-files-found: error
+
+  publish:
+    needs: [prepare, build]
+    runs-on: ubuntu-22.04
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: dtolnay/rust-toolchain@1.88.0
+      - uses: taiki-e/install-action@v2
+        with:
+          tool: cargo-dist@0.34.0
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: dist-*
+          path: target/distrib
+          merge-multiple: true
+      - name: Build shell installer
+        run: dist build --artifacts=global --tag "$TAG" --output-format=json > target/global-manifest.json
+      - name: Bundle corresponding source and dependency licenses
+        run: |
+          mkdir -p target/source/.cargo
+          git archive "$GITHUB_SHA" | tar -xf - -C target/source
+          cargo vendor --locked target/source/vendor > target/source/.cargo/config.toml
+          sed -i 's|directory = "target/source/vendor"|directory = "vendor"|' target/source/.cargo/config.toml
+          tar -czf "target/distrib/teapress-$TAG-source.tar.gz" -C target/source .
+          cp target/global-manifest.json target/distrib/dist-manifest.json
+          jq -er '.artifacts[] | select(.kind == "executable-zip") | (.checksums.sha256 // error("Missing archive checksum")) + "  " + .name' target/global-manifest.json > target/archives.sha256
+          cd target/distrib
+          sha256sum --strict --check ../archives.sha256
+          mkdir -p ../upload
+          jq -r '.artifacts[].name' ../global-manifest.json | while IFS= read -r asset; do
+            cp "$asset" ../upload/
+          done
+          cp "teapress-$TAG-source.tar.gz" dist-manifest.json ../upload/
+          cd ../upload
+          sha256sum * > SHA256SUMS
+      - name: Publish release
+        env:
+          VERSION: ${{ inputs.version }}
+        run: |
+          gh api --paginate "repos/$GITHUB_REPOSITORY/releases" --jq '.[] | @json' > releases.jsonl
+          read -r -a versions <<< "$VERSION $(jq -sr '[.[] | select(.draft == false) | .tag_name] | join(" ")' releases.jsonl)"
+          latest=$(npx --yes semver@7.7.3 "${versions[@]}" | tail -n 1)
+          test "$latest" = "$VERSION" || { echo 'A newer version is already published'; exit 1; }
+          if jq -se --arg tag "$TAG" 'any(.[]; .tag_name == $tag and .draft == false)' releases.jsonl; then
+            echo 'Release already published; keeping existing assets'
+            exit 0
+          fi
+          if ! gh release view "$TAG" >/dev/null 2>&1; then
+            gh release create "$TAG" --verify-tag --draft --title "$TAG" --generate-notes
+          fi
+          gh release upload "$TAG" target/upload/* --clobber
+          if [[ "$TAG" == *-* ]]; then
+            gh release edit "$TAG" --draft=false --prerelease --latest=false
+          else
+            gh release edit "$TAG" --draft=false --latest
+          fi
