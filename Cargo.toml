@@ -1,0 +1,61 @@
+[package]
+name = "teapress"
+version = "0.0.4"
+description = "A simple, fast, local image compression CLI for PNG, JPEG and WebP, built for developers and AI agents."
+repository = "https://github.com/teash1rt/teapress"
+homepage = "https://github.com/teash1rt/teapress"
+license = "AGPL-3.0-only"
+keywords = ["image", "compression", "cli"]
+categories = ["command-line-utilities", "multimedia::images"]
+exclude = ["validation/"]
+rust-version = "1.88"
+edition = "2024"
+publish = false
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+image = { version = "0.25", default-features = false, features = ["png", "jpeg", "webp"] }
+dssim-core = "3.5"
+imagequant = "4.4"
+mozjpeg = { version = "0.10", default-features = false }
+oxipng = { version = "9", default-features = false, features = ["parallel"] }
+png = "0.18"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+webp = { version = "0.3", default-features = false }
+img-parts = "0.4.1"
+moxcms = "0.8.1"
+rgb = "0.8"
+zune-jpeg = "0.5"
+zune-core = "0.5"
+tempfile = "3"
+
+[profile.release]
+lto = "thin"
+strip = true
+
+[profile.dist]
+inherits = "release"
+
+[package.metadata.dist]
+dist = true
+
+[workspace.metadata.dist]
+cargo-dist-version = "0.34.0"
+# 版本变更由 CI 判断 dist 只负责构建和生成安装包
+ci = ["github"]
+allow-dirty = ["ci"]
+hosting = ["github"]
+installers = ["shell"]
+targets = ["aarch64-apple-darwin", "x86_64-apple-darwin", "x86_64-unknown-linux-gnu"]
+unix-archive = ".tar.gz"
+checksum = "sha256"
+# CI 另外打包含依赖源码的完整归档
+source-tarball = false
+include = ["target/DEPENDENCY-LICENSES.tar.gz"]
+
+[workspace.metadata.dist.github-custom-runners]
+aarch64-apple-darwin = "macos-15"
+x86_64-apple-darwin = "macos-15-intel"
+x86_64-unknown-linux-gnu = "ubuntu-22.04"

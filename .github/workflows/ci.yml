@@ -1,0 +1,87 @@
+name: CI
+
+on:
+  push:
+    branches: [dev, master]
+  pull_request:
+    branches: [dev, master]
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  check:
+    runs-on: ubuntu-22.04
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: taiki-e/install-action@v2
+        with:
+          tool: yq@4.54.2
+      - name: Install cargo-dist
+        run: curl --proto '=https' --tlsv1.2 -LsSf https://github.com/axodotdev/cargo-dist/releases/download/v0.34.0/cargo-dist-installer.sh | sh
+      - name: Check version
+        id: version
+        env:
+          BEFORE: ${{ github.event_name == 'push' && github.event.before || github.event.pull_request.base.sha }}
+          GH_TOKEN: ${{ github.token }}
+          EVENT: ${{ github.event_name }}
+        run: |
+          version=$(yq -p toml -oy -r '.package.version' Cargo.toml)
+          locked=$(yq -p toml -oy -r '.package[] | select(.name == "teapress" and .source == null) | .version' Cargo.lock)
+          test "$version" = "$locked" || { echo 'Cargo.toml and Cargo.lock versions differ'; exit 1; }
+          [[ "$version" != *+* ]] || { echo 'Build metadata is not supported'; exit 1; }
+          if [[ ! "$BEFORE" =~ ^0+$ ]] && git cat-file -e "$BEFORE:Cargo.toml" 2>/dev/null; then
+            previous=$(git show "$BEFORE:Cargo.toml" | yq -p toml -oy -r '.package.version')
+            if test "$version" != "$previous"; then
+              npx --yes semver@7.7.3 "$version" --include-prerelease -r ">$previous"
+            fi
+          fi
+          test "$EVENT" = push || exit 0
+          gh api --paginate "repos/$GITHUB_REPOSITORY/releases" --jq '.[] | @json' > "$RUNNER_TEMP/releases.jsonl"
+          if jq -se --arg tag "v$version" 'any(.[]; .tag_name == $tag and .draft == false)' "$RUNNER_TEMP/releases.jsonl"; then
+            exit 0
+          fi
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+      - uses: dtolnay/rust-toolchain@1.88.0
+        with:
+          components: rustfmt, clippy
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo fmt --check
+      - run: cargo clippy --locked --all-targets -- -D warnings
+      - uses: raven-actions/actionlint@v2
+        with:
+          version: '1.7.12'
+      - run: dist plan
+
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-15, macos-15-intel, ubuntu-22.04]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: dtolnay/rust-toolchain@1.88.0
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo test --release --locked
+
+  release:
+    needs: [check, test]
+    if: github.event_name == 'push' && needs.check.outputs.version != ''
+    permissions:
+      contents: write
+    uses: ./.github/workflows/release.yml
+    with:
+      version: ${{ needs.check.outputs.version }}
