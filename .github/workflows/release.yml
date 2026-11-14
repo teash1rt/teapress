@@ -25,7 +25,7 @@ env:
 
 jobs:
   prepare:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/dev'
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/master')
     runs-on: ubuntu-22.04
     timeout-minutes: 5
     permissions:
@@ -42,6 +42,10 @@ jobs:
           VERSION: ${{ inputs.version }}
         run: |
           gh api --paginate "repos/$GITHUB_REPOSITORY/releases" --jq '.[] | @json' > releases.jsonl
+          if jq -se --arg tag "$TAG" 'any(.[]; .tag_name == $tag and .draft == false)' releases.jsonl; then
+            echo 'published=true' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
           read -r -a versions <<< "$VERSION $(jq -sr '[.[] | select(.draft == false) | .tag_name] | join(" ")' releases.jsonl)"
           latest=$(npx --yes semver@7.7.3 "${versions[@]}" | tail -n 1)
           test "$latest" = "$VERSION" || { echo 'A newer version is already published'; exit 1; }
@@ -51,11 +55,7 @@ jobs:
             git tag "$TAG" "$GITHUB_SHA"
             git push origin "refs/tags/$TAG"
           fi
-          if jq -se --arg tag "$TAG" 'any(.[]; .tag_name == $tag and .draft == false)' releases.jsonl; then
-            echo 'published=true' >> "$GITHUB_OUTPUT"
-          else
-            echo 'published=false' >> "$GITHUB_OUTPUT"
-          fi
+          echo 'published=false' >> "$GITHUB_OUTPUT"
 
   build:
     needs: prepare

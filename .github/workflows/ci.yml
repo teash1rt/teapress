@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [dev]
+    branches: [dev, master]
   pull_request:
-    branches: [dev]
+    branches: [dev, master]
 
 permissions:
   contents: read
@@ -39,7 +39,7 @@ jobs:
           locked=$(yq -p toml -oy -r '.package[] | select(.name == "teapress" and .source == null) | .version' Cargo.lock)
           test "$version" = "$locked" || { echo 'Cargo.toml and Cargo.lock versions differ'; exit 1; }
           [[ "$version" != *+* ]] || { echo 'Build metadata is not supported'; exit 1; }
-          if [[ ! "$BEFORE" =~ ^0+$ ]]; then
+          if [[ ! "$BEFORE" =~ ^0+$ ]] && git cat-file -e "$BEFORE:Cargo.toml" 2>/dev/null; then
             previous=$(git show "$BEFORE:Cargo.toml" | yq -p toml -oy -r '.package.version')
             if test "$version" != "$previous"; then
               npx --yes semver@7.7.3 "$version" --include-prerelease -r ">$previous"
