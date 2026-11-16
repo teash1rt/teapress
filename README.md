@@ -8,10 +8,23 @@
 
 ## Install
 
+Release targets: macOS (Apple Silicon / Intel), Linux x86_64, and Windows x64 (MSVC).
+
+macOS / Linux:
+
 ```sh
 curl -fsSL https://github.com/teash1rt/teapress/releases/latest/download/teapress-installer.sh | sh
+```
 
-# Update
+Windows (PowerShell):
+
+```powershell
+irm https://github.com/teash1rt/teapress/releases/latest/download/teapress-installer.ps1 | iex
+```
+
+Update:
+
+```sh
 teapress update
 ```
 
@@ -33,7 +46,7 @@ teapress photo.png -o output/
 | Argument / option | Behavior |
 | --- | --- |
 | `<INPUTS>...` | One or more image paths |
-| `update` | Install the latest stable release in place; requires curl and sh |
+| `update` | Install the latest stable release in place; requires curl and sh on macOS/Linux, curl.exe and PowerShell on Windows |
 | `-o, --outdir <DIR>` | Save copies instead; never overwrite existing files |
 | `-l, --lossless` | Preserve decoded pixels; metadata and file bytes may change |
 | `-h, --help` | Show all options and output conventions |

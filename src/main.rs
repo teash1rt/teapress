@@ -56,29 +56,66 @@ enum Action {
 
 fn update(stdout: &mut impl Write) -> Result<u8> {
     let result = (|| -> Result<()> {
+        #[cfg(not(windows))]
         let executable = std::env::current_exe()?;
+        #[cfg(not(windows))]
         let directory = executable
             .parent()
             .context("Executable has no parent directory")?;
-        let script = tempfile::NamedTempFile::new()?;
+        let temporary = tempfile::tempdir()?;
+        #[cfg(not(windows))]
+        let (script_name, curl) = ("teapress-installer.sh", "curl");
+        #[cfg(windows)]
+        let (script_name, curl) = ("teapress-installer.ps1", "curl.exe");
+        let script = temporary.path().join(script_name);
+        let url =
+            format!("https://github.com/teash1rt/teapress/releases/latest/download/{script_name}");
         // 下载完整后再执行 避免网络中断时运行残缺脚本
-        let status = Command::new("curl")
+        let status = Command::new(curl)
             .args([
-                "--fail", "--silent", "--show-error", "--location",
-                "--proto", "=https", "--proto-redir", "=https",
-                "--connect-timeout", "10", "--max-time", "120", "--output",
+                "--fail",
+                "--silent",
+                "--show-error",
+                "--location",
+                "--proto",
+                "=https",
+                "--proto-redir",
+                "=https",
+                "--connect-timeout",
+                "10",
+                "--max-time",
+                "120",
+                "--output",
             ])
-            .arg(script.path())
-            .arg("https://github.com/teash1rt/teapress/releases/latest/download/teapress-installer.sh")
+            .arg(&script)
+            .arg(url)
             .stdout(Stdio::from(io::stderr()))
             .status()
             .context("Failed to run curl to download the installer")?;
         if !status.success() {
             bail!("Installer download failed with {status}");
         }
-        // 复用官方安装器 只更新当前目录 不改 shell 配置或安装记录
-        let status = Command::new("/bin/sh")
-            .arg(script.path())
+        // Windows 先安装到临时目录 避免安装器覆盖正在运行的 exe
+        #[cfg(windows)]
+        let directory = temporary.path();
+        #[cfg(windows)]
+        let mut installer = {
+            let mut command = Command::new("powershell.exe");
+            command.args([
+                "-NoLogo",
+                "-NoProfile",
+                "-NonInteractive",
+                "-ExecutionPolicy",
+                "Bypass",
+                "-File",
+            ]);
+            command
+        };
+        #[cfg(not(windows))]
+        let mut installer = Command::new("/bin/sh");
+        // 复用官方安装器 不改 PATH 或安装记录
+        let status = installer
+            .arg(&script)
             .env_remove("TEAPRESS_INSTALL_DIR")
             .env_remove("CARGO_DIST_FORCE_INSTALL_DIR")
             .env("TEAPRESS_UNMANAGED_INSTALL", directory)
@@ -87,6 +124,21 @@ fn update(stdout: &mut impl Write) -> Result<u8> {
             .context("Failed to run the installer")?;
         if !status.success() {
             bail!("Installer exited with {status}");
+        }
+        #[cfg(windows)]
+        {
+            let replacement = directory.join("teapress.exe");
+            // 替换前确认下载的程序存在且可执行 失败时保留原程序
+            let status = Command::new(&replacement)
+                .arg("--version")
+                .stdout(Stdio::from(io::stderr()))
+                .status()
+                .context("Failed to validate the downloaded executable")?;
+            if !status.success() {
+                bail!("Downloaded executable exited with {status}");
+            }
+            self_replace::self_replace(&replacement)
+                .context("Failed to replace the running executable")?;
         }
         Ok(())
     })();

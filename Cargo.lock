@@ -672,6 +672,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "self-replace"
+version = "1.5.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "609c5606d9d357b26e4ee1a7a01beac396628d0fa01ebbade2a09cefb88e65af"
+dependencies = [
+ "fastrand",
+ "tempfile",
+ "windows-sys",
+]
+
+[[package]]
 name = "serde"
 version = "1.0.229"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -751,7 +762,7 @@ checksum = "55937e1799185b12863d447f42597ed69d9928686b8d88a1df17376a097d8369"
 
 [[package]]
 name = "teapress"
-version = "0.0.4"
+version = "0.0.5"
 dependencies = [
  "anyhow",
  "clap",
@@ -764,6 +775,7 @@ dependencies = [
  "oxipng",
  "png",
  "rgb",
+ "self-replace",
  "serde",
  "serde_json",
  "tempfile",

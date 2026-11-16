@@ -403,3 +403,103 @@ fn duplicate_paths_are_rejected_without_recompressing() {
         }
     }
 }
+
+#[cfg(windows)]
+#[test]
+fn windows_update_replaces_running_exe_and_preserves_it_on_failure() {
+    let dir = tempfile::tempdir().unwrap();
+    let install = dir.path().join("安装 空格 ' &");
+    std::fs::create_dir(&install).unwrap();
+    let binary = install.join("teapress.exe");
+    std::fs::copy(env!("CARGO_BIN_EXE_teapress"), &binary).unwrap();
+    let original = std::fs::read(&binary).unwrap();
+    let downloader = install.join("curl.exe");
+    let compile = Command::new("rustc")
+        .arg(concat!(
+            env!("CARGO_MANIFEST_DIR"),
+            "/tests/fixtures/update-downloader.rs"
+        ))
+        .args(["--edition=2024", "-o"])
+        .arg(&downloader)
+        .output()
+        .unwrap();
+    assert!(
+        compile.status.success(),
+        "{}",
+        String::from_utf8_lossy(&compile.stderr)
+    );
+    let installer = dir.path().join("installer.ps1");
+    std::fs::write(
+        &installer,
+        r#"
+$ErrorActionPreference = 'Stop'
+if ($env:TEAPRESS_INSTALL_DIR -or $env:CARGO_DIST_FORCE_INSTALL_DIR) { exit 99 }
+if ($env:TEAPRESS_UNMANAGED_INSTALL -eq $env:MOCK_REAL_INSTALL) { exit 98 }
+Write-Output 'installing'
+[Console]::Error.WriteLine('progress')
+if ($env:MOCK_INSTALL_EXIT -ne '0') { exit ([int]$env:MOCK_INSTALL_EXIT) }
+if ($env:MOCK_SKIP_BINARY -ne '1') {
+    New-Item -ItemType Directory -Path $env:TEAPRESS_UNMANAGED_INSTALL -Force | Out-Null
+    $destination = Join-Path $env:TEAPRESS_UNMANAGED_INSTALL 'teapress.exe'
+    if ($env:MOCK_SKIP_BINARY -eq '2') {
+        [IO.File]::WriteAllText($destination, 'not an executable')
+    } else {
+        Copy-Item -LiteralPath $env:MOCK_REPLACEMENT -Destination $destination
+    }
+}
+exit 0
+"#,
+    )
+    .unwrap();
+    let path = std::env::join_paths(
+        std::iter::once(install.clone())
+            .chain(std::env::split_paths(&std::env::var_os("PATH").unwrap())),
+    )
+    .unwrap();
+    for (download_exit, install_exit, skip_binary) in
+        [(7, 0, 0), (0, 7, 0), (0, 0, 1), (0, 0, 2), (0, 0, 0)]
+    {
+        let run = Command::new(&binary)
+            .arg("update")
+            .env("PATH", &path)
+            .env("MOCK_INSTALLER", &installer)
+            .env("MOCK_REPLACEMENT", &downloader)
+            .env("MOCK_REAL_INSTALL", &install)
+            .env("MOCK_DOWNLOAD_EXIT", download_exit.to_string())
+            .env("MOCK_INSTALL_EXIT", install_exit.to_string())
+            .env("MOCK_SKIP_BINARY", skip_binary.to_string())
+            .env("TEAPRESS_INSTALL_DIR", dir.path().join("wrong"))
+            .env("CARGO_DIST_FORCE_INSTALL_DIR", dir.path().join("wrong"))
+            .env("TEAPRESS_UNMANAGED_INSTALL", dir.path().join("wrong"))
+            .output()
+            .unwrap();
+        let success = download_exit == 0 && install_exit == 0 && skip_binary == 0;
+        assert_eq!(
+            run.status.code(),
+            Some(if success { 0 } else { 1 }),
+            "{}",
+            String::from_utf8_lossy(&run.stderr)
+        );
+        let rows: serde_json::Value = serde_json::from_slice(&run.stdout).unwrap();
+        assert_eq!(rows.as_array().unwrap().len(), 1);
+        let progress = String::from_utf8_lossy(&run.stderr);
+        assert!(progress.contains("downloading"));
+        assert_eq!(progress.contains("installing"), download_exit == 0);
+        if success {
+            assert_eq!(rows[0]["detail"], "Update completed");
+            assert_eq!(
+                std::fs::read(&binary).unwrap(),
+                std::fs::read(&downloader).unwrap()
+            );
+            let version = Command::new(&binary).arg("--version").output().unwrap();
+            assert!(version.status.success());
+            assert_eq!(
+                String::from_utf8(version.stdout).unwrap().trim(),
+                "teapress test-replacement"
+            );
+        } else {
+            assert_eq!(rows[0]["error"]["code"], "UPDATE_FAILED");
+            assert_eq!(std::fs::read(&binary).unwrap(), original);
+        }
+    }
+}

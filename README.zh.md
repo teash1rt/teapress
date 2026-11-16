@@ -8,10 +8,23 @@
 
 ## 安装
 
+发布目标：macOS（Apple Silicon / Intel）、Linux x86_64、Windows x64（MSVC）。
+
+macOS / Linux：
+
 ```sh
 curl -fsSL https://github.com/teash1rt/teapress/releases/latest/download/teapress-installer.sh | sh
+```
 
-# 更新
+Windows（PowerShell）：
+
+```powershell
+irm https://github.com/teash1rt/teapress/releases/latest/download/teapress-installer.ps1 | iex
+```
+
+更新：
+
+```sh
 teapress update
 ```
 
@@ -33,7 +46,7 @@ teapress photo.png -o output/
 | 参数 | 行为 |
 | --- | --- |
 | `<INPUTS>...` | 一个或多个图片路径 |
-| `update` | 原地安装最新稳定版，需要 curl 和 sh |
+| `update` | 原地安装最新稳定版，macOS/Linux 需要 curl 和 sh，Windows 需要 curl.exe 和 PowerShell |
 | `-o, --outdir <DIR>` | 另存副本，不覆盖已有文件 |
 | `-l, --lossless` | 保持解码后的像素不变，元数据和文件字节可能变化 |
 | `-h, --help` | 查看全部参数和输出约定 |
