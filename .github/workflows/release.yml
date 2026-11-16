@@ -70,6 +70,8 @@ jobs:
             target: x86_64-apple-darwin
           - os: ubuntu-22.04
             target: x86_64-unknown-linux-gnu
+          - os: windows-2022
+            target: x86_64-pc-windows-msvc
     runs-on: ${{ matrix.os }}
     timeout-minutes: 30
     steps:
@@ -77,8 +79,15 @@ jobs:
         with:
           persist-credentials: false
       - uses: dtolnay/rust-toolchain@1.88.0
-      - name: Install cargo-dist
+      - name: Install cargo-dist (Unix)
+        if: runner.os != 'Windows'
         run: curl --proto '=https' --tlsv1.2 -LsSf https://github.com/axodotdev/cargo-dist/releases/download/v0.34.0/cargo-dist-installer.sh | sh
+      - name: Install cargo-dist (Windows)
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          Invoke-WebRequest https://github.com/axodotdev/cargo-dist/releases/download/v0.34.0/cargo-dist-installer.ps1 -OutFile "$env:RUNNER_TEMP/dist-installer.ps1"
+          & "$env:RUNNER_TEMP/dist-installer.ps1"
       - name: Collect dependency licenses
         run: |
           mkdir -p target
@@ -95,8 +104,13 @@ jobs:
           VERSION: ${{ inputs.version }}
         run: |
           mkdir -p "$RUNNER_TEMP/package"
-          tar -xzf "target/distrib/teapress-$TARGET.tar.gz" -C "$RUNNER_TEMP/package"
-          binary="$RUNNER_TEMP/package/teapress-$TARGET/teapress"
+          if [[ "$RUNNER_OS" == Windows ]]; then
+            unzip -q "target/distrib/teapress-$TARGET.zip" -d "$RUNNER_TEMP/package"
+            binary="$RUNNER_TEMP/package/teapress.exe"
+          else
+            tar -xzf "target/distrib/teapress-$TARGET.tar.gz" -C "$RUNNER_TEMP/package"
+            binary="$RUNNER_TEMP/package/teapress-$TARGET/teapress"
+          fi
           test "$("$binary" --version)" = "teapress $VERSION"
           "$binary" --help
           "$binary" update --help
@@ -127,7 +141,7 @@ jobs:
           pattern: dist-*
           path: target/distrib
           merge-multiple: true
-      - name: Build shell installer
+      - name: Build shell and PowerShell installers
         run: dist build --artifacts=global --tag "$TAG" --output-format=json > target/global-manifest.json
       - name: Bundle corresponding source and dependency licenses
         run: |

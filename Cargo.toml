@@ -1,6 +1,6 @@
 [package]
 name = "teapress"
-version = "0.0.4"
+version = "0.0.5"
 description = "A simple, fast, local image compression CLI for PNG, JPEG and WebP, built for developers and AI agents."
 repository = "https://github.com/teash1rt/teapress"
 homepage = "https://github.com/teash1rt/teapress"
@@ -31,6 +31,9 @@ zune-jpeg = "0.5"
 zune-core = "0.5"
 tempfile = "3"
 
+[target.'cfg(windows)'.dependencies]
+self-replace = "1.5.1"
+
 [profile.release]
 lto = "thin"
 strip = true
@@ -47,9 +50,10 @@ cargo-dist-version = "0.34.0"
 ci = ["github"]
 allow-dirty = ["ci"]
 hosting = ["github"]
-installers = ["shell"]
-targets = ["aarch64-apple-darwin", "x86_64-apple-darwin", "x86_64-unknown-linux-gnu"]
+installers = ["shell", "powershell"]
+targets = ["aarch64-apple-darwin", "x86_64-apple-darwin", "x86_64-unknown-linux-gnu", "x86_64-pc-windows-msvc"]
 unix-archive = ".tar.gz"
+windows-archive = ".zip"
 checksum = "sha256"
 # CI 另外打包含依赖源码的完整归档
 source-tarball = false
@@ -59,3 +63,4 @@ include = ["target/DEPENDENCY-LICENSES.tar.gz"]
 aarch64-apple-darwin = "macos-15"
 x86_64-apple-darwin = "macos-15-intel"
 x86_64-unknown-linux-gnu = "ubuntu-22.04"
+x86_64-pc-windows-msvc = "windows-2022"
