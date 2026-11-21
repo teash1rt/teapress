@@ -3,15 +3,15 @@ mod compress;
 mod png_strategy;
 mod quality;
 
-use crate::compress::{MAX_BYTES, compress};
-use anyhow::{Context, Result, bail};
+use crate::compress::{MAX_BYTES, compress, supported_format};
+use anyhow::{Context, Result, bail, ensure};
 use clap::{Parser, Subcommand};
 use serde_json::json;
 use std::{
     collections::HashSet,
     fs,
     io::{self, Read, Write},
-    path::PathBuf,
+    path::{Path, PathBuf},
     process::{Command, ExitCode, Stdio},
 };
 
@@ -24,21 +24,23 @@ use std::{
     args_conflicts_with_subcommands = true,
     arg(clap::Arg::new("version").short('v').long("version").action(clap::ArgAction::Version).help("Print version")),
     about = "Compress PNG, JPEG and WebP locally",
-    after_help = "Balanced lossy compression; replaces inputs in place, no backup. Use -o to save copies.\nStatic images only; max 25 MiB and 20 million pixels per image. No directory traversal.\nRepeated canonical input paths return DUPLICATE_INPUT, including symlink aliases.\nStdout: one compact JSON array after the batch completes.\nSuccess: input/output paths, before/after bytes, ms (compression only),\ndssim/dssim_peak (lower is better), dssim_mode, detail.\nFailure: input, error {code, message}. Batches continue after errors.\nUsage errors: JSON array without input. Help/version: plain text.\nExit: 0 success, 1 failure, 2 usage."
+    after_help = "Balanced lossy compression; replaces images in place, no backup.\nUse -o to save copies and preserve relative paths for a directory input.\nDirectory inputs scan the top level by default. Use -r to include subdirectories.\nStatic images only; max 25 MiB and 20 million pixels per image.\nRepeated canonical input paths return DUPLICATE_INPUT, including symlink aliases.\nStdout: one compact JSON array after the batch completes.\nSuccess: input/output paths, before/after bytes, ms (compression only),\ndssim/dssim_peak (lower is better), dssim_mode, detail.\nFailure: input, error {code, message}. Batches continue after errors.\nUsage errors: JSON array without input. Help/version: plain text.\nExit: 0 success, 1 failure, 2 usage."
 )]
 struct Cli {
     #[command(subcommand)]
     command: Option<Action>,
     // 按顺序逐张处理图片
-    #[arg(required = true, help = "Input images, processed sequentially")]
+    #[arg(required = true, help = "One or more image files, or one directory")]
     inputs: Vec<PathBuf>,
     // 默认原地替换 指定目录时另存且不覆盖已有文件
     #[arg(
         short = 'o',
         long,
-        help = "Save to a directory without overwriting existing files; default: replace inputs"
+        help = "Save copies without overwriting existing files"
     )]
     outdir: Option<PathBuf>,
+    #[arg(short, long, help = "Include subdirectories of a directory input")]
+    recursive: bool,
     // 无损只保证解码像素不变 文件字节和元数据可能变化
     #[arg(
         short = 'l',
@@ -182,12 +184,53 @@ fn error_message(error: impl std::fmt::Display) -> String {
         .join(" ")
 }
 
+fn input_error(input: &Path, code: &str, error: impl std::fmt::Display) -> serde_json::Value {
+    json!({"input":input.to_string_lossy(),"error":{"code":code,"message":error_message(error)}})
+}
+
+fn scan_directory(
+    source: &Path,
+    excluded: Option<&Path>,
+    recursive: bool,
+) -> Vec<(PathBuf, io::Result<()>)> {
+    let mut directories = vec![PathBuf::new()];
+    let mut paths = Vec::new();
+    while let Some(directory) = directories.pop() {
+        let entries = match fs::read_dir(source.join(&directory)) {
+            Ok(entries) => entries,
+            Err(error) => {
+                paths.push((directory, Err(error)));
+                continue;
+            }
+        };
+        for entry in entries {
+            let (path, file_type) = match entry {
+                Ok(entry) => (directory.join(entry.file_name()), entry.file_type()),
+                Err(error) => (directory.clone(), Err(error)),
+            };
+            match file_type {
+                Ok(kind) if recursive && kind.is_dir() && Some(path.as_path()) != excluded => {
+                    directories.push(path);
+                }
+                Ok(kind) if kind.is_file() && supported_format(&path).is_some() => {
+                    paths.push((path, Ok(())));
+                }
+                Err(error) => paths.push((path, Err(error))),
+                _ => {}
+            }
+        }
+    }
+    paths.sort_by(|a, b| a.0.cmp(&b.0));
+    paths
+}
+
 fn run() -> Result<u8> {
     let mut stdout = io::stdout().lock();
     let Cli {
         command,
         inputs,
         outdir,
+        recursive,
         lossless,
     } = match Cli::try_parse() {
         Ok(cli) => cli,
@@ -211,17 +254,58 @@ fn run() -> Result<u8> {
     if let Some(Action::Update) = command {
         return update(&mut stdout);
     }
+    let (directory, paths) = if let [input] = inputs.as_slice()
+        && fs::metadata(input).is_ok_and(|metadata| metadata.is_dir())
+    {
+        let mut code = "INPUT_READ_FAILED";
+        let result = (|| -> Result<_> {
+            let source = fs::canonicalize(input)?;
+            let output = if let Some(outdir) = &outdir {
+                code = "OUTPUT_WRITE_FAILED";
+                fs::create_dir_all(outdir)?;
+                let output = fs::canonicalize(outdir)?;
+                code = "INVALID_INPUT";
+                ensure!(source != output, "Input and output directories must differ");
+                Some(output)
+            } else {
+                None
+            };
+            let excluded = output
+                .as_deref()
+                .and_then(|dir| dir.strip_prefix(&source).ok());
+            Ok(scan_directory(&source, excluded, recursive))
+        })();
+        match result {
+            Ok(paths) => (Some(input.as_path()), paths),
+            Err(error) => {
+                emit(&mut stdout, &[input_error(input, code, error)])?;
+                return Ok(1);
+            }
+        }
+    } else {
+        (
+            None,
+            inputs.iter().cloned().map(|path| (path, Ok(()))).collect(),
+        )
+    };
     let mut rows = Vec::new();
     let mut seen = HashSet::new();
     let mut failed = false;
-    for input in inputs {
+    for (path, scan_result) in paths {
+        let input = match directory {
+            Some(dir) if path.as_os_str().is_empty() => dir.to_path_buf(),
+            Some(dir) => dir.join(&path),
+            None => path.clone(),
+        };
         let mut code = "INPUT_READ_FAILED";
         let result = (|| -> Result<serde_json::Value> {
+            scan_result?;
             let metadata = fs::metadata(&input)?;
             code = "INVALID_INPUT";
-            if !metadata.is_file() {
-                bail!("Input must be a regular image file; directories are not supported");
+            if metadata.is_dir() {
+                bail!("Input directories must be passed alone");
             }
+            ensure!(metadata.is_file(), "Input must be a regular image file");
             let name = input
                 .file_name()
                 .and_then(|x| x.to_str())
@@ -239,19 +323,23 @@ fn run() -> Result<u8> {
             file.take((MAX_BYTES + 1) as u64).read_to_end(&mut bytes)?;
             // 替换符号链接指向的文件 保留链接本身
             let destination = match &outdir {
-                Some(dir) => {
-                    code = "OUTPUT_WRITE_FAILED";
-                    fs::create_dir_all(dir)?;
-                    dir.join(name)
-                }
+                Some(dir) if directory.is_some() => dir.join(&path),
+                Some(dir) => dir.join(name),
                 None => canonical,
             };
-            if outdir.is_some() && destination.exists() {
-                code = "OUTPUT_EXISTS";
-                bail!(
-                    "Output already exists; refusing to overwrite: {}",
-                    destination.display()
-                );
+            code = "OUTPUT_WRITE_FAILED";
+            let parent = destination
+                .parent()
+                .context("Output path has no parent directory")?;
+            if outdir.is_some() {
+                fs::create_dir_all(parent)?;
+                if destination.exists() {
+                    code = "OUTPUT_EXISTS";
+                    bail!(
+                        "Output already exists; refusing to overwrite: {}",
+                        destination.display()
+                    );
+                }
             }
             code = "COMPRESSION_FAILED";
             let output = compress(&bytes, name, lossless)?;
@@ -259,11 +347,7 @@ fn run() -> Result<u8> {
             // 需要替换时先在同一文件系统写完临时文件 再原子替换
             if outdir.is_some() || !output.retained {
                 code = "OUTPUT_WRITE_FAILED";
-                let mut target = tempfile::NamedTempFile::new_in(
-                    destination
-                        .parent()
-                        .context("Output path has no parent directory")?,
-                )?;
+                let mut target = tempfile::NamedTempFile::new_in(parent)?;
                 target.write_all(&output.bytes)?;
                 target.as_file().set_permissions(permissions)?;
                 target.as_file().sync_all()?;
@@ -280,8 +364,8 @@ fn run() -> Result<u8> {
                 }
             }
             let mut row = serde_json::to_value(&output)?;
-            row["input"] = json!(input);
-            row["output"] = json!(destination);
+            row["input"] = json!(input.to_string_lossy());
+            row["output"] = json!(destination.to_string_lossy());
             Ok(row)
         })();
         let row = match result {
@@ -295,7 +379,7 @@ fn run() -> Result<u8> {
                 {
                     code = "INPUT_NOT_FOUND";
                 }
-                json!({"input":input,"error":{"code":code,"message":error_message(error)}})
+                input_error(&input, code, error)
             }
         };
         rows.push(row);

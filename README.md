@@ -30,7 +30,7 @@ teapress update
 
 ## Usage
 
-**By default, teapress replaces the original files in place, without a backup.** Names and formats are preserved.
+**By default, teapress replaces images in place, without a backup.** Names and formats are preserved. Use `-o` to save copies.
 
 ```sh
 # It will compress photo.png in place
@@ -41,18 +41,28 @@ teapress photo.jpg banner.png icon.webp
 
 # It will save a compressed copy to output/ and keep the original
 teapress photo.png -o output/
+
+# Compress the images directly inside assets/ in place
+teapress assets/
+
+# Include subdirectories and compress in place
+teapress assets/ -r
+
+# Save compressed copies and keep paths relative to assets/
+teapress assets/ -r -o output/
 ```
 
 | Argument / option | Behavior |
 | --- | --- |
-| `<INPUTS>...` | One or more image paths |
+| `<INPUTS>...` | One or more image files, or one directory |
 | `update` | Install the latest stable release in place; requires curl and sh on macOS/Linux, curl.exe and PowerShell on Windows |
 | `-o, --outdir <DIR>` | Save copies instead; never overwrite existing files |
+| `-r, --recursive` | Include subdirectories of a directory input |
 | `-l, --lossless` | Preserve decoded pixels; metadata and file bytes may change |
 | `-h, --help` | Show all options and output conventions |
 | `-v, --version` | Show version |
 
-Static `.png`, `.jpg`, `.jpeg` and `.webp` files only, up to 25 MiB and 20 million pixels each. Files are processed sequentially; directories are not traversed.
+Static `.png`, `.jpg`, `.jpeg` and `.webp` files only, up to 25 MiB and 20 million pixels each. Files are processed sequentially. Directory mode scans regular files in relative path order and skips symbolic links. When using `-o`, the output directory must differ from the input directory. If the output is inside the input directory, the scan skips that subtree.
 
 Results go to stdout as one JSON array after the batch completes. Example:
 

@@ -30,7 +30,7 @@ teapress update
 
 ## 用法
 
-**默认原地替换原图，不创建备份。** 保留文件名和格式。
+**默认原地替换原图，不创建备份。** 保留文件名和格式。指定 `-o` 可另存副本。
 
 ```sh
 # 压缩并原地替换 photo.png
@@ -41,18 +41,28 @@ teapress photo.jpg banner.png icon.webp
 
 # 将压缩副本保存到 output/ 保留原图
 teapress photo.png -o output/
+
+# 原地压缩 assets/ 顶层的图片
+teapress assets/
+
+# 递归扫描子目录并原地压缩
+teapress assets/ -r
+
+# 递归压缩并另存，保留相对于 assets/ 的路径
+teapress assets/ -r -o output/
 ```
 
 | 参数 | 行为 |
 | --- | --- |
-| `<INPUTS>...` | 一个或多个图片路径 |
+| `<INPUTS>...` | 一个或多个图片文件，或一个目录 |
 | `update` | 原地安装最新稳定版，macOS/Linux 需要 curl 和 sh，Windows 需要 curl.exe 和 PowerShell |
 | `-o, --outdir <DIR>` | 另存副本，不覆盖已有文件 |
+| `-r, --recursive` | 递归处理输入目录的子目录 |
 | `-l, --lossless` | 保持解码后的像素不变，元数据和文件字节可能变化 |
 | `-h, --help` | 查看全部参数和输出约定 |
 | `-v, --version` | 查看版本 |
 
-仅支持静态 `.png`、`.jpg`、`.jpeg` 和 `.webp` 图片，每张不超过 25 MiB、2000 万像素。多张图片串行处理，不遍历目录。
+仅支持静态 `.png`、`.jpg`、`.jpeg` 和 `.webp` 图片，每张不超过 25 MiB、2000 万像素。多张图片串行处理。目录模式按相对路径排序处理普通文件，跳过符号链接。使用 `-o` 时，输出目录须与源目录不同。若输出目录位于源目录内，扫描会跳过这个子目录。
 
 整批处理完成后，向标准输出返回一个 JSON 数组。示例：
 
