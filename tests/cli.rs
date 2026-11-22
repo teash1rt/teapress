@@ -1,5 +1,5 @@
 use image::{ImageFormat, Rgb, RgbImage};
-use std::{io::Cursor, process::Command};
+use std::{fs, io::Cursor, process::Command};
 
 fn image_bytes(format: ImageFormat) -> Vec<u8> {
     let image = RgbImage::from_fn(32, 24, |x, y| Rgb([x as u8 * 4, y as u8 * 6, 80]));
@@ -75,6 +75,174 @@ fn batch_continues_after_bad_image_and_never_overwrites() {
     let rows: serde_json::Value = serde_json::from_slice(&run.stdout).unwrap();
     assert_eq!(rows[0]["error"]["code"], "OUTPUT_EXISTS");
     assert_eq!(std::fs::read(dst).unwrap(), b"must not overwrite");
+}
+
+#[test]
+fn directory_input_replaces_images_in_place_without_outdir() {
+    for recursive in [false, true] {
+        let temp = tempfile::tempdir().unwrap();
+        let source = temp.path().join("assets");
+        let top = source.join("top.png");
+        let nested = source.join("nested");
+        let child = nested.join("child.png");
+        let original = image_bytes(ImageFormat::Png);
+        fs::create_dir_all(&nested).unwrap();
+        fs::write(&top, &original).unwrap();
+        fs::write(&child, &original).unwrap();
+
+        let mut command = Command::new(env!("CARGO_BIN_EXE_teapress"));
+        command.current_dir(temp.path()).arg("assets");
+        if recursive {
+            command.arg("-r");
+        }
+        let run = command.output().unwrap();
+        assert_eq!(run.status.code(), Some(0));
+        let rows: Vec<serde_json::Value> = serde_json::from_slice(&run.stdout).unwrap();
+        assert_eq!(rows.len(), if recursive { 2 } else { 1 });
+        assert_eq!(
+            rows.last().unwrap()["output"],
+            fs::canonicalize(&top).unwrap().to_str().unwrap()
+        );
+        assert!(fs::read(&top).unwrap().len() < original.len());
+        if recursive {
+            assert!(fs::read(&child).unwrap().len() < original.len());
+        } else {
+            assert_eq!(fs::read(&child).unwrap(), original);
+        }
+    }
+}
+
+#[test]
+fn directory_input_defaults_to_top_level_and_finds_supported_images() {
+    let temp = tempfile::tempdir().unwrap();
+    let source = temp.path().join("assets.png");
+    let output = temp.path().join("output");
+    let original = image_bytes(ImageFormat::Png);
+    fs::create_dir_all(source.join("nested")).unwrap();
+    fs::write(source.join("top.PNG"), &original).unwrap();
+    fs::write(source.join("nested/child.png"), &original).unwrap();
+    fs::write(source.join("notes.txt"), b"not an image").unwrap();
+
+    let run = Command::new(env!("CARGO_BIN_EXE_teapress"))
+        .arg(&source)
+        .arg("-o")
+        .arg(&output)
+        .arg("--lossless")
+        .output()
+        .unwrap();
+    assert_eq!(run.status.code(), Some(0));
+    let rows: Vec<serde_json::Value> = serde_json::from_slice(&run.stdout).unwrap();
+    assert_eq!(rows.len(), 1);
+    assert_eq!(rows[0]["input"], source.join("top.PNG").to_str().unwrap());
+    assert_eq!(rows[0]["output"], output.join("top.PNG").to_str().unwrap());
+    assert!(fs::metadata(output.join("top.PNG")).unwrap().len() < original.len() as u64);
+    assert_eq!(fs::read(source.join("top.PNG")).unwrap(), original);
+    assert_eq!(fs::read_dir(output).unwrap().count(), 1);
+}
+
+#[test]
+fn recursive_directory_input_keeps_relative_paths_and_skips_nested_output() {
+    let temp = tempfile::tempdir().unwrap();
+    let source = temp.path().join("assets");
+    let output = source.join("optimized");
+    let original = image_bytes(ImageFormat::Png);
+    for name in ["b/nested", "a", "optimized/a"] {
+        fs::create_dir_all(source.join(name)).unwrap();
+    }
+    fs::write(source.join("b/nested/logo.png"), &original).unwrap();
+    fs::write(source.join("a/logo.png"), &original).unwrap();
+    fs::write(output.join("a/logo.png"), b"keep this output").unwrap();
+    fs::write(output.join("previous.png"), &original).unwrap();
+
+    let run = Command::new(env!("CARGO_BIN_EXE_teapress"))
+        .arg(&source)
+        .arg("-r")
+        .arg("--outdir")
+        .arg(&output)
+        .arg("--lossless")
+        .output()
+        .unwrap();
+    assert_eq!(run.status.code(), Some(1));
+    let rows: Vec<serde_json::Value> = serde_json::from_slice(&run.stdout).unwrap();
+    assert_eq!(rows.len(), 2);
+    assert_eq!(
+        rows[0]["input"],
+        source.join("a").join("logo.png").to_str().unwrap()
+    );
+    assert_eq!(rows[0]["error"]["code"], "OUTPUT_EXISTS");
+    assert_eq!(
+        rows[1]["output"],
+        output
+            .join("b")
+            .join("nested")
+            .join("logo.png")
+            .to_str()
+            .unwrap()
+    );
+    assert_eq!(
+        fs::read(output.join("a/logo.png")).unwrap(),
+        b"keep this output"
+    );
+    assert!(output.join("b/nested/logo.png").is_file());
+    assert!(!output.join("optimized").exists());
+}
+
+#[test]
+fn directory_input_validates_output_and_reports_empty_batches() {
+    let temp = tempfile::tempdir().unwrap();
+    let source = temp.path().join("assets");
+    fs::create_dir(&source).unwrap();
+    let run = Command::new(env!("CARGO_BIN_EXE_teapress"))
+        .current_dir(temp.path())
+        .args(["assets", "-o", "assets/../assets"])
+        .output()
+        .unwrap();
+    assert_eq!(run.status.code(), Some(1));
+    let rows: Vec<serde_json::Value> = serde_json::from_slice(&run.stdout).unwrap();
+    assert_eq!(rows[0]["input"], "assets");
+    assert_eq!(rows[0]["error"]["code"], "INVALID_INPUT");
+    let run = Command::new(env!("CARGO_BIN_EXE_teapress"))
+        .current_dir(temp.path())
+        .args(["assets", "--recursive"])
+        .output()
+        .unwrap();
+    assert_eq!(run.status.code(), Some(0));
+    assert_eq!(run.stdout, b"[]\n");
+}
+
+#[cfg(unix)]
+#[test]
+fn directory_scan_skips_symlinks_and_resolves_the_output_directory() {
+    use std::os::unix::fs::symlink;
+
+    let temp = tempfile::tempdir().unwrap();
+    let source = temp.path().join("assets");
+    let output = source.join("optimized");
+    let output_alias = temp.path().join("output");
+    fs::create_dir_all(&output).unwrap();
+    let original = image_bytes(ImageFormat::Png);
+    fs::write(source.join("logo.png"), &original).unwrap();
+    fs::write(output.join("previous.png"), &original).unwrap();
+    symlink(&source, source.join("loop")).unwrap();
+    symlink(source.join("logo.png"), source.join("file-alias.png")).unwrap();
+    symlink(&output, &output_alias).unwrap();
+
+    let run = Command::new(env!("CARGO_BIN_EXE_teapress"))
+        .arg(&source)
+        .arg("--recursive")
+        .arg("-o")
+        .arg(&output_alias)
+        .arg("--lossless")
+        .output()
+        .unwrap();
+    assert_eq!(run.status.code(), Some(0));
+    let rows: Vec<serde_json::Value> = serde_json::from_slice(&run.stdout).unwrap();
+    assert_eq!(rows.len(), 1);
+    assert_eq!(
+        rows[0]["output"],
+        output_alias.join("logo.png").to_str().unwrap()
+    );
+    assert_eq!(fs::read_dir(output).unwrap().count(), 2);
 }
 
 #[test]
@@ -222,6 +390,7 @@ fn usage_errors_are_json_and_help_stays_text() {
             assert!(!text.contains("CLI_PARSE_ERROR"));
             assert!(!text.contains("--jsonl"));
             assert!(text.contains("-v, --version"));
+            assert!(text.contains("-r, --recursive"));
         } else {
             assert_eq!(text.trim(), concat!("teapress ", env!("CARGO_PKG_VERSION")));
         }

@@ -1,6 +1,6 @@
 use crate::{codec, png_strategy, quality};
 
-use anyhow::{Context, Result, bail, ensure};
+use anyhow::{Context, Result, ensure};
 use image::{DynamicImage, ImageDecoder, ImageFormat, ImageReader, Limits};
 use serde::Serialize;
 use std::{io::Cursor, path::Path, time::Instant};
@@ -25,6 +25,15 @@ pub struct Output {
     pub ms: u128,
 }
 
+pub fn supported_format(path: &Path) -> Option<ImageFormat> {
+    match path.extension()?.to_str()?.to_ascii_lowercase().as_str() {
+        "png" => Some(ImageFormat::Png),
+        "jpg" | "jpeg" => Some(ImageFormat::Jpeg),
+        "webp" => Some(ImageFormat::WebP),
+        _ => None,
+    }
+}
+
 pub fn compress(data: &[u8], name: &str, lossless: bool) -> Result<Output> {
     let started = Instant::now();
     ensure!(
@@ -33,18 +42,8 @@ pub fn compress(data: &[u8], name: &str, lossless: bool) -> Result<Output> {
     );
     ensure!(!data.is_empty(), "Image file is empty");
     ensure!(data.len() <= MAX_BYTES, "File exceeds 25 MiB");
-    let expected = match Path::new(name)
-        .extension()
-        .and_then(|s| s.to_str())
-        .unwrap_or("")
-        .to_ascii_lowercase()
-        .as_str()
-    {
-        "png" => ImageFormat::Png,
-        "jpg" | "jpeg" => ImageFormat::Jpeg,
-        "webp" => ImageFormat::WebP,
-        _ => bail!("Unsupported extension; expected .png, .jpg, .jpeg or .webp (case-insensitive)"),
-    };
+    let expected = supported_format(Path::new(name))
+        .context("Unsupported extension; expected .png, .jpg, .jpeg or .webp (case-insensitive)")?;
     let format = image::guess_format(data).context("Unrecognized image format")?;
     ensure!(
         format == expected,
